@@ -1,8 +1,13 @@
 # BAMBI Thermal Dataset — CVI Project
 
+*Note: add any important stuff that you might forget here.*
+
+---
+
 This document explains the dataset structure, what the label files mean, and how everything connects together for CNN training.
 
 ---
+Please download and unzip the images_thermal folder from https://zenodo.org/records/19034999 - bc it's way too large to upload on github. Everything else should be available in the github download
 
 ## Folder Structure
 
