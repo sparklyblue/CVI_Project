@@ -1,0 +1,11 @@
+cat > .gitignore << 'EOF'
+venv/
+images_thermal/
+labels_matched_thermal/
+labels_final/
+mots/
+label_summary.csv
+*.jpg
+*.png
+*.tif
+EOF
