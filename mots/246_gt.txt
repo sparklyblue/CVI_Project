@@ -1,0 +1,2014 @@
+421,3935,446,902,69,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+434,3935,450,886,69,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+464,3934,580,900,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+464,3935,461,845,69,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+480,3933,515,901,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+480,3934,567,862,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+480,3935,457,819,69,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+486,3933,513,890,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+486,3934,565,851,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+486,3935,455,808,69,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+496,3933,500,867,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+496,3934,552,828,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+496,3935,454,798,69,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+496,3936,559,899,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+502,3933,490,855,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+502,3934,544,819,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+502,3935,455,796,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+502,3936,556,890,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+522,3933,464,813,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+522,3934,517,773,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+522,3935,451,760,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+522,3936,530,836,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+522,3939,389,904,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+528,3930,543,900,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+528,3933,455,799,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+528,3934,505,758,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+528,3935,447,749,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+528,3936,524,825,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+528,3939,383,889,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+528,3941,612,898,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+533,3930,537,887,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+533,3931,532,901,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+533,3933,449,786,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+533,3934,499,745,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+533,3935,446,737,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+533,3936,514,811,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+533,3939,377,876,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+533,3941,603,891,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+541,3930,530,868,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+541,3931,525,886,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+541,3933,436,766,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+541,3934,487,727,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+541,3935,437,718,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+541,3936,500,791,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+541,3939,356,854,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+541,3941,595,883,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+571,3930,500,807,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+571,3931,484,817,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+571,3933,395,703,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+571,3934,446,664,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+571,3935,396,655,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+571,3936,463,735,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+571,3939,319,792,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+571,3940,360,899,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+571,3941,566,840,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+597,3929,596,901,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+597,3930,486,753,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+597,3931,450,754,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+597,3932,576,899,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+597,3933,364,646,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+597,3934,414,609,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+597,3935,367,595,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+597,3936,433,691,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+597,3939,285,736,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+597,3940,330,855,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+597,3941,548,803,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+610,3929,584,872,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+610,3930,478,730,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+610,3931,437,731,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+610,3932,570,878,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+610,3933,351,626,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+610,3934,401,587,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+610,3935,356,573,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+610,3936,423,673,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+610,3938,311,905,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+610,3939,277,711,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+610,3940,317,838,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+610,3941,539,787,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+628,3929,576,821,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+628,3930,471,699,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+628,3931,417,694,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+628,3932,553,836,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+628,3933,334,581,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+628,3934,384,544,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+628,3935,340,544,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+628,3936,404,638,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+628,3938,304,862,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+628,3939,258,670,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+628,3940,302,804,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+628,3941,531,755,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+658,3929,576,746,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+658,3930,463,634,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+658,3931,397,626,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+658,3932,533,768,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+658,3933,313,509,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+658,3934,364,476,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+658,3935,345,486,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+658,3936,375,575,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+658,3937,318,900,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+658,3938,284,794,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+658,3939,238,602,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+658,3940,272,744,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+658,3941,525,713,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+661,3929,575,741,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+661,3930,462,629,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+661,3931,396,621,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+661,3932,532,763,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+661,3933,312,504,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+661,3934,363,471,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+661,3935,344,481,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+661,3936,374,570,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+661,3937,317,899,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+661,3938,283,789,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+661,3939,237,597,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+661,3940,271,739,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+661,3941,524,708,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+691,3929,568,649,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+691,3930,456,567,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+691,3931,390,566,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+691,3932,508,710,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+691,3933,294,434,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+691,3934,351,399,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+691,3935,348,422,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+691,3936,354,517,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+691,3937,305,845,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+691,3938,262,719,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+691,3939,215,528,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+691,3940,251,672,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+691,3941,506,663,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+721,3929,559,557,46,47,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+721,3930,450,510,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+721,3931,389,509,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+721,3932,500,680,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+721,3933,280,370,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+721,3934,333,328,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+721,3935,350,339,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+721,3936,330,466,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+721,3937,310,797,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+721,3938,248,654,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+721,3939,205,457,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+721,3940,239,603,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+721,3941,495,593,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+741,3929,551,507,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+741,3930,452,475,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+741,3931,397,470,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+741,3932,493,649,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+741,3933,279,325,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+741,3934,335,280,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+741,3935,348,292,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+741,3936,323,432,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+741,3937,314,757,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+741,3938,251,619,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+741,3939,198,411,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+741,3940,233,555,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+741,3941,497,548,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+771,3929,539,465,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+771,3930,463,455,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+771,3931,403,445,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+771,3932,481,630,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+771,3933,279,293,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+771,3934,331,248,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+771,3935,348,261,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+771,3936,304,416,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+771,3937,313,724,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+771,3938,255,603,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+771,3939,198,379,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+771,3940,233,523,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+771,3941,498,526,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+801,3929,525,444,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+801,3930,472,455,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+801,3931,410,443,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+801,3932,469,636,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+801,3933,275,277,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+801,3934,344,224,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+801,3935,352,250,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+801,3936,295,423,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+801,3937,326,724,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+801,3938,256,613,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+801,3939,198,366,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+801,3940,233,523,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+801,3941,495,513,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+841,3929,517,444,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+841,3930,490,477,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+841,3931,418,446,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+841,3932,461,668,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+841,3933,275,277,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+841,3934,374,220,70,41,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+841,3935,350,253,67,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+841,3936,287,452,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+841,3937,366,743,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+841,3938,271,653,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+841,3939,198,366,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+841,3940,233,535,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+841,3941,495,513,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+871,3929,517,444,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+871,3930,492,488,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+871,3931,409,451,53,56,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+871,3932,458,683,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+871,3933,278,278,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+871,3934,396,226,70,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+871,3935,343,241,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+871,3936,279,474,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+871,3937,393,745,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+871,3938,283,674,48,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+871,3939,198,366,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+871,3940,236,555,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+871,3941,496,513,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+901,3929,517,444,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+901,3930,492,491,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+901,3931,403,473,53,56,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+901,3932,458,683,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+901,3933,278,278,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+901,3934,425,250,70,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+901,3935,343,241,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+901,3936,271,497,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+901,3937,424,758,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+901,3938,297,700,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+901,3939,198,366,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+901,3940,244,583,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+901,3941,499,516,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+931,3929,520,445,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+931,3930,491,509,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+931,3931,398,504,53,56,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+931,3932,458,683,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+931,3933,278,278,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+931,3934,450,269,70,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+931,3935,343,241,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+931,3936,263,522,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+931,3937,438,765,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+931,3938,309,711,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+931,3939,198,366,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+931,3940,255,610,45,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+931,3941,499,516,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+961,3929,520,445,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+961,3930,494,525,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+961,3931,393,527,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+961,3932,459,686,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+961,3933,278,278,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+961,3934,477,286,70,47,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+961,3935,343,241,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+961,3936,255,542,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+961,3937,438,765,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+961,3938,309,711,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+961,3939,198,366,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+961,3940,264,630,47,69,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+961,3941,499,516,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1001,3929,520,445,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1001,3930,498,541,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1001,3931,392,560,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1001,3932,458,688,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1001,3933,277,280,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1001,3934,502,294,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1001,3935,363,252,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1001,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1001,3937,437,767,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1001,3938,308,713,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1001,3939,197,368,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1001,3940,270,661,47,69,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1001,3941,498,518,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1041,3929,520,446,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1041,3930,498,541,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1041,3931,383,594,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1041,3932,458,688,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1041,3933,284,301,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1041,3934,500,298,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1041,3935,400,264,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1041,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1041,3937,437,767,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1041,3938,306,713,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1041,3939,197,368,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1041,3940,278,695,47,69,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1041,3941,498,518,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1071,3929,520,446,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1071,3930,498,541,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1071,3931,377,621,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1071,3932,458,688,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1071,3933,286,333,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1071,3934,500,298,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1071,3935,440,275,67,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1071,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1071,3937,437,767,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1071,3938,306,713,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1071,3939,197,368,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1071,3940,289,722,47,69,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1071,3941,498,518,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1101,3929,512,446,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1101,3930,498,541,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1101,3931,369,649,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1101,3932,458,688,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1101,3933,298,357,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1101,3934,504,302,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1101,3935,475,298,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1101,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1101,3937,437,767,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1101,3938,306,713,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1101,3939,197,368,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1101,3940,294,744,47,69,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1101,3941,498,518,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1141,3929,506,453,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1141,3930,498,541,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1141,3931,357,675,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1141,3932,456,691,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1141,3933,315,390,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1141,3934,507,301,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1141,3935,475,298,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1141,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1141,3937,437,764,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1141,3938,306,713,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1141,3939,197,368,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1141,3940,308,772,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1141,3941,498,518,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1181,3929,502,451,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1181,3930,498,541,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1181,3931,347,686,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1181,3932,448,698,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1181,3933,341,414,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1181,3934,507,301,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1181,3935,475,298,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1181,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1181,3937,437,764,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1181,3938,309,711,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1181,3939,204,368,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1181,3940,346,785,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1181,3941,498,518,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1231,3929,482,427,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1231,3930,495,528,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1231,3931,351,671,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1231,3932,424,718,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1231,3933,398,420,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1231,3934,506,279,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1231,3935,486,299,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1231,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1231,3937,437,742,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1231,3938,307,693,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1231,3939,202,353,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1231,3940,386,766,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1231,3941,498,501,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1251,3929,482,422,46,33,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1251,3930,494,524,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1251,3931,354,664,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1251,3932,419,724,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1251,3933,424,412,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1251,3934,507,279,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1251,3935,488,297,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1251,3936,249,565,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1251,3937,435,742,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1251,3938,310,686,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1251,3939,205,349,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1251,3940,387,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1251,3941,498,493,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1261,3929,499,388,46,53,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1261,3930,494,524,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1261,3931,354,664,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1261,3932,419,726,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1261,3933,436,409,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1261,3934,507,279,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1261,3935,488,291,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1261,3936,254,572,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1261,3937,435,742,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1261,3938,310,686,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1261,3939,205,349,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1261,3940,387,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1261,3941,498,493,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1301,3929,500,351,46,53,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1301,3930,494,524,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1301,3931,354,664,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1301,3932,427,751,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1301,3933,451,399,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1301,3934,505,282,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1301,3935,488,289,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1301,3936,259,596,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1301,3937,462,760,68,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1301,3938,311,725,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1301,3939,205,349,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1301,3940,391,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1301,3941,498,493,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1341,3929,503,347,46,53,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1341,3930,494,524,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1341,3931,354,664,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1341,3932,434,757,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1341,3933,452,399,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1341,3934,505,282,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1341,3935,488,289,53,73,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1341,3936,259,596,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1341,3937,481,795,70,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1341,3938,312,763,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1341,3939,205,349,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1341,3940,391,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1341,3941,498,493,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1381,3929,506,349,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1381,3930,493,514,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1381,3931,355,657,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1381,3932,439,763,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1381,3933,452,395,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1381,3934,505,260,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1381,3935,482,298,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1381,3936,262,592,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1381,3937,485,832,70,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1381,3938,325,793,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1381,3939,203,344,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1381,3940,397,752,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1381,3941,505,492,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1411,3929,500,335,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1411,3930,493,514,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1411,3931,355,657,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1411,3932,439,763,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1411,3933,451,390,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1411,3934,505,260,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1411,3935,482,291,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1411,3936,262,592,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1411,3937,485,855,70,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1411,3938,339,814,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1411,3939,201,339,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1411,3940,397,752,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1411,3941,505,492,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1456,3929,500,322,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1456,3930,491,499,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1456,3931,355,645,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1456,3932,438,760,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1456,3933,451,380,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1456,3934,514,265,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1456,3935,485,280,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1456,3936,262,575,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1456,3937,489,887,70,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1456,3938,346,823,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1456,3939,204,329,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1456,3940,412,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1456,3941,505,476,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1466,3929,500,318,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1466,3930,491,499,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1466,3931,355,643,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1466,3932,443,757,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1466,3933,451,380,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1466,3934,519,266,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1466,3935,484,277,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1466,3936,262,575,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1466,3937,490,901,70,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1466,3938,344,821,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1466,3939,202,324,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1466,3940,413,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1466,3941,505,476,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1506,3929,500,308,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1506,3930,491,487,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1506,3931,356,631,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1506,3932,439,746,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1506,3933,452,370,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1506,3934,536,283,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1506,3935,485,268,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1506,3936,261,563,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1506,3938,343,806,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1506,3939,199,313,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1506,3940,425,774,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1506,3941,505,464,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1556,3929,499,291,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1556,3930,490,468,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1556,3931,363,640,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1556,3932,438,729,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1556,3933,451,345,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1556,3934,549,303,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1556,3935,481,246,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1556,3936,261,563,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1556,3938,345,784,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1556,3939,203,295,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1556,3940,456,778,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1556,3941,506,444,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1616,3929,499,268,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1616,3930,493,444,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1616,3931,369,646,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1616,3932,438,707,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1616,3933,449,322,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1616,3934,568,299,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1616,3935,493,228,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1616,3936,272,573,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1616,3938,343,766,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1616,3939,201,270,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1616,3940,456,757,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1616,3941,505,420,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1666,3929,499,246,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1666,3930,492,426,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1666,3931,375,660,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1666,3932,439,688,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1666,3933,450,305,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1666,3934,566,277,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1666,3935,529,209,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1666,3936,284,596,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1666,3938,345,742,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1666,3939,201,252,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1666,3940,457,736,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1666,3941,505,400,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1666,3942,491,895,52,33,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1696,3929,501,230,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1696,3930,489,404,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1696,3931,386,680,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1696,3932,439,669,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1696,3933,450,283,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1696,3934,566,259,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1696,3935,574,194,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1696,3936,300,619,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1696,3938,345,726,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1696,3939,205,232,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1696,3940,465,731,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1696,3941,506,384,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1696,3942,503,884,52,33,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1728,3929,501,225,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1728,3930,493,403,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1728,3931,399,686,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1728,3932,438,663,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1728,3933,450,281,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1728,3934,565,270,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1728,3935,594,202,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1728,3936,307,639,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1728,3938,342,726,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1728,3939,203,231,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1728,3940,482,750,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1728,3941,504,379,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1728,3942,511,899,52,33,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1778,3929,496,220,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1778,3930,490,397,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1778,3931,399,680,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1778,3932,440,658,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1778,3933,450,272,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1778,3934,572,301,50,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1778,3935,630,192,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1778,3936,319,663,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1778,3938,349,754,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1778,3939,202,222,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1778,3940,494,776,61,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1778,3941,504,371,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1828,3929,492,200,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1828,3930,490,377,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1828,3931,398,665,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1828,3932,440,638,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1828,3933,452,253,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1828,3934,593,317,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1828,3935,669,158,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1828,3936,338,679,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1828,3938,366,765,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1828,3939,201,202,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1828,3940,512,790,51,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1828,3941,504,353,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1878,3929,491,184,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1878,3930,489,357,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1878,3931,397,648,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1878,3932,439,618,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1878,3933,451,233,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1878,3934,620,321,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1878,3935,704,134,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1878,3936,342,677,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1878,3938,369,748,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1878,3939,200,181,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1878,3940,515,797,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1878,3941,503,333,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1928,3929,492,180,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1928,3930,490,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1928,3931,402,668,53,66,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1928,3932,439,606,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1928,3933,449,232,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1928,3934,638,337,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1928,3935,744,124,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1928,3936,345,664,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1928,3938,385,773,58,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1928,3939,202,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1928,3940,522,802,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1928,3941,503,320,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1978,3929,492,180,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1978,3930,490,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1978,3931,406,704,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1978,3932,443,611,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+1978,3933,449,232,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1978,3934,659,374,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1978,3935,784,127,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1978,3936,345,664,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1978,3938,406,810,60,79,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+1978,3939,202,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1978,3940,524,803,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+1978,3941,503,320,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2018,3929,492,180,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2018,3930,490,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2018,3931,402,739,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2018,3932,444,618,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2018,3933,449,232,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2018,3934,660,393,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2018,3935,813,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2018,3936,345,664,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2018,3938,416,841,60,79,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2018,3939,202,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2018,3940,532,807,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2018,3941,503,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2058,3929,492,180,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2058,3930,490,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2058,3931,392,762,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2058,3932,460,645,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2058,3933,449,232,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2058,3934,660,393,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2058,3935,852,133,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2058,3936,345,664,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2058,3938,429,881,60,79,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2058,3939,202,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2058,3940,551,814,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2058,3941,503,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2088,3938,430,901,60,79,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2108,3929,492,180,40,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2108,3930,490,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2108,3931,385,777,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2108,3932,480,681,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2108,3933,449,232,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2108,3934,660,393,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2108,3935,883,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2108,3936,348,664,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2108,3939,202,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2108,3940,559,816,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2108,3941,503,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2168,3929,514,169,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2168,3930,490,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2168,3931,385,777,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2168,3932,503,733,42,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2168,3933,451,236,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2168,3934,660,393,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2168,3935,883,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2168,3936,361,679,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2168,3939,202,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2168,3940,559,816,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2168,3941,503,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2168,3943,707,899,50,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2208,3929,509,176,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2208,3930,488,347,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2208,3931,394,797,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2208,3932,510,771,42,52,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2208,3933,475,248,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2208,3934,658,393,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2208,3935,881,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2208,3936,387,680,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2208,3939,200,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2208,3940,561,820,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2208,3941,501,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2208,3943,718,881,66,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2268,3929,501,187,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2268,3930,485,339,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2268,3931,391,808,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2268,3932,513,807,42,52,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2268,3933,520,264,65,42,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2268,3934,651,397,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2268,3935,881,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2268,3936,403,680,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2268,3939,200,171,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2268,3940,555,817,53,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2268,3941,501,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2268,3943,774,869,66,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2318,3929,498,189,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2318,3930,485,339,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2318,3931,391,808,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2318,3932,510,837,42,52,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2318,3933,556,289,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2318,3934,644,406,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2318,3935,881,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2318,3936,398,679,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2318,3939,199,173,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2318,3940,560,817,43,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2318,3941,501,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2318,3943,766,861,92,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2378,3929,498,189,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2378,3930,485,339,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2378,3931,391,808,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2378,3932,518,885,42,52,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2378,3933,577,319,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2378,3934,627,448,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2378,3935,881,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2378,3936,402,677,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2378,3939,199,173,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2378,3940,560,817,43,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2378,3941,501,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2378,3943,802,855,92,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2398,3929,498,189,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2398,3930,485,339,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2398,3931,391,808,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2398,3932,524,901,42,52,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2398,3933,583,330,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2398,3934,616,468,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2398,3935,881,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2398,3936,402,677,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2398,3939,208,187,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2398,3940,559,817,43,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2398,3941,501,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2398,3943,821,856,92,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2448,3929,501,189,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2448,3930,486,343,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2448,3931,395,806,41,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2448,3933,584,340,63,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2448,3934,594,503,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2448,3935,881,129,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2448,3936,402,674,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2448,3939,230,210,59,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2448,3940,562,817,43,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2448,3941,501,323,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2448,3943,875,857,92,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2498,3929,503,184,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2498,3930,487,339,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2498,3931,410,823,57,50,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2498,3933,589,377,63,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2498,3934,560,542,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2498,3935,889,128,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2498,3936,407,673,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2498,3939,263,244,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2498,3940,565,817,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2498,3941,502,317,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2498,3943,931,875,64,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2558,3929,507,183,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2558,3930,489,337,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2558,3931,455,799,57,50,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2558,3933,604,416,63,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2558,3934,520,587,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2558,3935,886,122,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2558,3936,407,673,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2558,3939,262,285,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2558,3940,565,817,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2558,3941,502,317,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2558,3943,931,876,64,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2618,3929,503,183,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2618,3930,489,337,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2618,3931,511,783,57,50,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2618,3933,604,416,63,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2618,3934,484,635,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2618,3935,886,122,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2618,3936,407,673,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2618,3939,250,337,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2618,3940,565,817,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2618,3941,502,317,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2618,3943,947,916,64,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2668,3929,489,193,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2668,3930,489,337,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2668,3931,553,769,57,50,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2668,3933,604,416,63,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2668,3934,489,675,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2668,3935,903,122,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2668,3936,407,673,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2668,3939,254,380,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2668,3940,561,818,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2668,3941,502,317,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2728,3929,472,211,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2728,3930,495,340,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2728,3931,613,759,57,50,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2728,3933,609,432,63,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2728,3934,483,730,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2728,3935,925,123,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2728,3936,407,673,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2728,3939,266,421,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2728,3940,561,818,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2728,3941,507,312,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2788,3929,449,228,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2788,3930,495,340,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2788,3931,645,768,57,50,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2788,3933,611,474,63,72,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2788,3934,476,783,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2788,3935,940,123,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2788,3936,398,672,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2788,3939,266,421,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2788,3940,562,818,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2788,3941,507,312,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2848,3929,417,260,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2848,3930,496,342,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2848,3931,670,807,55,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2848,3933,609,504,65,78,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2848,3934,473,798,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2848,3935,941,125,73,57,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2848,3936,393,686,57,64,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2848,3939,282,463,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2848,3940,566,819,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2848,3941,508,314,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2918,3929,394,321,36,39,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2918,3930,496,342,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2918,3931,671,868,55,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2918,3933,618,570,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2918,3934,473,798,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2918,3935,965,143,53,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2918,3936,394,744,57,64,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2918,3939,301,534,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2918,3940,566,819,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2918,3941,508,319,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2978,3929,418,371,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2978,3930,495,342,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2978,3931,673,902,55,58,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+2978,3933,636,631,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2978,3934,460,817,68,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2978,3935,966,146,53,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2978,3936,392,792,57,64,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+2978,3939,319,601,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2978,3940,578,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+2978,3941,509,320,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3038,3929,418,426,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3038,3930,494,337,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3038,3933,653,668,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3038,3934,457,858,56,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3038,3935,969,158,53,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3038,3936,400,839,57,64,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3038,3939,342,660,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3038,3940,578,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3038,3941,508,320,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3078,3929,403,467,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3078,3930,494,333,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3078,3933,656,702,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3078,3934,453,897,56,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3078,3935,969,176,53,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3078,3936,406,861,57,64,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3078,3939,352,700,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3078,3940,574,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3078,3941,508,320,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3118,3929,380,514,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3118,3930,494,333,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3118,3933,674,744,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3118,3935,971,199,53,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3118,3936,413,894,57,64,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3118,3939,374,745,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3118,3940,574,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3118,3941,508,316,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3119,3948,980,195,44,85,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3129,3933,682,751,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3149,3948,986,220,38,85,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3177,3948,981,245,43,85,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3178,3929,358,577,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3178,3930,490,332,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3178,3933,716,783,55,80,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3178,3939,397,805,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3178,3940,574,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3178,3941,508,310,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3178,3944,980,248,44,78,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3238,3929,336,637,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3238,3930,490,332,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3238,3933,765,833,57,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3238,3939,414,865,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3238,3940,574,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3238,3941,508,310,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3238,3944,965,283,59,80,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3252,3929,345,677,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3252,3930,490,332,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3252,3933,784,861,57,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3252,3939,424,894,43,67,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3252,3940,579,823,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3252,3941,508,310,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3252,3944,952,296,59,80,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3312,3929,345,701,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3312,3930,478,325,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3312,3933,780,908,57,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3312,3940,568,816,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3312,3941,500,309,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3312,3944,900,316,89,60,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3347,3929,348,721,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3347,3930,464,309,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3347,3941,483,293,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3347,3944,860,309,89,60,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3382,3929,351,728,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3382,3930,454,285,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3382,3940,539,773,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3382,3941,471,270,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3382,3944,839,284,89,60,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3402,3929,352,732,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3402,3930,451,268,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3402,3940,533,757,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3402,3941,465,252,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3402,3944,833,268,89,60,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3402,3945,763,900,42,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3402,3946,387,893,43,70,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3452,3929,348,722,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3452,3930,434,215,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3452,3940,517,690,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3452,3941,448,185,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3452,3944,816,228,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3452,3945,753,841,46,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3452,3946,385,834,43,70,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3452,3947,596,896,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3467,3929,346,716,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3467,3940,514,672,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3467,3944,805,219,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3467,3945,749,826,46,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3467,3946,377,816,46,64,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3467,3947,597,881,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3497,3930,408,165,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3497,3940,495,640,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3497,3941,418,134,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3497,3945,731,791,46,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3497,3947,577,846,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3502,3929,333,716,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3502,3930,402,163,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3502,3940,487,637,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3502,3941,414,129,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3502,3944,772,210,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3502,3945,724,786,46,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3502,3946,356,792,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3502,3947,572,842,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3542,3929,297,705,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3542,3930,344,134,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3542,3940,438,612,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3542,3941,356,100,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3542,3944,711,227,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3542,3945,662,753,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3542,3946,300,764,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3542,3947,512,811,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3547,3929,289,703,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3547,3930,334,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3547,3940,427,611,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3547,3941,344,98,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3547,3944,696,229,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3547,3945,649,747,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3547,3946,292,762,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3547,3947,502,809,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3557,3929,275,706,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3557,3930,316,129,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3557,3940,413,605,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3557,3941,325,93,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3557,3944,675,237,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3557,3945,632,743,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3557,3946,273,759,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3557,3947,484,804,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3577,3929,264,707,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3577,3930,297,123,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3577,3940,396,602,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3577,3941,304,88,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3577,3944,648,244,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3577,3946,252,753,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3577,3947,464,800,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3582,3929,266,707,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3582,3930,295,121,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3582,3940,397,601,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3582,3941,305,87,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3582,3944,644,246,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3582,3945,611,741,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3582,3946,254,752,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3582,3947,461,799,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3612,3929,276,712,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3612,3930,295,121,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3612,3940,402,605,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3612,3941,305,87,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3612,3944,642,284,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3612,3945,611,741,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3612,3946,248,757,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3612,3947,461,799,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3627,3929,284,723,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3627,3944,646,301,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3647,3940,414,610,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3647,3946,243,761,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3672,3929,296,730,36,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3672,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3672,3940,412,614,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3672,3941,303,91,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3672,3944,633,351,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3672,3945,610,744,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3672,3946,250,776,53,48,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3672,3947,460,803,31,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3697,3929,300,729,40,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3712,3929,306,738,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3712,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3712,3940,417,616,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3712,3941,303,91,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3712,3944,616,399,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3712,3945,610,744,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3712,3946,253,796,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3712,3947,458,803,35,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3737,3944,616,429,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3757,3929,342,746,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3757,3944,617,448,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3757,3946,271,832,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3762,3929,343,747,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3762,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3762,3940,415,613,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3762,3941,303,91,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3762,3944,616,451,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3762,3945,635,756,58,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3762,3946,271,835,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3762,3947,460,798,43,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3777,3929,354,748,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3777,3940,412,615,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3777,3944,615,449,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3777,3945,649,763,61,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3777,3946,276,847,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3777,3947,461,800,43,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3797,3940,419,611,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3797,3944,615,461,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3797,3945,663,767,65,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3812,3929,381,751,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3812,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3812,3940,424,616,47,53,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3812,3941,303,91,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3812,3944,614,478,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3812,3945,669,769,68,70,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3812,3946,284,860,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3812,3947,472,809,43,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3827,3945,677,777,67,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3837,3929,397,764,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3837,3944,608,506,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3837,3946,288,869,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3837,3947,474,814,45,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3862,3929,413,782,42,43,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3862,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3862,3940,437,634,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3862,3941,303,91,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3862,3944,601,533,49,70,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3862,3945,674,778,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3862,3946,291,870,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3862,3947,478,811,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3892,3929,417,800,42,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3892,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3892,3940,451,639,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3892,3941,303,91,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3892,3944,605,557,49,72,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3892,3945,674,778,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3892,3946,294,882,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3892,3947,478,811,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3923,3929,425,813,42,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3923,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3923,3940,457,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3923,3941,303,89,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3923,3944,611,580,49,72,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3923,3945,674,778,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3923,3946,300,904,57,56,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3923,3947,486,819,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3973,3929,438,835,42,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3973,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+3973,3940,454,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3973,3941,303,89,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+3973,3944,626,623,49,72,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+3973,3945,677,775,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+3973,3947,487,815,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4013,3929,461,856,42,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4013,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4013,3940,454,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4013,3941,303,89,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4013,3944,635,667,49,72,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+4013,3945,677,775,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4013,3947,487,815,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4053,3929,483,880,42,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4053,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4053,3940,454,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4053,3941,303,89,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4053,3944,647,711,49,72,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+4053,3945,685,775,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4053,3947,489,815,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4083,3929,502,883,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4083,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4083,3940,456,645,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4083,3941,303,89,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4083,3944,652,727,51,84,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+4083,3945,687,778,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4083,3947,494,815,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4123,3929,531,886,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4123,3930,297,132,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4123,3940,459,648,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4123,3941,303,89,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4123,3944,662,730,51,98,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+4123,3945,684,777,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4123,3947,499,811,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4153,3929,548,882,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4153,3930,299,127,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4153,3940,461,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4153,3941,303,82,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4153,3944,659,720,51,98,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+4153,3945,684,769,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4153,3947,499,801,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4163,3929,548,879,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4163,3930,300,121,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4163,3940,461,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4163,3941,300,76,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4163,3944,657,713,51,98,1.00,64,0.50,Sus scrofa (Wild boar),0,2,0
+4163,3945,682,767,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4163,3947,497,795,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4165,3929,548,879,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4165,3930,300,121,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4165,3940,461,644,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4165,3941,300,76,48,61,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4165,3945,682,767,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4165,3947,497,795,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4165,3949,650,718,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4165,3950,673,900,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4211,3929,544,848,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4211,3930,301,89,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4211,3940,457,616,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4211,3945,704,734,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4211,3947,502,758,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4211,3949,652,689,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4211,3950,680,867,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4211,3951,738,900,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4231,3929,548,831,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4231,3930,300,72,38,37,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4231,3940,458,602,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4231,3945,699,718,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4231,3947,504,738,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4231,3949,651,672,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4231,3950,679,850,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4231,3951,726,884,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4261,3929,561,803,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4261,3940,461,587,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4261,3945,697,696,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4261,3947,503,715,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4261,3949,645,652,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4261,3950,679,830,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4261,3951,710,871,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4271,3929,568,793,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4271,3940,464,578,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4271,3945,696,685,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4271,3947,503,704,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4271,3949,644,641,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4271,3950,678,819,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4271,3951,709,873,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4271,3952,769,910,38,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4301,3929,581,769,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4301,3940,480,572,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4301,3945,690,665,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4301,3947,501,682,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4301,3949,636,621,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4301,3950,672,798,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4301,3951,698,860,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4301,3952,759,888,42,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4301,3953,622,893,47,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4351,3929,603,727,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4351,3940,511,555,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4351,3945,679,630,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4351,3947,511,649,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4351,3949,633,600,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4351,3950,673,763,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4351,3951,690,819,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4351,3952,748,853,42,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4351,3953,591,852,47,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4361,3929,606,716,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4361,3940,515,552,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4361,3945,684,624,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4361,3947,514,645,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4361,3949,634,596,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4361,3950,667,753,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4361,3951,691,814,56,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4361,3952,749,849,42,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4361,3953,588,844,47,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4361,3954,544,899,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4411,3929,622,665,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4411,3940,536,529,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4411,3945,678,584,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4411,3947,511,608,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4411,3949,635,602,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4411,3950,660,719,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4411,3951,676,772,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4411,3952,737,814,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4411,3953,545,788,71,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4411,3954,572,846,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4431,3929,624,645,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4431,3940,539,529,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4431,3945,680,571,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4431,3947,514,595,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4431,3949,638,602,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4431,3950,656,701,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4431,3951,677,763,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4431,3952,734,799,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4431,3953,529,763,71,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4431,3954,580,823,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4436,3955,526,898,45,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4456,3955,520,875,55,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4471,3929,616,597,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4471,3940,548,516,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4471,3945,664,531,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4471,3947,520,565,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4471,3949,629,594,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4471,3950,649,664,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4471,3951,674,722,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4471,3952,723,754,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4471,3953,504,697,71,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4471,3954,606,781,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4486,3955,527,840,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4516,3955,545,805,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4521,3929,619,543,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4521,3940,540,482,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4521,3945,659,497,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4521,3947,532,548,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4521,3949,627,592,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4521,3950,665,632,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4521,3951,672,684,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4521,3952,704,703,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4521,3953,477,621,71,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4521,3954,620,727,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4556,3955,561,760,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4560,3955,563,755,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4561,3929,615,514,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4561,3940,539,450,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4561,3945,655,464,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4561,3947,551,514,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4561,3949,624,567,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4561,3950,680,616,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4561,3951,669,656,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4561,3952,696,666,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4561,3953,461,572,71,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4561,3954,626,685,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4590,3955,566,721,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4591,3929,609,497,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4591,3940,526,434,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4591,3945,650,440,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4591,3947,566,487,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4591,3949,631,550,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4591,3950,680,589,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4591,3951,658,627,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4591,3952,691,639,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4591,3953,452,526,71,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4591,3954,630,660,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4591,3955,566,719,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4621,3929,594,490,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4621,3940,514,426,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4621,3945,625,419,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4621,3947,573,464,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4621,3949,611,534,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4621,3950,658,568,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4621,3951,642,605,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4621,3952,668,620,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4621,3953,430,486,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4621,3954,611,643,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4621,3955,558,696,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4651,3929,559,482,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4651,3940,487,431,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4651,3945,596,405,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4651,3947,558,445,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4651,3949,578,520,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4651,3950,622,565,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4651,3951,613,594,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4651,3952,634,609,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4651,3953,401,458,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4651,3954,576,630,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4651,3955,531,678,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4681,3929,526,472,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4681,3940,461,439,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4681,3945,561,397,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4681,3947,545,428,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4681,3949,547,513,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4681,3950,610,573,66,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4681,3951,574,588,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4681,3952,605,599,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4681,3953,364,431,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4681,3954,545,623,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4681,3955,498,671,59,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4711,3929,502,464,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4711,3940,437,453,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4711,3945,537,389,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4711,3947,537,414,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4711,3949,527,505,59,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4711,3950,590,568,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4711,3951,555,576,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4711,3952,575,588,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4711,3953,343,418,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4711,3954,521,615,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4711,3955,473,663,61,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4771,3929,515,460,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4771,3940,446,500,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4771,3945,537,381,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4771,3947,572,410,47,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4771,3949,516,510,69,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4771,3950,593,570,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4771,3951,536,558,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4771,3952,569,585,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4771,3953,354,372,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4771,3954,515,609,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4771,3955,467,658,63,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4811,3929,522,460,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4811,3940,465,522,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4811,3945,537,377,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4811,3947,569,413,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4811,3949,516,510,69,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4811,3950,591,568,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4811,3951,536,558,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4811,3952,567,585,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4811,3953,399,332,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4811,3954,512,606,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4811,3955,467,658,63,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4861,3929,527,463,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4861,3940,465,522,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4861,3945,540,377,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4861,3947,567,413,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4861,3949,516,510,69,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4861,3950,587,562,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4861,3951,536,558,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4861,3952,567,585,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4861,3953,428,306,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4861,3954,512,606,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4861,3955,471,636,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4911,3929,539,471,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4911,3940,465,524,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4911,3945,564,373,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4911,3947,572,413,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4911,3949,503,513,69,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4911,3950,587,562,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4911,3951,528,562,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4911,3952,566,582,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4911,3953,469,279,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4911,3954,513,606,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4911,3955,474,604,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4961,3929,539,471,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4961,3940,465,524,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4961,3945,568,367,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4961,3947,590,420,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+4961,3949,503,513,69,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4961,3950,588,561,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4961,3951,524,562,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4961,3952,561,573,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4961,3953,502,250,59,68,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+4961,3954,515,600,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+4961,3955,478,568,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5011,3929,530,468,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5011,3940,467,524,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5011,3945,568,358,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5011,3947,599,420,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5011,3949,508,501,69,58,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5011,3950,581,556,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5011,3951,527,549,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5011,3952,550,539,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5011,3953,537,248,73,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5011,3954,530,599,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5011,3955,482,520,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5051,3929,530,468,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5051,3940,467,521,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5051,3945,581,350,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5051,3947,600,415,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5051,3949,506,495,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5051,3950,576,553,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5051,3951,543,535,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5051,3952,558,506,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5051,3953,574,247,73,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5051,3954,535,591,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5051,3955,487,486,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5101,3929,537,446,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5101,3940,465,522,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5101,3945,609,334,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5101,3947,600,415,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5101,3949,512,496,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5101,3950,579,552,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5101,3951,572,513,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5101,3952,568,484,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5101,3953,613,249,73,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5101,3954,544,595,58,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5101,3955,502,445,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5151,3929,561,412,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5151,3940,465,522,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5151,3945,609,334,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5151,3947,600,415,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5151,3949,512,496,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5151,3950,578,549,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5151,3951,603,486,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5151,3952,592,455,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5151,3953,613,249,73,46,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5151,3954,540,598,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5151,3955,524,406,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5191,3929,587,395,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5191,3940,466,531,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5191,3945,609,331,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5191,3947,599,415,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5191,3949,506,494,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5191,3950,586,533,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5191,3951,628,460,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5191,3952,623,430,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5191,3953,617,248,73,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5191,3954,548,598,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5191,3955,524,402,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5241,3929,594,391,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5241,3940,472,526,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5241,3945,605,332,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5241,3947,601,413,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5241,3949,509,487,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5241,3950,603,512,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5241,3951,659,421,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5241,3952,634,419,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5241,3953,617,246,73,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5241,3954,582,606,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5241,3955,528,401,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5301,3929,594,386,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5301,3940,479,529,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5301,3945,608,331,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5301,3947,599,415,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5301,3949,512,489,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5301,3950,616,492,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5301,3951,684,387,56,71,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5301,3952,641,415,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5301,3953,617,246,73,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5301,3954,592,606,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5301,3955,528,401,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5351,3929,591,367,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5351,3940,480,529,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5351,3945,608,331,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5351,3947,596,416,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5351,3949,512,489,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5351,3950,623,487,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5351,3951,724,358,66,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5351,3952,657,408,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5351,3953,617,246,73,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5351,3954,595,608,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5351,3955,528,401,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5391,3929,579,362,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5391,3940,492,534,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5391,3945,608,329,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5391,3947,599,419,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5391,3949,512,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5391,3950,622,485,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5391,3951,747,347,66,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5391,3952,660,406,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5391,3953,617,242,73,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5391,3954,594,607,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5391,3955,552,397,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5451,3929,560,352,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5451,3940,528,554,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5451,3945,608,329,66,54,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5451,3947,590,423,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5451,3949,505,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5451,3950,622,485,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5451,3951,747,347,66,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5451,3952,662,401,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5451,3953,617,242,73,60,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5451,3954,594,607,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5451,3955,583,378,55,65,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5501,3929,556,352,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5501,3940,541,553,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5501,3945,608,332,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5501,3947,595,422,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5501,3949,505,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5501,3950,622,485,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5501,3951,751,347,66,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5501,3952,662,403,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5501,3953,618,247,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5501,3954,594,607,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5501,3955,599,379,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5551,3929,562,370,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5551,3940,571,541,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5551,3945,608,330,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5551,3947,595,422,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5551,3949,505,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5551,3950,622,485,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5551,3951,770,349,66,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5551,3952,661,398,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5551,3953,620,249,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5551,3954,588,603,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5551,3955,629,376,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5601,3929,592,385,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5601,3940,588,509,57,51,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5601,3945,608,330,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5601,3947,599,420,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5601,3949,508,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5601,3950,622,485,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5601,3951,770,349,66,61,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5601,3952,661,397,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5601,3953,620,249,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5601,3954,585,598,60,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5601,3955,639,375,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5661,3929,596,390,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5661,3940,596,465,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5661,3945,616,338,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5661,3947,607,430,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5661,3949,508,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5661,3950,621,482,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5661,3951,759,353,60,85,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5661,3952,664,401,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5661,3953,620,249,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5661,3954,588,576,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5661,3955,639,372,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5711,3929,605,388,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5711,3940,590,430,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5711,3945,620,331,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5711,3947,617,433,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5711,3949,508,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5711,3950,626,482,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5711,3951,759,353,60,85,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5711,3952,666,397,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5711,3953,620,249,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5711,3954,591,542,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5711,3955,639,370,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5791,3929,605,388,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5791,3940,591,426,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5791,3945,620,331,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5791,3947,625,444,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5791,3949,509,484,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5791,3950,626,482,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5791,3951,759,353,60,85,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5791,3952,666,393,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5791,3953,642,235,71,50,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5791,3954,592,508,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5791,3955,639,366,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5851,3929,610,386,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5851,3940,591,426,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5851,3945,620,331,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5851,3947,625,444,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5851,3949,509,484,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5851,3950,624,480,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5851,3951,759,353,60,85,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5851,3952,666,391,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5851,3953,672,184,51,76,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5851,3954,611,472,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5851,3955,639,366,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5911,3929,610,386,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5911,3940,591,426,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5911,3945,625,328,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5911,3947,627,442,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5911,3949,509,484,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5911,3950,626,494,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5911,3951,723,387,60,85,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5911,3952,666,391,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5911,3953,688,124,51,76,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5911,3954,634,455,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5911,3955,639,366,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5961,3929,610,372,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5961,3940,597,423,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5961,3945,625,330,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5961,3947,629,439,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+5961,3949,509,484,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5961,3950,625,489,54,63,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5961,3951,692,416,60,85,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5961,3952,666,392,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5961,3953,690,119,51,76,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+5961,3954,655,455,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+5961,3955,672,360,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6021,3929,592,319,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6021,3940,605,407,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6021,3945,625,332,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6021,3947,630,429,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6021,3949,510,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6021,3950,611,494,58,69,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6021,3951,628,444,64,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6021,3952,669,395,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6021,3953,693,72,51,76,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6021,3954,659,453,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6021,3955,676,360,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6051,3953,684,38,51,76,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6058,3953,682,38,51,76,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6071,3929,603,269,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6071,3940,611,412,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6071,3945,616,335,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6071,3947,630,435,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6071,3949,510,485,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6071,3950,593,528,58,69,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6071,3951,580,463,64,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6071,3952,665,397,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6071,3954,657,453,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6071,3955,710,372,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6121,3929,621,232,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6121,3940,616,420,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6121,3945,614,349,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6121,3947,622,448,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6121,3949,498,505,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6121,3950,561,559,74,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6121,3951,537,506,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6121,3952,664,401,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6121,3954,650,473,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6121,3955,738,382,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6141,3929,630,224,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6141,3940,625,416,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6141,3945,610,356,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6141,3947,619,454,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6141,3949,501,509,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6141,3950,546,567,74,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6141,3951,520,528,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6141,3952,666,396,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6141,3954,647,478,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6141,3955,753,382,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6181,3929,639,209,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6181,3940,636,427,57,57,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6181,3945,601,365,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6181,3947,613,465,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6181,3949,497,518,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6181,3950,524,590,74,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6181,3951,503,577,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6181,3952,670,382,50,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6181,3954,642,491,50,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6181,3955,767,379,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6231,3929,636,212,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6231,3940,631,434,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6231,3945,594,375,66,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6231,3947,605,472,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6231,3949,483,531,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6231,3950,525,593,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6231,3951,480,609,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6231,3952,666,375,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6231,3954,628,502,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6231,3955,757,384,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6281,3929,619,214,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6281,3940,614,436,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6281,3945,582,381,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6281,3947,589,472,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6281,3949,467,541,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6281,3950,512,593,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6281,3951,461,613,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6281,3952,650,375,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6281,3954,607,504,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6281,3955,744,385,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6331,3929,592,216,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6331,3940,592,438,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6331,3945,547,390,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6331,3947,562,474,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6331,3949,452,552,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6331,3950,484,591,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6331,3951,454,601,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6331,3952,625,376,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6331,3954,585,504,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6331,3955,717,387,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6371,3929,572,218,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6371,3940,567,439,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6371,3945,514,413,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6371,3947,545,475,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6371,3949,425,553,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6371,3950,459,597,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6371,3951,444,605,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6371,3952,594,378,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6371,3954,564,508,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6371,3955,698,391,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6421,3929,561,231,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6421,3940,556,452,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6421,3945,503,426,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6421,3947,532,490,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6421,3949,422,570,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6421,3950,452,608,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6421,3951,437,617,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6421,3952,587,386,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6421,3954,554,517,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6421,3955,689,407,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6471,3929,558,253,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6471,3940,555,476,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6471,3945,484,457,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6471,3947,526,509,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6471,3949,410,592,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6471,3950,448,627,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6471,3951,432,643,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6471,3952,572,410,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6471,3954,548,536,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6471,3955,683,426,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6491,3929,558,262,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6491,3940,555,481,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6491,3945,476,474,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6491,3947,529,515,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6491,3949,410,595,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6491,3950,446,639,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6491,3951,431,648,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6491,3952,566,423,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6491,3954,548,541,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6491,3955,680,434,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6551,3929,558,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6551,3940,558,478,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6551,3945,470,484,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6551,3947,527,516,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6551,3949,410,598,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6551,3950,451,635,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6551,3951,431,648,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6551,3952,539,432,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6551,3954,547,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6551,3955,685,433,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6611,3929,558,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6611,3940,558,479,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6611,3945,472,493,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6611,3947,527,516,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6611,3949,408,598,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6611,3950,449,630,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6611,3951,431,648,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6611,3952,530,432,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6611,3954,547,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6611,3955,685,433,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6691,3929,558,257,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6691,3940,558,479,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6691,3945,472,490,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6691,3947,527,516,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6691,3949,415,587,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6691,3950,449,623,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6691,3951,432,649,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6691,3952,517,448,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6691,3954,547,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6691,3955,685,433,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6731,3929,558,257,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6731,3940,558,479,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6731,3945,473,489,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6731,3947,527,516,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6731,3949,415,590,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6731,3950,449,625,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6731,3951,430,642,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6731,3952,498,462,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6731,3954,547,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6731,3955,683,432,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6781,3929,555,258,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6781,3940,554,479,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6781,3945,452,489,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6781,3947,527,516,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6781,3949,405,592,65,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6781,3950,449,626,66,59,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6781,3951,435,645,72,77,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6781,3952,496,462,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6781,3954,544,542,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6781,3955,677,432,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6851,3929,555,258,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6851,3940,549,474,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6851,3945,440,482,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6851,3947,531,520,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6851,3949,409,592,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6851,3950,432,640,68,45,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6851,3951,434,674,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6851,3952,483,472,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6851,3954,541,544,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6851,3955,677,432,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6911,3929,555,258,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6911,3940,549,474,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6911,3945,440,482,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6911,3947,531,520,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6911,3949,411,600,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6911,3950,404,656,68,45,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6911,3951,438,674,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6911,3952,473,492,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6911,3954,541,544,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6911,3955,677,432,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6961,3929,551,262,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6961,3940,551,475,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6961,3945,439,482,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6961,3947,533,521,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+6961,3949,416,590,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6961,3950,407,662,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6961,3951,441,673,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+6961,3952,467,506,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6961,3954,543,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+6961,3955,679,433,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7011,3929,551,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7011,3940,551,474,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7011,3945,440,482,66,62,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7011,3947,536,521,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7011,3949,411,597,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7011,3950,399,665,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7011,3951,439,674,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7011,3952,464,516,56,47,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7011,3954,544,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7011,3955,678,429,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7041,3929,551,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7041,3940,549,474,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7041,3945,438,489,68,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7041,3947,542,521,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7041,3949,410,603,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7041,3950,398,669,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7041,3951,440,675,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7041,3952,458,531,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7041,3954,541,544,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7041,3955,678,429,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7091,3929,551,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7091,3940,549,474,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7091,3945,421,497,68,48,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7091,3947,545,523,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7091,3949,430,624,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7091,3950,398,669,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7091,3951,440,675,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7091,3952,441,552,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7091,3954,542,546,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7091,3955,678,429,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7131,3929,551,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7131,3940,549,474,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7131,3945,406,512,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7131,3947,545,523,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7131,3949,431,630,57,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7131,3950,399,669,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7131,3951,440,675,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7131,3952,436,567,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7131,3954,542,546,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7131,3955,678,429,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7171,3929,551,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7171,3940,549,472,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7171,3945,395,553,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7171,3947,545,523,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7171,3949,434,634,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7171,3950,399,669,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7171,3951,444,675,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7171,3952,434,570,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7171,3954,540,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7171,3955,678,429,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7221,3929,551,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7221,3940,548,475,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7221,3945,390,588,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7221,3947,547,522,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7221,3949,434,630,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7221,3950,403,664,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7221,3951,466,682,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7221,3952,438,584,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7221,3954,542,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7221,3955,678,429,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7261,3929,545,257,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7261,3940,554,470,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7261,3945,389,602,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7261,3947,545,522,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7261,3949,433,633,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7261,3950,413,664,62,81,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7261,3951,475,689,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7261,3952,436,586,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7261,3954,540,545,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7261,3955,682,425,77,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7311,3929,548,256,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7311,3940,558,466,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7311,3945,392,599,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7311,3947,554,520,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7311,3949,430,628,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7311,3950,424,673,60,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7311,3951,481,690,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7311,3952,425,587,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7311,3954,544,542,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7311,3955,695,397,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7361,3929,547,246,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7361,3940,554,458,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7361,3945,386,591,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7361,3947,548,515,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7361,3949,427,619,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7361,3950,419,669,60,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7361,3951,482,691,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7361,3952,421,579,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7361,3954,536,534,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7361,3955,689,397,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7401,3929,541,245,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7401,3940,550,446,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7401,3945,379,590,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7401,3947,547,511,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7401,3949,431,599,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7401,3950,417,665,60,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7401,3951,490,696,74,53,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7401,3952,410,580,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7401,3954,530,530,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7401,3955,685,392,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7403,3929,541,245,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7403,3940,550,446,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7403,3945,379,590,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7403,3947,547,511,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7403,3949,431,599,67,92,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7403,3950,417,665,60,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7403,3952,410,580,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7403,3954,530,530,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7403,3955,685,392,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7433,3929,536,245,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7433,3940,555,435,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7433,3945,369,589,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7433,3947,542,508,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7433,3949,419,612,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7433,3950,401,662,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7433,3952,398,590,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7433,3954,521,530,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7433,3955,679,392,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7433,3956,19,36,56,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7473,3929,519,247,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7473,3940,547,427,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7473,3945,358,588,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7473,3947,532,508,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7473,3949,413,617,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7473,3950,390,664,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7473,3952,374,615,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7473,3954,511,531,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7473,3955,671,390,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7473,3956,0,63,49,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7513,3929,503,249,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7513,3940,534,427,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7513,3945,343,586,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7513,3947,519,508,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7513,3949,393,615,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7513,3950,375,664,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7513,3952,357,634,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7513,3954,499,532,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7513,3955,658,390,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7513,3956,0,89,13,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7523,3929,496,255,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7523,3940,530,428,57,45,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7523,3945,339,589,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7523,3947,512,511,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7523,3949,387,618,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7523,3950,371,663,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7523,3952,355,639,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7523,3954,494,534,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7523,3955,655,389,51,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7523,3956,0,100,11,67,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7583,3929,465,257,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7583,3940,516,407,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7583,3945,320,587,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7583,3947,500,512,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7583,3949,374,611,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7583,3950,356,663,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7583,3952,325,655,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7583,3954,473,530,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7583,3955,634,387,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7643,3929,448,261,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7643,3940,502,406,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7643,3945,308,587,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7643,3947,494,509,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7643,3949,357,611,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7643,3950,339,658,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7643,3952,307,671,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7643,3954,465,528,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7643,3955,617,387,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7693,3929,440,252,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7693,3940,488,394,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7693,3945,303,571,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7693,3947,489,497,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7693,3949,348,603,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7693,3950,330,651,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7693,3952,296,664,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7693,3954,453,500,60,43,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7693,3955,608,376,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7733,3929,437,226,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7733,3940,485,369,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7733,3945,296,547,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7733,3947,483,469,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7733,3949,345,581,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7733,3950,326,622,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7733,3952,289,639,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7733,3954,461,460,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7733,3955,600,351,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7783,3929,441,187,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7783,3940,485,332,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7783,3945,297,510,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7783,3947,481,434,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7783,3949,343,537,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7783,3950,324,583,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7783,3952,290,599,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7783,3954,459,407,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7783,3955,597,308,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7823,3929,439,154,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7823,3940,483,292,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7823,3945,297,474,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7823,3947,475,398,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7823,3949,337,504,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7823,3950,322,550,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7823,3952,292,566,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7823,3954,461,362,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7823,3955,595,272,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7863,3929,449,100,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7863,3940,485,248,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7863,3945,294,432,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7863,3947,476,349,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7863,3949,335,463,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7863,3950,324,505,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7863,3952,305,525,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7863,3954,467,316,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7863,3955,601,208,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7886,3929,444,66,48,49,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7886,3940,480,220,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7886,3945,295,405,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7886,3947,471,323,53,40,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7886,3949,336,436,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7886,3950,320,480,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7886,3952,301,497,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7886,3954,461,290,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7886,3955,596,180,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7926,3940,468,178,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7926,3945,283,363,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7926,3947,453,287,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7926,3949,324,394,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7926,3950,308,438,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7926,3952,289,453,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7926,3954,452,241,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7926,3955,584,138,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7956,3940,447,149,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7956,3945,267,334,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7956,3947,445,256,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7956,3949,316,363,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7956,3950,299,407,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7956,3952,276,420,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7956,3954,443,216,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7956,3955,576,110,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7964,3940,445,146,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7964,3945,265,331,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7964,3947,443,253,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7964,3949,314,360,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7964,3950,297,404,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7964,3952,274,417,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7964,3954,441,213,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7964,3955,574,107,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7965,3940,419,121,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7965,3945,252,307,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7965,3947,430,229,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+7965,3949,301,336,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7965,3950,284,380,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+7965,3952,261,393,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7965,3954,430,182,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+7965,3955,561,76,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8001,3940,390,84,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8001,3945,240,272,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8001,3947,413,196,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8001,3949,282,298,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8001,3950,269,343,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8001,3952,249,363,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8001,3954,416,143,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8001,3955,545,35,55,83,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8036,3940,350,57,59,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8036,3945,218,239,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8036,3947,393,169,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8036,3949,265,269,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8036,3950,249,315,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8036,3952,231,330,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8036,3954,394,107,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8066,3945,198,213,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8066,3947,367,140,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8066,3949,243,241,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8066,3950,227,284,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8066,3952,201,300,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8066,3954,370,74,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8088,3945,177,191,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8088,3947,349,119,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8088,3949,226,212,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8088,3950,202,262,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8088,3952,183,279,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8088,3954,352,53,48,59,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8138,3945,95,166,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8138,3947,269,97,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8138,3949,156,185,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8138,3950,118,237,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8138,3952,103,256,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8178,3945,31,144,62,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8178,3947,200,82,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8178,3949,92,163,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8178,3950,50,213,74,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8178,3952,36,234,56,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8218,3945,0,126,34,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8218,3947,143,68,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8218,3949,35,145,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8218,3950,0,193,70,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8218,3952,0,216,35,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8232,3945,0,121,16,66,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8232,3947,125,63,53,44,1.00,61,1.00,Sus scrofa (Wild boar),0,1,0
+8232,3949,17,140,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8232,3950,0,188,52,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8232,3952,0,211,17,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8242,3949,11,140,67,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8242,3950,0,188,46,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8242,3952,0,211,11,55,1.00,72,1.00,Sus scrofa x Sus domesticus (Hybrid Pig),0,2,0
+8271,3949,0,124,53,74,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0
+8271,3950,0,167,19,51,1.00,63,1.00,Sus scrofa (Wild boar),0,2,0

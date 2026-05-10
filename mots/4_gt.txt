@@ -1,0 +1,357 @@
+5168,88,969,321,29,34,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+5168,89,878,300,35,34,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+5168,90,773,255,21,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5168,91,740,262,25,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5168,92,691,209,45,26,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+5168,93,664,325,30,29,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+5188,89,945,298,35,34,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+5188,90,839,253,21,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5188,91,807,260,25,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5188,92,751,209,45,26,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+5188,93,720,325,30,29,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+5208,89,1010,296,14,34,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+5208,90,904,251,21,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5208,91,872,258,25,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5208,92,816,207,45,26,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+5208,93,783,323,30,29,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+5248,91,998,254,25,21,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+5248,92,942,203,45,26,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+5248,93,907,322,30,29,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+5258,92,977,205,45,26,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+5258,93,942,324,30,29,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+5278,92,1022,200,2,26,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+5278,93,987,319,30,29,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6053,99,479,766,29,31,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6059,94,479,664,51,33,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+6059,95,536,721,23,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6059,96,563,711,27,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6059,97,650,785,43,33,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+6059,98,723,846,49,32,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6079,94,420,659,51,33,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+6079,95,476,715,23,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6079,96,506,711,27,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6079,97,590,780,43,33,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+6079,98,657,841,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6083,99,397,758,29,31,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6093,94,381,660,51,33,1.00,13,1.00,Capra ibex (Alpine ibex),2,2,0
+6094,100,852,769,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6099,94,364,661,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6099,95,417,716,23,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6099,96,444,706,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6099,97,525,777,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6099,98,582,835,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6103,94,352,661,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6103,95,405,712,23,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6103,96,428,701,27,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6103,97,507,777,43,33,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+6103,98,562,828,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6103,99,340,760,29,31,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6104,95,407,712,23,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6104,96,436,698,27,23,1.00,9,1.00,Capra ibex (Alpine ibex),0,1,0
+6104,97,511,777,43,33,1.00,11,1.00,Capra ibex (Alpine ibex),0,2,0
+6104,98,566,828,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6108,98,556,834,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6108,100,765,765,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6109,94,335,661,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6109,95,388,716,23,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6109,96,415,706,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6109,97,496,777,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6109,98,553,835,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6123,99,287,752,29,31,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6124,100,665,760,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6129,94,287,657,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6129,95,334,712,23,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6129,96,364,699,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6129,97,448,773,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6129,98,502,831,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6139,97,399,766,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6139,98,456,824,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6149,94,228,650,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6149,95,275,705,23,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6149,96,305,692,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6149,97,378,766,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6149,98,431,825,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6153,99,209,747,29,31,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6154,100,494,748,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6166,98,368,821,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6167,98,355,823,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6168,98,358,818,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6169,94,178,654,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6169,95,227,710,23,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6169,96,249,697,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6169,97,319,767,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6169,98,352,819,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6170,98,354,821,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6172,98,346,821,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6172,99,156,750,29,31,1.00,7,1.00,Capra ibex (Alpine ibex),0,0,0
+6173,98,342,821,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6173,99,153,750,29,31,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6173,100,390,741,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6174,100,385,741,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6180,94,134,646,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6180,100,354,739,33,34,1.00,15,0.50,Aves (Bird),0,0,0
+6181,94,130,645,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6189,94,98,639,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6189,95,147,695,23,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6189,96,169,680,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6189,97,255,760,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6189,98,303,815,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6193,98,273,813,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6194,100,280,735,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6195,98,262,813,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6196,94,79,637,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6196,98,266,816,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6197,98,275,810,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6198,98,268,812,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6199,94,71,636,51,33,1.00,14,0.50,Capra ibex (Alpine ibex),2,2,0
+6199,96,120,680,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6199,97,228,757,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6199,98,262,811,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6200,98,262,811,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6202,98,256,809,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6208,96,67,676,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6209,96,61,675,27,23,1.00,10,0.50,Capra ibex (Alpine ibex),0,1,0
+6209,97,195,762,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6209,98,226,806,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6214,100,170,729,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6239,98,155,804,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6244,100,32,722,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6249,97,93,759,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6254,100,11,718,34,34,1.00,15,0.50,Aves (Bird),0,0,0
+6264,97,56,755,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6269,97,44,754,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6269,98,58,797,49,32,1.00,8,0.50,Capra ibex (Alpine ibex),0,0,0
+6274,97,20,748,43,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6285,97,0,748,35,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+6286,97,0,748,32,33,1.00,12,0.50,Capra ibex (Alpine ibex),0,2,0
+13131,87,24,708,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13132,87,26,708,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13133,87,28,709,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13134,87,31,709,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13135,87,33,709,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13136,87,35,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13137,87,37,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13138,87,39,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13139,87,42,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13140,87,44,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13141,87,46,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13142,87,48,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13143,87,51,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13144,87,53,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13145,87,56,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13146,87,58,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13147,87,60,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13148,87,63,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13149,87,65,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13150,87,68,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13151,87,70,710,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13152,87,73,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13153,87,76,711,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13154,87,78,712,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13155,87,81,712,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13156,87,84,713,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13157,87,87,713,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13158,87,90,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13159,87,92,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13160,87,95,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13161,87,98,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13162,87,100,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13163,87,102,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13164,87,105,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13165,87,107,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13166,87,109,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13167,87,111,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13168,87,113,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13169,87,116,713,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13170,87,118,713,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13171,87,120,713,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13172,87,123,713,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13173,87,126,714,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13174,87,128,714,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13175,87,131,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13176,87,134,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13177,87,137,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13178,87,140,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13179,87,142,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13180,87,145,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13181,87,148,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13182,87,151,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13183,87,154,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13184,87,156,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13185,87,159,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13186,87,162,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13187,87,165,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13188,87,168,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13189,87,170,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13190,87,173,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13191,87,176,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13192,87,179,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13193,87,181,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13194,87,184,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13195,87,186,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13196,87,189,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13197,87,191,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13198,87,194,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13199,87,196,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13200,87,199,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13201,87,201,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13202,87,203,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13203,87,206,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13204,87,208,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13205,87,211,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13206,87,213,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13207,87,215,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13208,87,218,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13209,87,220,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13210,87,223,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13211,87,225,715,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13212,87,228,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13213,87,230,716,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13214,87,233,717,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13215,87,236,718,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13216,87,239,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13217,87,241,719,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13218,87,244,720,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13219,87,247,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13220,87,249,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13221,87,252,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13222,87,255,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13223,87,258,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13224,87,261,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13225,87,264,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13226,87,267,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13227,87,270,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13228,87,273,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13229,87,276,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13230,87,279,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13231,87,282,721,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13232,87,284,722,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13233,87,286,723,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13234,87,288,724,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13235,87,290,725,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13236,87,293,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13237,87,295,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13238,87,297,727,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13239,87,299,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13240,87,301,729,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13241,87,303,730,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13242,87,306,729,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13243,87,310,729,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13244,87,313,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13245,87,316,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13246,87,320,727,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13247,87,323,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13248,87,326,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13249,87,329,725,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13250,87,333,725,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13251,87,336,724,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13252,87,339,724,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13253,87,341,725,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13254,87,344,725,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13255,87,346,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13256,87,349,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13257,87,351,726,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13258,87,354,727,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13259,87,356,727,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13260,87,359,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13261,87,361,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13262,87,364,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13263,87,367,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13264,87,370,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13265,87,373,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13266,87,377,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13267,87,380,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13268,87,383,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13269,87,386,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13270,87,389,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13271,87,392,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13272,87,394,728,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13273,87,397,729,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13274,87,399,729,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13275,87,401,729,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13276,87,404,730,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13277,87,406,730,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13278,87,408,730,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13279,87,410,730,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13280,87,413,731,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13281,87,415,731,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13282,87,418,731,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13283,87,421,732,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13284,87,424,732,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13285,87,427,732,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13286,87,431,733,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13287,87,434,733,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13288,87,437,733,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13289,87,440,733,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13290,87,443,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13291,87,446,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13292,87,449,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13293,87,451,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13294,87,454,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13295,87,457,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13296,87,460,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13297,87,462,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13298,87,465,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13299,87,468,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13300,87,470,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13301,87,473,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13302,87,476,734,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13303,87,480,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13304,87,483,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13305,87,486,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13306,87,490,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13307,87,493,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13308,87,496,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13309,87,499,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13310,87,503,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13311,87,506,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13312,87,509,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13313,87,512,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13314,87,515,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13315,87,518,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13316,87,521,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13317,87,523,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13318,87,526,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13319,87,529,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13320,87,532,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13321,87,535,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13322,87,538,735,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13323,87,540,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13324,87,543,736,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13325,87,545,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13326,87,548,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13327,87,550,737,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13328,87,553,738,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13329,87,555,738,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13330,87,558,739,32,37,1.00,5,1.00,Rupicapra rupicapra (Chamois),0,0,0
+13331,87,560,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13332,87,563,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13333,87,566,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13334,87,569,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13335,87,572,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13336,87,575,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13337,87,578,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13338,87,581,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13339,87,584,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13340,87,587,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13341,87,590,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13342,87,594,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13343,87,597,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13344,87,601,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13345,87,604,739,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13346,87,608,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13347,87,612,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13348,87,615,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13349,87,619,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13350,87,622,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13351,87,626,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13352,87,629,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13353,87,632,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13354,87,636,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13355,87,639,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13356,87,642,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13357,87,645,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13358,87,648,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13359,87,652,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13360,87,655,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0
+13361,87,658,740,32,37,1.00,6,0.50,Rupicapra rupicapra (Chamois),0,0,0

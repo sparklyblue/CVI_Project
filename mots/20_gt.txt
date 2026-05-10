@@ -1,0 +1,203 @@
+43,740,288,518,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+63,740,287,535,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+73,740,286,550,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+83,740,284,578,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+93,740,280,608,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+103,740,276,643,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+113,740,269,688,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+123,740,263,724,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+133,740,253,764,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+143,740,244,800,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+153,740,234,834,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+163,740,221,860,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+173,740,211,897,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+176,740,209,905,38,39,1.00,17,1.00,Homo sapiens (Human),0,0,0
+218,741,198,216,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+228,741,177,248,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+238,741,159,268,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+248,741,137,285,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+258,741,121,296,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+268,741,102,307,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+278,741,83,318,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+288,741,52,325,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+298,741,35,327,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+308,741,16,324,26,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+318,741,0,322,23,23,1.00,36,1.00,Canis lupus familiaris (Dog),0,0,0
+1847,742,104,897,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1857,742,108,874,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1867,742,111,861,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1877,742,111,855,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1887,742,116,850,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1907,742,122,836,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1927,742,118,819,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1937,742,104,804,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1947,742,78,788,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1957,742,53,773,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1967,742,14,751,39,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+1977,742,0,735,21,43,1.00,18,1.00,Homo sapiens (Human),0,2,0
+4005,743,885,902,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4021,743,887,840,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4021,744,771,888,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4031,743,888,799,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4031,744,770,843,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4031,745,718,895,41,39,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4041,743,889,761,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4041,744,771,805,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4041,745,714,844,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4051,743,892,727,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4051,744,775,764,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4051,745,714,802,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4061,743,893,691,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4061,744,780,735,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4061,745,719,773,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4069,746,832,703,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4071,743,890,648,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4071,744,782,690,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4071,745,722,730,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4079,746,834,655,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4081,743,888,602,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4081,744,773,645,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4081,745,713,685,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4091,743,893,564,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4091,744,778,608,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4091,745,718,648,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4101,743,894,522,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4101,744,779,566,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4101,745,719,606,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4109,746,835,527,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4111,743,895,485,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4111,744,780,529,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4111,745,720,569,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4119,746,839,483,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4121,743,905,446,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4121,744,790,490,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4121,745,730,530,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4131,743,894,403,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4131,744,779,447,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4131,745,719,487,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4139,746,837,400,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4141,743,900,359,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4141,744,779,407,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4141,745,719,447,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4151,743,899,322,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4151,744,778,370,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4151,745,718,410,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4159,746,835,321,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4161,743,902,291,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4161,744,782,333,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4161,745,722,373,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4171,743,906,247,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4171,744,786,289,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4171,745,726,329,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4179,746,843,246,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4191,743,908,166,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4191,744,788,208,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4191,745,728,248,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4199,746,836,162,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4211,743,908,87,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4211,744,788,129,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4211,745,728,169,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4219,746,841,84,41,48,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4221,743,908,52,42,44,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4221,744,788,94,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4221,745,728,134,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4225,744,788,75,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4225,745,728,115,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4231,744,789,46,43,41,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4231,745,729,86,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+4235,745,733,69,43,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5573,747,423,82,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5573,748,288,156,33,42,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5583,747,426,130,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5583,748,283,197,33,42,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5603,747,426,209,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5603,748,283,276,33,42,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5618,747,423,268,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5623,747,422,287,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5623,748,279,354,33,42,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5632,747,425,323,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5633,750,365,348,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5634,747,426,331,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5643,747,428,366,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5643,748,283,429,33,42,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5643,750,367,387,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5646,747,428,377,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5663,747,428,442,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5663,748,283,505,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5663,749,608,83,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5673,747,427,480,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5673,748,282,543,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5673,749,606,131,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5673,750,372,502,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5683,747,423,522,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5683,748,278,585,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5683,749,603,168,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5683,750,368,540,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5703,747,427,598,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5703,748,274,664,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5703,749,603,247,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5703,750,364,619,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5710,747,427,624,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5710,749,603,273,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5713,747,427,635,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5713,748,274,701,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5713,749,603,284,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5713,750,364,656,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5723,747,423,670,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5723,748,275,733,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5723,749,606,323,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5723,750,362,701,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5733,747,422,714,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5733,748,274,777,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5733,749,604,362,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5733,750,364,732,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5743,747,423,748,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5743,748,276,808,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5743,749,604,400,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5743,750,363,767,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5763,747,425,827,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5763,748,278,887,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5763,749,604,476,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5763,750,363,854,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5767,747,425,843,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5767,748,278,903,33,42,1.00,1,1.00,Cervus elaphus (Red deer),0,0,0
+5767,749,604,492,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5767,750,363,870,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5770,749,603,500,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5777,747,419,888,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5777,749,599,530,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5777,750,358,908,38,53,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+5780,747,421,898,39,49,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5780,749,601,540,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5788,749,601,570,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5800,749,601,615,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5810,749,600,657,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5813,749,600,665,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5820,749,601,692,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5823,749,599,706,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5824,749,597,706,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5829,749,600,727,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5840,749,597,769,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5860,749,598,840,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5863,749,596,854,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5865,749,596,864,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+5875,749,598,897,52,38,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7379,751,155,891,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7389,751,152,858,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7409,751,150,781,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7429,751,150,707,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7449,751,146,628,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7465,751,148,565,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7475,751,146,523,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7492,751,143,459,38,56,1.00,6,0.50,Cervus elaphus (Red deer),0,2,0
+7526,752,0,636,25,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7527,752,0,631,26,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7531,752,0,611,32,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7538,752,0,575,21,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7558,752,0,502,25,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7578,752,0,422,27,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7597,752,0,355,27,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7598,752,0,351,27,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7628,752,0,231,25,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7648,752,0,154,22,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0
+7668,752,0,68,19,43,1.00,2,0.50,Cervus elaphus (Red deer),0,0,0

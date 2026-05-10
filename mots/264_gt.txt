@@ -1,0 +1,77 @@
+7993,4274,630,489,32,27,1.00,22,0.50,Capreolus capreolus (Roe deer),0,2,0
+8023,4274,688,489,32,27,1.00,22,0.50,Capreolus capreolus (Roe deer),0,2,0
+8038,4274,717,490,32,27,1.00,22,0.50,Capreolus capreolus (Roe deer),0,2,0
+10957,4275,39,154,33,30,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+10987,4275,35,197,33,30,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+11007,4275,30,224,33,30,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+11014,4275,29,233,33,30,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+11141,4275,15,401,33,30,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+15646,4276,800,284,30,28,1.00,49,1.00,Unknown,0,0,0
+15753,4276,557,270,30,28,1.00,49,1.00,Unknown,0,0,0
+15926,4276,204,247,30,28,1.00,49,1.00,Unknown,0,0,0
+15943,4276,136,243,30,28,1.00,49,1.00,Unknown,0,0,0
+15976,4276,77,241,30,28,1.00,49,1.00,Unknown,0,0,0
+15996,4276,43,239,30,28,1.00,49,1.00,Unknown,0,0,0
+16027,4276,0,234,17,28,1.00,49,1.00,Unknown,0,0,0
+16279,4277,724,601,34,37,1.00,50,0.50,Unknown,0,0,0
+16299,4277,688,597,34,37,1.00,50,0.50,Unknown,0,0,0
+16333,4277,630,592,34,37,1.00,50,0.50,Unknown,0,0,0
+16339,4277,620,591,34,37,1.00,50,0.50,Unknown,0,0,0
+16342,4277,615,591,34,37,1.00,50,0.50,Unknown,0,0,0
+19860,4278,1011,495,13,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+19910,4278,998,588,26,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20000,4278,981,727,30,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20010,4278,979,745,30,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20010,4279,727,81,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20020,4278,977,762,30,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20020,4279,725,98,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20020,4280,733,84,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20060,4278,965,827,30,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20060,4279,717,158,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20060,4280,723,150,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20110,4278,955,902,30,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20110,4279,710,228,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20110,4280,716,222,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20119,4278,951,919,30,32,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20119,4279,705,241,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20119,4280,712,234,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20189,4279,694,342,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20189,4280,701,335,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20289,4279,672,487,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20289,4280,679,480,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20419,4279,649,680,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20419,4280,656,673,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20489,4279,637,785,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20489,4280,644,778,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20498,4279,632,799,38,29,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+20498,4280,639,792,30,26,1.00,21,1.00,Capreolus capreolus (Roe deer),0,2,0
+26016,4281,545,393,33,29,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+26025,4281,539,429,33,29,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+26026,4281,541,412,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26029,4281,538,436,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26033,4281,535,444,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26036,4281,533,450,33,29,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+26061,4281,530,491,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26141,4281,499,642,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26163,4281,493,680,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26175,4281,487,708,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26177,4281,486,713,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+26186,4281,479,738,33,29,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+27951,4282,389,89,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28021,4282,362,206,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28071,4282,347,284,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28171,4282,314,445,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28195,4282,306,483,29,31,1.00,18,0.50,Capreolus capreolus (Roe deer),0,0,0
+28261,4282,284,587,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28351,4282,253,741,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28431,4282,217,876,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+28451,4282,211,913,29,31,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29259,4283,919,910,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29319,4283,898,810,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29419,4283,864,649,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29529,4283,830,475,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29649,4283,790,289,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29719,4283,772,199,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29722,4283,772,199,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29723,4283,768,158,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
+29773,4283,749,85,44,37,1.00,17,1.00,Capreolus capreolus (Roe deer),0,0,0
