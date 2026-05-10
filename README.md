@@ -2,12 +2,15 @@
 
 *Note: add any important stuff that you might forget here.*
 
+> **Please download and unzip the `images_thermal` folder from https://zenodo.org/records/19034999 — it's way too large to upload on GitHub. Everything else should be available in the GitHub download.**
+
+> **The code to combine `images_thermal`, the labels and the mots was generated with Claude, mostly because the other stuff wasn't working because it was incredibly tough to understand wth was going on with the labels and mots :), if there is anything I can do, tell me — Lea**
+
 ---
 
 This document explains the dataset structure, what the label files mean, and how everything connects together for CNN training.
 
 ---
-Please download and unzip the images_thermal folder from https://zenodo.org/records/19034999 - bc it's way too large to upload on github. Everything else should be available in the github download
 
 ## Folder Structure
 
@@ -102,6 +105,8 @@ Both are Red deer (class 1), one static, one moving.
 | 10 | Unknown |
 | 11 | No-animal |
 
+> Note: Alpine ibex (4) and Chamois (5) have no images in this subset — they exist in the raw BAMBI data but were not included in the train/val/test split.
+
 ### Motion
 
 | ID | Meaning |
@@ -116,45 +121,57 @@ Both are Red deer (class 1), one static, one moving.
 
 | Split | Images | Boxes |
 |-------|--------|-------|
-| Train | 4 518  | ~10 000 |
-| Val   | 55     | ~120 |
-| Test  | 732    | ~1 700 |
+| Train | 19 173 | ~59 000 |
+| Val   | 2 492  | ~8 000 |
+| Test  | 2 490  | ~5 500 |
+| **Total** | **24 155** | **72 547** |
 
 Species distribution across all splits:
 
 | Species | Boxes |
 |---------|-------|
-| Red deer | 6 527 |
-| Wild boar | 3 351 |
-| Unknown | 1 566 |
-| Hybrid Pig | 988 |
-| Roe deer | 620 |
-| Fallow Deer | 5 |
+| Red deer | 22 375 |
+| Fallow Deer | 18 967 |
+| Wild boar | 18 237 |
+| Roe deer | 5 670 |
+| Unknown | 3 837 |
+| Hybrid Pig | 1 089 |
+| Human | 1 040 |
+| Bird | 853 |
+| No-animal | 385 |
+| Dog | 94 |
 
 Motion distribution:
 
 | Motion | Boxes |
 |--------|-------|
-| Static | 6 392 |
-| Moving | 4 262 |
-| Ambiguous | 2 403 |
-
-> Note: several species from the raw BAMBI dataset (Alpine ibex, Chamois, Human, Bird, Dog, No-animal) have no images in this subset — they exist in the source data but were not included in the train/val/test split.
+| Static | 43 806 |
+| Moving | 23 579 |
+| Ambiguous | 5 162 |
 
 ---
 
 ## How the Labels Were Generated
 
-The original `labels_matched_thermal/` files had every animal as class `0` with no species information. The real labels live in the `mots/` files, which are per-flight tracking files from the BAMBI dataset.
+The original `labels_matched_thermal/` files had every animal as class `0` with no species information. The real labels — including species name and motion state — live in the `mots/` files, which are per-flight tracking files from the BAMBI dataset.
 
-`build_labels.py` joins them together:
+`build_labels.py` joins them together by looping over every image in the dataset and taking one of two paths:
 
-1. For each image `{flight}_{frame}.jpg`, it opens `mots/{flight}_gt.txt`
-2. It finds all detections for that frame number
-3. It matches each YOLO bounding box to a mots detection using IoU (bounding box overlap)
-4. It writes the matched species ID and motion ID into `labels_final/`
+**Path A — label file exists in `labels_matched_thermal/`:**
+1. Reads the existing YOLO bounding boxes
+2. Finds all mots detections for that flight + frame
+3. Matches each YOLO box to a mots detection using bounding box IoU
+4. Writes the matched species ID and motion ID into `labels_final/`
 
-All 13 057 boxes were matched (0 unmatched), so every label has a real species and motion assignment.
+**Path B — no label file exists (most val and many train/test images):**
+1. Goes directly to the mots file for that flight + frame
+2. Converts the pixel-coord bounding boxes to normalised YOLO format using image dimensions
+3. Writes species ID and motion ID into `labels_final/`
+
+**Path C — no label file and no mots entry:**
+Writes an empty `.txt` file (valid background frame for training).
+
+All 72 547 boxes were matched with 0 unmatched, meaning every label has a confirmed species and motion assignment.
 
 ---
 
@@ -177,6 +194,8 @@ def load_sample(stem, split="train"):
     with open(label_path) as f:
         for line in f:
             parts = line.strip().split()
+            if len(parts) < 6:
+                continue
             species_id = int(parts[0])
             cx, cy, w, h = float(parts[1]), float(parts[2]), float(parts[3]), float(parts[4])
             motion_id  = int(parts[5])
@@ -188,10 +207,10 @@ def load_sample(stem, split="train"):
             y2 = int((cy + h / 2) * ih)
 
             boxes.append({
-                "species":  species_id,
-                "motion":   motion_id,
-                "bbox_norm": (cx, cy, w, h),       # normalised
-                "bbox_px":   (x1, y1, x2, y2),     # pixel coords
+                "species":   species_id,
+                "motion":    motion_id,
+                "bbox_norm": (cx, cy, w, h),    # normalised
+                "bbox_px":   (x1, y1, x2, y2),  # pixel coords
             })
 
     return image, boxes
@@ -213,8 +232,7 @@ model.train(data="data.yaml", epochs=50, imgsz=640)
 ### Stripping motion column (species-only training)
 
 ```python
-# Quick one-liner to produce standard 5-column YOLO labels
-import os
+# Produces standard 5-column YOLO labels without the motion field
 from pathlib import Path
 
 for split in ["train", "val", "test"]:
@@ -235,26 +253,33 @@ To visually check that labels are correct:
 
 ```bash
 source venv/Scripts/activate   # Windows
+# source venv/bin/activate     # Mac/Linux
 python check_labels.py
 # open http://localhost:5001
 ```
 
-The checker lets you filter by species and motion state and shows images with bounding boxes and labels drawn on top.
+The checker lets you filter by species, motion state, and split, and shows images with bounding boxes and labels drawn on top. Click any image to zoom in.
 
 ---
 
-## Reproducing the Labels
-
-If you need to regenerate `labels_final/` from scratch:
+## Setup & Reproducing the Labels
 
 ```bash
-source venv/Scripts/activate
+# 1. Create and activate virtual environment
+python -m venv venv
+source venv/Scripts/activate   # Windows
+# source venv/bin/activate     # Mac/Linux
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Regenerate labels_final/ from scratch
 python build_labels.py
 ```
 
 This reads `mots/` and `labels_matched_thermal/` and rewrites `labels_final/`, `data.yaml`, and `label_summary.csv`.
 
-
+---
 
 ## Source Dataset
 

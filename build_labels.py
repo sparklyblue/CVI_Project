@@ -238,7 +238,6 @@ def main():
         "total_images": 0,
         "total_boxes": 0,
         "matched": 0,
-        "unmatched": 0,
         "species_counts": defaultdict(int),
         "motion_counts": defaultdict(int),
         "no_mots_file": 0,
@@ -246,52 +245,39 @@ def main():
     }
 
     for split in SPLITS:
+        img_dir   = IMAGES_DIR / split
         label_dir = YOLO_LABELS_DIR / split
         out_dir   = OUTPUT_LABELS_DIR / split
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        label_files = sorted(label_dir.glob("*.txt"))
-        print(f"\n{split}: {len(label_files)} label files")
+        # Drive from images — every image gets a label file
+        image_files = sorted(
+            f for f in img_dir.glob("*")
+            if f.suffix.lower() in {".jpg", ".jpeg", ".png"}
+        )
+        print(f"\n{split}: {len(image_files)} images")
 
-        for lf in label_files:
-            stem = lf.stem  # e.g. "159_2187"
+        from_yolo = 0
+        from_mots = 0
+        skipped   = 0
+
+        for img_path in image_files:
+            stem  = img_path.stem   # e.g. "159_2187"
             parts = stem.split("_", 1)
             if len(parts) != 2:
-                print(f"  Skipping unexpected filename: {lf.name}")
+                skipped += 1
                 continue
 
             flight_id, frame_id_str = parts[0], parts[1]
             try:
                 frame_id = int(frame_id_str)
             except ValueError:
-                print(f"  Skipping non-integer frame: {lf.name}")
+                skipped += 1
                 continue
 
-            # Find matching image (try jpg and png)
-            img_path = None
-            for ext in [".jpg", ".jpeg", ".png"]:
-                p = IMAGES_DIR / split / (stem + ext)
-                if p.exists():
-                    img_path = p
-                    break
+            img_w, img_h = get_image_size(img_path)
 
-            img_w, img_h = get_image_size(img_path) if img_path else (None, None)
-
-            # Read YOLO boxes
-            yolo_boxes = []
-            with open(lf, encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    vals = line.split()
-                    if len(vals) < 5:
-                        continue
-                    # original class ignored (all 0), keep bbox
-                    cx, cy, w, h = float(vals[1]), float(vals[2]), float(vals[3]), float(vals[4])
-                    yolo_boxes.append((cx, cy, w, h))
-
-            # Get mots detections for this frame
+            # Get mots detections for this frame (needed in both paths)
             mots_dets = []
             if flight_id not in mots:
                 stats["no_mots_file"] += 1
@@ -300,39 +286,89 @@ def main():
             else:
                 mots_dets = mots[flight_id][frame_id]
 
-            # Match boxes
-            if mots_dets and yolo_boxes:
-                matches = match_boxes(yolo_boxes, mots_dets, img_w, img_h)
-            else:
-                matches = [(10, 2)] * len(yolo_boxes)  # Unknown / ambiguous
+            out_path = out_dir / (stem + ".txt")
 
-            # Write output label file
-            out_path = out_dir / lf.name
-            with open(out_path, "w", encoding="utf-8") as out:
-                for (cx, cy, w, h), (sp_id, mo_id) in zip(yolo_boxes, matches):
-                    out.write(f"{sp_id} {cx:.6f} {cy:.6f} {w:.6f} {h:.6f} {mo_id}\n")
-                    stats["total_boxes"] += 1
-                    stats["species_counts"][sp_id] += 1
-                    stats["motion_counts"][mo_id] += 1
-                    if mots_dets:
+            # ── PATH A: label file exists → IoU-match to get species/motion ──
+            yolo_label = label_dir / (stem + ".txt")
+            if yolo_label.exists():
+                yolo_boxes = []
+                with open(yolo_label, encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        vals = line.split()
+                        if len(vals) < 5:
+                            continue
+                        cx, cy, w, h = float(vals[1]), float(vals[2]), float(vals[3]), float(vals[4])
+                        yolo_boxes.append((cx, cy, w, h))
+
+                if mots_dets and yolo_boxes:
+                    matches = match_boxes(yolo_boxes, mots_dets, img_w, img_h)
+                else:
+                    matches = [(10, 2)] * len(yolo_boxes)
+
+                with open(out_path, "w", encoding="utf-8") as out:
+                    for (cx, cy, w, h), (sp_id, mo_id) in zip(yolo_boxes, matches):
+                        out.write(f"{sp_id} {cx:.6f} {cy:.6f} {w:.6f} {h:.6f} {mo_id}\n")
+                        stats["total_boxes"] += 1
+                        stats["species_counts"][sp_id] += 1
+                        stats["motion_counts"][mo_id] += 1
                         stats["matched"] += 1
-                    else:
-                        stats["unmatched"] += 1
+
+                from_yolo += 1
+                box_count = len(yolo_boxes)
+
+            # ── PATH B: no label file → generate directly from mots ──────────
+            else:
+                if not mots_dets:
+                    # No label file and no mots entry → empty label (background frame)
+                    out_path.write_text("")
+                    stats["total_images"] += 1
+                    summary_rows.append({
+                        "split": split, "image": stem, "flight": flight_id,
+                        "frame": frame_id, "boxes": 0, "source": "empty",
+                    })
+                    continue
+
+                if img_w is None or img_h is None:
+                    skipped += 1
+                    continue
+
+                with open(out_path, "w", encoding="utf-8") as out:
+                    for det in mots_dets:
+                        cx = (det["x"] + det["w"] / 2) / img_w
+                        cy = (det["y"] + det["h"] / 2) / img_h
+                        nw = det["w"] / img_w
+                        nh = det["h"] / img_h
+                        sp_id = det["species_id"]
+                        mo_id = det["motion_id"]
+                        out.write(f"{sp_id} {cx:.6f} {cy:.6f} {nw:.6f} {nh:.6f} {mo_id}\n")
+                        stats["total_boxes"] += 1
+                        stats["species_counts"][sp_id] += 1
+                        stats["motion_counts"][mo_id] += 1
+                        stats["matched"] += 1
+
+                from_mots += 1
+                box_count = len(mots_dets)
 
             stats["total_images"] += 1
-
             summary_rows.append({
-                "split":      split,
-                "image":      stem,
-                "flight":     flight_id,
-                "frame":      frame_id,
-                "boxes":      len(yolo_boxes),
-                "matched":    len(mots_dets) > 0,
+                "split":   split,
+                "image":   stem,
+                "flight":  flight_id,
+                "frame":   frame_id,
+                "boxes":   box_count,
+                "source":  "yolo+mots" if yolo_label.exists() else "mots_only",
             })
+
+        print(f"  from yolo+mots : {from_yolo}")
+        print(f"  from mots only : {from_mots}")
+        print(f"  skipped        : {skipped}")
 
     # ── Write summary CSV ──────────────────────────────────────────────────
     with open(SUMMARY_CSV, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["split","image","flight","frame","boxes","matched"])
+        writer = csv.DictWriter(f, fieldnames=["split","image","flight","frame","boxes","source"])
         writer.writeheader()
         writer.writerows(summary_rows)
     print(f"\nSummary CSV written to {SUMMARY_CSV}")
@@ -370,7 +406,6 @@ def main():
     print(f"  Images processed : {stats['total_images']}")
     print(f"  Boxes total      : {stats['total_boxes']}")
     print(f"  Matched to mots  : {stats['matched']}")
-    print(f"  Unmatched        : {stats['unmatched']}")
     print(f"  No mots file     : {stats['no_mots_file']}")
     print(f"  No mots frame    : {stats['no_mots_frame']}")
     print("\nSpecies distribution:")
