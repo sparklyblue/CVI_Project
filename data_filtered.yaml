@@ -1,0 +1,20 @@
+path: .
+train: labels_final/train
+val:   labels_final/val
+test:  labels_final/test
+
+# Label format per box: species_id cx cy w h motion_id
+# motion: 0=static  1=moving
+
+nc: 5
+names:
+  - Roe deer
+  - Red deer
+  - Fallow Deer
+  - Wild boar
+  - Hybrid Pig
+
+motion_nc: 2
+motion_names:
+  - static
+  - moving

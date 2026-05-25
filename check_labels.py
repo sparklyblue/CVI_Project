@@ -1,5 +1,5 @@
 """
-BAMBI Label Spot-Checker
+BAMBI Label Spot-Checker - Claude generated just for looking
 =========================
 A local web app to visually verify that species + motion labels
 are correctly assigned to image crops.
@@ -30,7 +30,7 @@ except ImportError:
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 
 IMAGES_DIR      = Path("images_thermal/images")
-LABELS_DIR      = Path("labels_final")
+LABELS_DIR      = Path("labels_filtered")
 SPLITS          = ["train", "val", "test"]
 
 SPECIES_NAMES = {

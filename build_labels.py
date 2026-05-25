@@ -27,9 +27,7 @@ Motion IDs:
     2  ambiguous
 
 Usage:
-    python build_labels.py
-
-    Adjust the paths at the top of the CONFIG section if needed.
+    py build_labels.py
 """
 
 import csv
@@ -49,7 +47,7 @@ DATA_YAML           = Path("data.yaml")
 SPLITS = ["train", "val", "test"]
 
 # IoU threshold for matching a YOLO box to a mots detection
-IOU_THRESHOLD = 0.05   # low because coords are from different sources
+IOU_THRESHOLD = 0.05  
 
 # ── SPECIES MAP ───────────────────────────────────────────────────────────────
 
@@ -69,6 +67,7 @@ SPECIES_MAP = {
     "No-animal":                                        11,
 }
 
+# The shorter names for output
 SPECIES_NAMES = [
     "Roe deer",
     "Red deer",
@@ -84,11 +83,10 @@ SPECIES_NAMES = [
     "No-animal",
 ]
 
-# Motion: col 11 values
+# Motion: col values
 MOTION_NAMES = {0: "static", 1: "moving", 2: "ambiguous"}
 
 # ── HELPERS ───────────────────────────────────────────────────────────────────
-
 def load_mots(mots_dir: Path) -> dict:
     """
     Returns a nested dict:
@@ -132,7 +130,6 @@ def load_mots(mots_dir: Path) -> dict:
                 })
         mots[flight_id] = dict(frames)
     return mots
-
 
 def iou(box_a, box_b):
     """
