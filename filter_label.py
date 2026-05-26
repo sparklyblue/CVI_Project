@@ -14,7 +14,7 @@ Species mapping:
        1   →   1      Red deer
        2   →   2      Fallow Deer
        3   →   3      Wild boar
-       5   →   4      Hybrid Pig
+       6   →   4      Hybrid Pig
 
 Usage:
     python filter_labels.py

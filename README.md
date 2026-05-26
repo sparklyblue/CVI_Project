@@ -194,6 +194,7 @@ Since our question was about a smaller dataset, we decided to only use images wi
 |1| Red deer |
 |2| Fallow Deer |
 |3| Wild boar |
+|4| Hybrid Pig |
 
 I also decided to drop the ambigious status, instead only working with static and moving.
 
