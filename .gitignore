@@ -1,5 +1,7 @@
 venv/
+.venv/
 images_thermal/
+images_filtered/
 labels_final/
 label_summary.csv
 labels_filtered/
@@ -7,3 +9,4 @@ filtered_summary.csv
 *.jpg
 *.png
 *.tif
+*.zip

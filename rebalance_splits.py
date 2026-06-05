@@ -29,7 +29,7 @@ from pathlib import Path
  
 # ── CONFIG ────────────────────────────────────────────────────────────────────
  
-IMAGES_DIR          = Path("images_thermal/images")
+IMAGES_DIR          = Path("images_filtered")
 LABELS_FILTERED_DIR = Path("labels_filtered")
  
 # Flights to move: (flight_id, from_split, to_split)
