@@ -10,3 +10,4 @@ filtered_summary.csv
 *.png
 *.tif
 *.zip
+*.keras
