@@ -55,7 +55,7 @@ def load_dataset(image_path="images_filtered/train", label_path="labels_filtered
     return X, Y
 
 # resize bc for training they all need to have the same size
-def resize_img(X_train, X_val, X_test, size=(64, 64)):
+def resize_img(X_train, X_val, X_test, size=(128, 128)):
     X = X_train + X_val + X_test
 
     # convert to correct input format for tensorflow
@@ -75,12 +75,12 @@ def make_model(width, height) -> tf.keras.Model:
             tf.keras.layers.Input(shape=(height, width, 1)),
             tf.keras.layers.Conv2D(64, 3, activation="relu"), 
             tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(128, 3, activation="relu"),
+            tf.keras.layers.Conv2D(64, 3, activation="relu"),
             tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(256, 3, activation="relu"),
-            tf.keras.layers.Flatten(),
-            tf.keras.layers.Dense(256, activation="relu"),
-            tf.keras.layers.Dense(128),
+            tf.keras.layers.Conv2D(128, 3, activation="relu"),
+            tf.keras.layers.GlobalMaxPooling2D(),
+            tf.keras.layers.Dense(64, activation="relu"),
+            tf.keras.layers.Dense(32),
             tf.keras.layers.Dense(5, activation="softmax"),
         ]
     )
@@ -100,11 +100,12 @@ def make_transfer_model(input_shape=(64, 64, 3)):
         pooling=None
     )
 
-    base_model.trainable = False
+    base_model.trainable = True
     inputs = keras.Input(shape=input_shape)
     x = base_model(inputs, training=True)  
     x = Flatten()(x)
-    x = Dense(128, activation='relu')(x)
+    x = Dense(64, activation='relu')(x)
+    x = Dense(32, activation='relu')(x)
     x = Dropout(0.3)(x)
     outputs = Dense(5, activation='softmax')(x)
     model = Model(inputs=inputs, outputs=outputs)
@@ -144,6 +145,7 @@ if __name__ == "__main__":
     X_test  = np.repeat(X_test, 3, axis=-1)
 
     print(X_train.shape)
+    print(np.unique_counts(y_train))
 
     #model = make_model(X_train.shape[1], X_train.shape[2])
     model = make_transfer_model((X_train.shape[1], X_train.shape[2], X_train.shape[3]))
