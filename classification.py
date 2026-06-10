@@ -15,6 +15,7 @@ import numpy as np
 import tensorflow as tf
 import keras
 from sklearn.metrics import confusion_matrix, balanced_accuracy_score, classification_report
+from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
 
 from keras.layers import Conv2D, Flatten, Dense, GlobalAveragePooling2D, GlobalMaxPooling2D, Dropout
@@ -32,7 +33,7 @@ def load_img(image_path, label_path):
         for annotation in f:
             cls, xc, yc, w, h, _ = map(float, annotation.split()) # convert them to float, no need to import motion
 
-            # exclude samples who are less than 5 pixels wide or high -> too small
+            # exclude samples that are less than 5 pixels wide or high -> too small
             if w * W < 5 or h * H < 5:
                 continue
 
@@ -72,17 +73,14 @@ def resize_img(X_train, X_val, X_test, size=(128, 128)):
 
     return x_train, x_val, x_test
 
-def resize_img_padding(X_train, X_val, X_test, size=128): 
-    x_train = np.array([np.array(resize_with_padding(img, size)) for img in X_train], dtype=np.float32)
-    x_val = np.array([np.array(resize_with_padding(img, size)) for img in X_val], dtype=np.float32)
-    x_test = np.array([np.array(resize_with_padding(img, size)) for img in X_test], dtype=np.float32)
+# dont change format of image, add padding if bounding boxes not a square
+def resize_img_padding(X, size=128): 
+    x = np.array([np.array(resize_with_padding(img, size)) for img in X], dtype=np.float32)
 
-    return x_train, x_val, x_test
+    return x
 
 def resize_with_padding(img, size=128):
     w, h = img.size
-    if w == 0 or h == 0:
-        print("BAD IMAGE:", img.size)
 
     scale = size / max(w, h)
     new_w = int(w * scale)
@@ -171,38 +169,42 @@ def make_transfer_model(input_shape=(64, 64, 3)):
 
 if __name__ == "__main__":
     X_train, y_train = load_dataset()
-    X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
-    X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+    #X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
+    #X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
     print("images loaded")
-    X_train, X_val, X_test = resize_img_padding(X_train, X_val, X_test, 164)
+    X_train = resize_img_padding(X_train, 128)
+    #X_val = resize_img_padding(X_val, 128)
+    #X_test = resize_img_padding(X_test, 128)
     print("images resized")
     # need additional dim for keras input
     X_train = X_train[..., np.newaxis]
-    X_val = X_val[..., np.newaxis]
-    X_test = X_test[..., np.newaxis]
+    #X_val = X_val[..., np.newaxis]
+    #X_test = X_test[..., np.newaxis]
 
     # convert to rgb format for transfer learning
     X_train = np.repeat(X_train, 3, axis=-1)
-    X_val   = np.repeat(X_val, 3, axis=-1)
-    X_test  = np.repeat(X_test, 3, axis=-1)
+    #X_val   = np.repeat(X_val, 3, axis=-1)
+    #X_test  = np.repeat(X_test, 3, axis=-1)
     
     X_train = preprocess_input(X_train)
-    X_val = preprocess_input(X_val)
-    X_test = preprocess_input(X_test)
+    #X_val = preprocess_input(X_val)
+    #X_test = preprocess_input(X_test)
 
     #X_train /= 255.0
     #X_val /= 255.0
     #X_test /= 255.0
 
     y_train = tf.convert_to_tensor(y_train, dtype=tf.int32)
-    y_val = tf.convert_to_tensor(y_val, dtype=tf.int32)
-    y_test = tf.convert_to_tensor(y_test, dtype=tf.int32)
+    #y_val = tf.convert_to_tensor(y_val, dtype=tf.int32)
+    #y_test = tf.convert_to_tensor(y_test, dtype=tf.int32)
 
-    print(np.unique(y_val.numpy(), return_counts=True))
+    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, stratify=y_train, random_state=42)
+
+    print(np.unique(y_train.numpy(), return_counts=True))
     print(np.unique(y_test.numpy(), return_counts=True))
 
     print(X_train.shape)
-    print(np.unique_counts(y_train))
+    print(X_test.shape)
 
     # imbalanced classes 
     class_weights = get_class_weights(y_train)
@@ -219,7 +221,8 @@ if __name__ == "__main__":
     model.fit(
         X_train,
         y_train,
-        validation_data=(X_val, y_val),
+        validation_split=0.2,
+        #validation_data=(X_val, y_val),
         epochs=20,
         batch_size=32,
         class_weight=class_weights,
