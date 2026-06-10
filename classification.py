@@ -23,7 +23,7 @@ from keras.models import Model
 from keras.applications.efficientnet_v2 import preprocess_input
 
 def load_img(image_path, label_path): 
-    img = Image.open(image_path).convert("L")  # convert to grayscale
+    img = Image.open(image_path).convert("RGB")  # convert to grayscale
     W, H = img.size
 
     cropped_images = []
@@ -81,31 +81,26 @@ def resize_img_padding(X, size=128):
 
 def resize_with_padding(img, size=128):
     w, h = img.size
-
     scale = size / max(w, h)
-    new_w = int(w * scale)
-    new_h = int(h * scale)
+    new_w, new_h = int(w * scale), int(h * scale)
     img = img.resize((new_w, new_h))
 
-    canvas = Image.new("L", (size, size), 0)
-    x = (size - new_w) // 2
-    y = (size - new_h) // 2
-    canvas.paste(img, (x, y))
-
+    canvas = Image.new("RGB", (size, size), (0, 0, 0)) # 3 channels black padding
+    canvas.paste(img, ((size - new_w) // 2, (size - new_h) // 2))
     return canvas
 
 def get_class_weights(y): 
-    classes = np.unique(y.numpy())
+    classes = np.unique(y)
 
     weights = compute_class_weight(
         class_weight="balanced",
         classes=classes,
-        y=y.numpy()
+        y=y
     )
 
     return dict(zip(classes, weights))
 
-def make_model(width, height) -> tf.keras.Model:
+def make_model(height, width, dim) -> tf.keras.Model:
     data_augmentation = tf.keras.Sequential([
         tf.keras.layers.RandomFlip("horizontal"),
         tf.keras.layers.RandomRotation(0.05),
@@ -114,7 +109,7 @@ def make_model(width, height) -> tf.keras.Model:
 
     model = tf.keras.Sequential(
         [
-            tf.keras.layers.Input(shape=(height, width, 1)),
+            tf.keras.layers.Input(shape=(height, width, dim)),
             data_augmentation,
             tf.keras.layers.Conv2D(64, 3, activation="relu"), 
             tf.keras.layers.MaxPooling2D(),
@@ -153,11 +148,11 @@ def make_transfer_model(input_shape=(64, 64, 3)):
     inputs = keras.Input(shape=input_shape)
     x = data_augmentation(inputs)
     x = base_model(x, training=False)  
+    print("EfficientNet layers:", len(base_model.layers))
     x = GlobalAveragePooling2D()(x)
-    x = Dense(512, activation='relu')(x)
-    x = Dropout(0.4)(x)
-    x = Dense(256, activation='relu')(x)
-    x = Dropout(0.4)(x)
+    x = Dense(128, activation='relu')(x)
+    x = Dense(64, activation='relu')(x)
+    x = Dropout(0.3)(x)
     outputs = Dense(5, activation='softmax')(x)
     model = Model(inputs=inputs, outputs=outputs)
     model.compile(
@@ -165,43 +160,25 @@ def make_transfer_model(input_shape=(64, 64, 3)):
             loss="sparse_categorical_crossentropy",
             metrics=["accuracy"]
         )
-    return model
+    return model, base_model
 
-if __name__ == "__main__":
-    X_train, y_train = load_dataset()
-    #X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
-    #X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+def train_model(model_path="classification_animals_model.keras", transfer=False): 
+    X, y = load_dataset()
     print("images loaded")
-    X_train = resize_img_padding(X_train, 128)
-    #X_val = resize_img_padding(X_val, 128)
-    #X_test = resize_img_padding(X_test, 128)
+    X = resize_img_padding(X, 164)
     print("images resized")
-    # need additional dim for keras input
-    X_train = X_train[..., np.newaxis]
-    #X_val = X_val[..., np.newaxis]
-    #X_test = X_test[..., np.newaxis]
-
-    # convert to rgb format for transfer learning
-    X_train = np.repeat(X_train, 3, axis=-1)
-    #X_val   = np.repeat(X_val, 3, axis=-1)
-    #X_test  = np.repeat(X_test, 3, axis=-1)
     
-    X_train = preprocess_input(X_train)
-    #X_val = preprocess_input(X_val)
-    #X_test = preprocess_input(X_test)
+    if transfer:
+        X = preprocess_input(X)
+    else: 
+        X /= 255.0
 
-    #X_train /= 255.0
-    #X_val /= 255.0
-    #X_test /= 255.0
+    y = np.array(y, dtype=np.int32)
 
-    y_train = tf.convert_to_tensor(y_train, dtype=tf.int32)
-    #y_val = tf.convert_to_tensor(y_val, dtype=tf.int32)
-    #y_test = tf.convert_to_tensor(y_test, dtype=tf.int32)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
 
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, stratify=y_train, random_state=42)
-
-    print(np.unique(y_train.numpy(), return_counts=True))
-    print(np.unique(y_test.numpy(), return_counts=True))
+    print(np.unique(y_train, return_counts=True))
+    print(np.unique(y_test, return_counts=True))
 
     print(X_train.shape)
     print(X_test.shape)
@@ -216,34 +193,156 @@ if __name__ == "__main__":
         restore_best_weights=True
     )
 
-    #model = make_model(X_train.shape[1], X_train.shape[2])
-    model = make_transfer_model((X_train.shape[1], X_train.shape[2], X_train.shape[3]))
-    model.fit(
-        X_train,
-        y_train,
-        validation_split=0.2,
-        #validation_data=(X_val, y_val),
-        epochs=20,
-        batch_size=32,
-        class_weight=class_weights,
-        verbose=2,
-        shuffle=True,
-        callbacks=[early_stop]
-    )
+    if transfer: 
+        model, base_model = make_transfer_model((X_train.shape[1], X_train.shape[2], X_train.shape[3]))
+
+        model.fit(
+            X_train,
+            y_train,
+            validation_split=0.2,
+            epochs=20,
+            batch_size=32,
+            class_weight=class_weights,
+            shuffle=True,
+            verbose=2,
+            callbacks=[early_stop]
+        )
+
+        base_model.trainable = True
+
+        # Freeze most layers
+        for layer in base_model.layers[:-30]:
+            layer.trainable = False
+
+        # Recompile after changing trainable flags
+        model.compile(
+            optimizer=keras.optimizers.Adam(1e-4),
+            loss="sparse_categorical_crossentropy",
+            metrics=["accuracy"]
+        )
+
+        early_stop_stage2 = keras.callbacks.EarlyStopping(
+            monitor="val_accuracy",
+            patience=3,
+            restore_best_weights=True
+        )
+
+        model.fit(
+            X_train,
+            y_train,
+            validation_split=0.2,
+            epochs=10,
+            batch_size=32,
+            class_weight=class_weights,
+            shuffle=True,
+            verbose=2,
+            callbacks=[
+                early_stop_stage2,
+            ]
+        )
+
+    else: 
+        model = make_model(X_train.shape[1], X_train.shape[2], X_train.shape[3])   
+
+        model.fit(
+            X_train,
+            y_train,
+            validation_split=0.2,
+            epochs=20,
+            batch_size=32,
+            class_weight=class_weights,
+            verbose=2,
+            shuffle=True,
+            #callbacks=[early_stop]
+        )
 
     print(model.summary())
-    # evaluate the model
-    test_loss, test_acc = model.evaluate(X_test, y_test)
-    print("Test loss:", test_loss)
-    print("Test accuracy:", test_acc)
+    evaluate_model(model, X_test, y_test)
+    model.save(model_path)
+
+def load_model(model_path, train=False, transfer=True):
+    X_train, y_train = load_dataset()
+    X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
+    X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+    print("images loaded")
+    X_train = resize_img_padding(X_train, 128)
+    X_val = resize_img_padding(X_val, 128)
+    X_test = resize_img_padding(X_test, 128)
+    print("images resized")
+    # need additional dim for keras input
+    X_train = X_train[..., np.newaxis]
+    X_val = X_val[..., np.newaxis]
+    X_test = X_test[..., np.newaxis]
+
+    if transfer:           
+        # convert to rgb format for transfer learning
+        X_train = np.repeat(X_train, 3, axis=-1)
+        X_val   = np.repeat(X_val, 3, axis=-1)
+        X_test  = np.repeat(X_test, 3, axis=-1)
+    
+        X_train = preprocess_input(X_train)
+        X_val = preprocess_input(X_val)
+        X_test = preprocess_input(X_test)
+    else: 
+        X_train /= 255.0
+        X_val /= 255.0
+        X_test /= 255.0
+
+    y_train = np.array(y_train, dtype=np.int32)
+    y_val = np.array(y_val, dtype=np.int32)
+    y_test = np.array(y_test, dtype=np.int32)
+
+    loaded_model = keras.saving.load_model(model_path)
+
+    if train: 
+        # imbalanced classes 
+        class_weights = get_class_weights(y_train)
+        print(class_weights)
+
+        early_stop = keras.callbacks.EarlyStopping(
+            monitor="val_accuracy",
+            patience=5,
+            restore_best_weights=True
+        )
+
+        loaded_model.fit(
+            X_train,
+            y_train,
+            validation_split=0.2,
+            epochs=20,
+            batch_size=32,
+            class_weight=class_weights,
+            verbose=2,
+            shuffle=True,
+            callbacks=[early_stop]
+        )
+
+    evaluate_model(loaded_model, X_train, y_train, "Train")
+    evaluate_model(loaded_model, X_val, y_val, "Val")
+    evaluate_model(loaded_model, X_test, y_test, "Test")
+
+def evaluate_model(model, X, y, split="Test"):
+    loss, acc = model.evaluate(X, y)
+    print(f"{split} loss:", loss)
+    print(f"{split} accuracy:", acc)
 
     # print a confusion matrix
-    y_pred = model.predict(X_test)
+    y_pred = model.predict(X)
     y_pred_classes = np.argmax(y_pred, axis=1)
-    cm = confusion_matrix(y_test, y_pred_classes)
+    cm = confusion_matrix(y, y_pred_classes)
     print(cm)
 
-    balanced_acc = balanced_accuracy_score(y_test, y_pred_classes)
+    balanced_acc = balanced_accuracy_score(y, y_pred_classes)
     print("Balanced accuracy:", balanced_acc)
-    print(classification_report(y_test, y_pred_classes, digits=3))
-    model.save("classification_animals_model.keras")
+    print(classification_report(y, y_pred_classes, digits=3))
+
+if __name__ == "__main__":
+    #load_model("classification_base.keras")
+    train_model("classification_transfer.keras", transfer=True)
+    load_model("classification_transfer.keras")
+
+# TODO's:
+# try less training data samples and increase image size (to little GPU to do that now)
+# try different model architectures (from scratch) like in the lecture
+# try image preprocessing?? idk filtering and so on
+# smaller batch size but increase image size 
