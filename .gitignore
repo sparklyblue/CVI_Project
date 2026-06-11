@@ -1,9 +1,36 @@
+# Python environments and caches
 venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Large/raw dataset folders
 images_thermal/
 labels_final/
-label_summary.csv
 labels_filtered/
-filtered_summary.csv
+labels_matched_thermal/
+mots/
+
+# Generated experiment outputs
+dist/
+models/
+runs/
+*.joblib
+*.npz
+*.pkl
+*.pickle
+
+# Generated summaries and predictions
+label_summary.csv
+filter_summary.csv
+predictions_*.csv
+tuning_results.csv
+threshold_sweep.csv
+metrics.json
+
+# Image outputs / generated panels
 *.jpg
+*.jpeg
 *.png
 *.tif
+*.tiff

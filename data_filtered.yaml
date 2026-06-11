@@ -1,7 +1,7 @@
 path: .
-train: labels_final/train
-val:   labels_final/val
-test:  labels_final/test
+train: images_thermal/images/train
+val:   images_thermal/images/val
+test:  images_thermal/images/test
 
 # Label format per box: species_id cx cy w h motion_id
 # motion: 0=static  1=moving
