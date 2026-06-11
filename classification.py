@@ -17,13 +17,15 @@ import keras
 from sklearn.metrics import confusion_matrix, balanced_accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
+from sklearn.utils import resample
+import statistics
 
-from keras.layers import Conv2D, Flatten, Dense, GlobalAveragePooling2D, GlobalMaxPooling2D, Dropout
+from keras.layers import Conv2D, Flatten, Dense, GlobalAveragePooling2D, GlobalMaxPooling2D, Dropout, concatenate
 from keras.models import Model
 from keras.applications.efficientnet_v2 import preprocess_input
 
 def load_img(image_path, label_path): 
-    img = Image.open(image_path).convert("RGB")  # convert to grayscale
+    img = Image.open(image_path).convert("L")  # convert to grayscale
     W, H = img.size
 
     cropped_images = []
@@ -64,6 +66,49 @@ def load_dataset(image_path="images_filtered/train", label_path="labels_filtered
     
     return X, Y
 
+def load_img_multimodal(image_path, label_path): 
+    img = Image.open(image_path).convert("L")
+    W, H = img.size
+
+    cropped_images = []
+    classes = []
+    meta_features = [] # To capture scale data [w, h]
+
+    with open(label_path) as f:
+        for annotation in f:
+            cls, xc, yc, w, h, _ = map(float, annotation.split())
+
+            if w * W < 5 or h * H < 5:
+                continue
+
+            x1 = int((xc - w/2) * W)
+            y1 = int((yc - h/2) * H)
+            x2 = int((xc + w/2) * W)
+            y2 = int((yc + h/2) * H)
+
+            crop = img.crop((x1, y1, x2, y2))
+            cropped_images.append(crop)
+            classes.append(int(cls))
+            meta_features.append([w, h]) # Keep the metadata frame values
+    
+    return cropped_images, classes, meta_features
+
+def load_dataset_multimodal(image_path="images_filtered/train", label_path="labels_filtered/train"): 
+    labels_dir = Path(label_path)
+    images_dir = Path(image_path)
+
+    X, Y, M = [], [], []
+    for img_path in images_dir.glob("*"):
+        lbl_path = labels_dir / f"{img_path.stem}.txt" 
+        
+        if lbl_path.exists():
+            x, y, m = load_img_multimodal(img_path, lbl_path)
+            X.extend(x)
+            Y.extend(y)
+            M.extend(m)
+    
+    return X, Y, M
+
 # resize bc for training they all need to have the same size
 def resize_img(X_train, X_val, X_test, size=(128, 128)):
     # convert to correct input format for tensorflow
@@ -85,7 +130,7 @@ def resize_with_padding(img, size=128):
     new_w, new_h = int(w * scale), int(h * scale)
     img = img.resize((new_w, new_h))
 
-    canvas = Image.new("RGB", (size, size), (0, 0, 0)) # 3 channels black padding
+    canvas = Image.new("L", (size, size), (128))
     canvas.paste(img, ((size - new_w) // 2, (size - new_h) // 2))
     return canvas
 
@@ -100,92 +145,146 @@ def get_class_weights(y):
 
     return dict(zip(classes, weights))
 
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, BatchNormalization, Input
+
 def make_model(height, width, dim) -> tf.keras.Model:
     data_augmentation = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal"),
-        tf.keras.layers.RandomRotation(0.05),
+        tf.keras.layers.RandomFlip("horizontal_and_vertical"), # Animals can face any direction relative to drones
+        tf.keras.layers.RandomRotation(0.15),
         tf.keras.layers.RandomZoom(0.1),
     ])
 
-    model = tf.keras.Sequential(
-        [
-            tf.keras.layers.Input(shape=(height, width, dim)),
-            data_augmentation,
-            tf.keras.layers.Conv2D(64, 3, activation="relu"), 
-            tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(128, 3, activation="relu"),
-            tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(256, 3, activation="relu"),
-            tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Flatten(),
-            tf.keras.layers.Dense(256, activation="relu"),
-            tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(5, activation="softmax"),
-        ]
-    )
+    model = tf.keras.Sequential([
+        Input(shape=(height, width, dim)),
+        data_augmentation,
+        
+        # Block 1
+        Conv2D(32, (3, 3), activation="relu", padding="same"),
+        BatchNormalization(),
+        MaxPooling2D((2, 2)),
+        
+        # Block 2
+        Conv2D(64, (3, 3), activation="relu", padding="same"),
+        BatchNormalization(),
+        MaxPooling2D((2, 2)),
+        
+        # Block 3
+        Conv2D(128, (3, 3), activation="relu", padding="same"),
+        BatchNormalization(),
+        MaxPooling2D((2, 2)),
+        
+        Flatten(),
+        # Reduced dense layer capacity to force general feature representation
+        Dense(128, activation="relu"), 
+        BatchNormalization(),
+        Dropout(0.5), # Increased dropout to heavily penalize memorization
+        Dense(5, activation="softmax"),
+    ])
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+        optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
         loss="sparse_categorical_crossentropy",
         metrics=["accuracy"],
     )
     return model
 
-def make_transfer_model(input_shape=(64, 64, 3)): 
-    base_model = keras.applications.EfficientNetV2B0(
-        include_top=False,  
-        weights="imagenet",
-        input_shape=input_shape,  
-        pooling=None
-    )
-
-    base_model.trainable = False
-    data_augmentation = keras.Sequential([
-        keras.layers.RandomFlip("horizontal"),
-        keras.layers.RandomRotation(0.05),
-        keras.layers.RandomZoom(0.1),
-    ])
-    inputs = keras.Input(shape=input_shape)
-    x = data_augmentation(inputs)
-    x = base_model(x, training=False)  
-    print("EfficientNet layers:", len(base_model.layers))
-    x = GlobalAveragePooling2D()(x)
-    x = Dense(128, activation='relu')(x)
-    x = Dense(64, activation='relu')(x)
-    x = Dropout(0.3)(x)
-    outputs = Dense(5, activation='softmax')(x)
-    model = Model(inputs=inputs, outputs=outputs)
-    model.compile(
-            optimizer=keras.optimizers.Adam(1e-3),
-            loss="sparse_categorical_crossentropy",
-            metrics=["accuracy"]
-        )
-    return model, base_model
-
-def train_model(model_path="classification_animals_model.keras", transfer=False): 
-    X, y = load_dataset()
-    print("images loaded")
-    X = resize_img_padding(X, 164)
-    print("images resized")
+def make_multimodal_model(height, width, dim) -> tf.keras.Model:
+    # --- Branch A: Pixel Image Processor ---
+    image_input = Input(shape=(height, width, dim), name="image_input")
     
-    if transfer:
-        X = preprocess_input(X)
-    else: 
-        X /= 255.0
+    data_augmentation = tf.keras.Sequential([
+        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
+        tf.keras.layers.RandomRotation(0.20), # Increased to completely scramble flight patterns
+    ])
+    
+    x = data_augmentation(image_input)
+    x = Conv2D(32, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D((2, 2))(x)
+    
+    x = Conv2D(64, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D((2, 2))(x)
+    
+    x = GlobalAveragePooling2D()(x)
+    x = Dense(64, activation="relu")(x)
+    x = Dropout(0.4)(x)
+    # --- Branch B: Scale Bounding Box Processor ---
+    meta_input = Input(shape=(2,), name="meta_input")
+    y = Dense(32, activation="relu")(meta_input)
+    y = BatchNormalization()(y)
+    y = Dense(32, activation="relu")(y)
 
-    y = np.array(y, dtype=np.int32)
+    # --- Fusion Core ---
+    combined = concatenate([x, y])
+    z = Dense(64, activation="relu")(combined)
+    z = BatchNormalization()(z)
+    z = Dropout(0.5)(z) # Aggressive dropout to penalize background memorization
+    
+    output = Dense(5, activation="softmax", name="output")(z)
+    
+    model = Model(inputs=[image_input, meta_input], outputs=output)
+    
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(learning_rate=3e-4), # Low learning rate for validation stability
+        loss="sparse_categorical_crossentropy",
+        metrics=["accuracy"],
+    )
+    return model
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+def train_model(model_path="classification_animals_model.keras"): 
+    X_train, y_train = load_dataset()
+    X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
+    X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+    print("images loaded")
+
+    X_train = resize_img_padding(X_train, 128)
+    X_val = resize_img_padding(X_val, 128)
+    X_test = resize_img_padding(X_test, 128)
+
+    # need additional dim for keras input
+    X_train = X_train[..., np.newaxis]
+    X_val = X_val[..., np.newaxis]
+    X_test = X_test[..., np.newaxis]
+    print("images resized")
+
+    X_train /= 255.0
+    X_val /= 255.0
+    X_test /= 255.0
+
+    y_train = np.array(y_train, dtype=np.int32)
+    y_val = np.array(y_val, dtype=np.int32)
+    y_test = np.array(y_test, dtype=np.int32)
+
+    # Oversamling
+    # Find the size of your largest class to balance up to it
+    max_class_size = max(np.bincount(y_train))
+    X_train_resampled = []
+    y_train_resampled = []
+
+    for class_idx in np.unique(y_train):
+        X_class = X_train[y_train == class_idx]
+        y_class = y_train[y_train == class_idx]
+        
+        # Oversample minority classes with replacement
+        X_upsampled, y_upsampled = resample(
+            X_class, y_class,
+            replace=True,
+            n_samples=max_class_size,
+            random_state=42
+        )
+        X_train_resampled.extend(X_upsampled)
+        y_train_resampled.extend(y_upsampled)
+
+    X_train = np.array(X_train_resampled, dtype=np.float32)
+    y_train = np.array(y_train_resampled, dtype=np.int32)
 
     print(np.unique(y_train, return_counts=True))
+    print(np.unique(y_val, return_counts=True))
     print(np.unique(y_test, return_counts=True))
 
     print(X_train.shape)
     print(X_test.shape)
-
-    # imbalanced classes 
-    class_weights = get_class_weights(y_train)
-    print(class_weights)
 
     early_stop = keras.callbacks.EarlyStopping(
         monitor="val_accuracy",
@@ -193,77 +292,115 @@ def train_model(model_path="classification_animals_model.keras", transfer=False)
         restore_best_weights=True
     )
 
-    if transfer: 
-        model, base_model = make_transfer_model((X_train.shape[1], X_train.shape[2], X_train.shape[3]))
+    model = make_model(X_train.shape[1], X_train.shape[2], X_train.shape[3])   
 
-        model.fit(
-            X_train,
-            y_train,
-            validation_split=0.2,
-            epochs=20,
-            batch_size=32,
-            class_weight=class_weights,
-            shuffle=True,
-            verbose=2,
-            callbacks=[early_stop]
-        )
-
-        base_model.trainable = True
-
-        # Freeze most layers
-        for layer in base_model.layers[:-30]:
-            layer.trainable = False
-
-        # Recompile after changing trainable flags
-        model.compile(
-            optimizer=keras.optimizers.Adam(1e-4),
-            loss="sparse_categorical_crossentropy",
-            metrics=["accuracy"]
-        )
-
-        early_stop_stage2 = keras.callbacks.EarlyStopping(
-            monitor="val_accuracy",
-            patience=3,
-            restore_best_weights=True
-        )
-
-        model.fit(
-            X_train,
-            y_train,
-            validation_split=0.2,
-            epochs=10,
-            batch_size=32,
-            class_weight=class_weights,
-            shuffle=True,
-            verbose=2,
-            callbacks=[
-                early_stop_stage2,
-            ]
-        )
-
-    else: 
-        model = make_model(X_train.shape[1], X_train.shape[2], X_train.shape[3])   
-
-        model.fit(
-            X_train,
-            y_train,
-            validation_split=0.2,
-            epochs=20,
-            batch_size=32,
-            class_weight=class_weights,
-            verbose=2,
-            shuffle=True,
-            #callbacks=[early_stop]
-        )
+    model.fit(
+        X_train,
+        y_train,
+        validation_data=(X_val, y_val),
+        epochs=20,
+        batch_size=32,
+        verbose=2,
+        shuffle=True,
+        #callbacks=[early_stop]
+    )
 
     print(model.summary())
+    evaluate_model(model, X_val, y_val)
     evaluate_model(model, X_test, y_test)
     model.save(model_path)
+
+def train_model_multimodal(model_path="classification_multimodal.keras"): 
+    X_train, y_train, M_train = load_dataset_multimodal()
+    X_val, y_val, M_val = load_dataset_multimodal("images_filtered/val", "labels_filtered/val")
+    X_test, y_test, M_test = load_dataset_multimodal("images_filtered/test", "labels_filtered/test")
+    
+    # Run processing and channel expanding
+    X_train = resize_img_padding(X_train, 128)[..., np.newaxis] / 255.0
+    X_val = resize_img_padding(X_val, 128)[..., np.newaxis] / 255.0
+    X_test = resize_img_padding(X_test, 128)[..., np.newaxis] / 255.0
+    
+    y_train = np.array(y_train, dtype=np.int32)
+    y_val = np.array(y_val, dtype=np.int32)
+    y_test = np.array(y_test, dtype=np.int32)
+    
+    M_train = np.array(M_train, dtype=np.float32)
+    M_val = np.array(M_val, dtype=np.float32)
+    M_test = np.array(M_test, dtype=np.float32)
+
+    # --- Synchronized Multimodal Oversampling ---
+    max_class_size = max(np.bincount(y_train))
+    X_resampled, y_resampled, M_resampled = [], [], []
+
+    for class_idx in np.unique(y_train):
+        indices = np.where(y_train == class_idx)[0]
+        # Resample matching indices across images and shape metadata
+        sampled_indices = np.random.choice(indices, size=max_class_size, replace=True)
+        
+        X_resampled.extend(X_train[sampled_indices])
+        y_resampled.extend(y_train[sampled_indices])
+        M_resampled.extend(M_train[sampled_indices])
+
+    X_train = np.array(X_resampled, dtype=np.float32)
+    y_train = np.array(y_resampled, dtype=np.int32)
+    M_train = np.array(M_resampled, dtype=np.float32)
+
+    model = make_multimodal_model(128, 128, 1)
+    
+    # Train passing inputs as a multi-key dictionary
+    model.fit(
+        x={"image_input": X_train, "meta_input": M_train},
+        y=y_train,
+        validation_data=({"image_input": X_val, "meta_input": M_val}, y_val),
+        epochs=25,
+        batch_size=32, # 32 provides stabler batches than 16 for gradient steps
+        shuffle=True,
+        verbose=2
+    )
+    
+    # Evaluation
+    loss, acc = model.evaluate({"image_input": X_test, "meta_input": M_test}, y_test)
+    print(f"Test Accuracy: {acc:.3f}")
 
 def load_model(model_path, train=False, transfer=True):
     X_train, y_train = load_dataset()
     X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
     X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+
+    widths = []
+    w_train = []
+    w_val = []
+    w_test = []
+    heights = []
+    h_train = []
+    h_val = []
+    h_test = []
+    X = X_train + X_val + X_test
+    for img in X:
+        widths.append(img.size[0])
+        heights.append(img.size[1])
+
+    for img in X_train:
+        w_train.append(img.size[0])
+        h_train.append(img.size[1])
+    for img in X_val:
+        w_val.append(img.size[0])
+        h_val.append(img.size[1])
+    for img in X_test:
+        w_test.append(img.size[0])
+        h_test.append(img.size[1])
+    print(min(widths), max(widths), statistics.mean(widths), statistics.median(widths))
+    print(min(heights), max(heights), statistics.mean(heights), statistics.median(heights))
+    print("\n\nX_train:")
+    print(min(w_train), max(w_train), statistics.mean(w_train), statistics.median(w_train))
+    print(min(h_train), max(h_train), statistics.mean(h_train), statistics.median(h_train))
+    print("\n\nX_val:")
+    print(min(w_val), max(w_val), statistics.mean(w_val), statistics.median(w_val))
+    print(min(h_val), max(h_val), statistics.mean(h_val), statistics.median(h_val))
+    print("\n\nX_test:")
+    print(min(w_test), max(w_test), statistics.mean(w_test), statistics.median(w_test))
+    print(min(h_test), max(h_test), statistics.mean(h_test), statistics.median(h_test))
+
     print("images loaded")
     X_train = resize_img_padding(X_train, 128)
     X_val = resize_img_padding(X_val, 128)
@@ -338,8 +475,8 @@ def evaluate_model(model, X, y, split="Test"):
 
 if __name__ == "__main__":
     #load_model("classification_base.keras")
-    train_model("classification_transfer.keras", transfer=True)
-    load_model("classification_transfer.keras")
+    train_model_multimodal("classification_multi.keras")
+    #load_model("classification_base16.keras")
 
 # TODO's:
 # try less training data samples and increase image size (to little GPU to do that now)
