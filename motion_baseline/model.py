@@ -1,4 +1,9 @@
-"""NumPy logistic-regression training utilities."""
+"""Model training helpers for the motion baseline.
+
+The baseline can train a small NumPy logistic regression model or several
+sklearn tree-based models. The surrounding CLI decides which candidates are
+tried and which threshold is selected.
+"""
 
 from __future__ import annotations
 
@@ -39,19 +44,13 @@ def train_logistic_regression(
     """
     A small weighted logistic regression model is trained with gradient descent.
 
-    Class weights can be softened. A power of 0 means no class weighting, while
-    a power of 1 means full balanced weighting.
+    The model is intentionally simple: it keeps the baseline interpretable and
+    makes it easy to compare against the later nonlinear sklearn candidates.
     """
     n_features = x_train.shape[1]
     weights = np.zeros(n_features, dtype=np.float32)
 
-    class_counts = Counter(int(v) for v in y_train)
-    total = len(y_train)
-    sample_weights = []
-    for label in y_train:
-        balanced_weight = total / (2 * max(1, class_counts[int(label)]))
-        sample_weights.append(balanced_weight ** class_weight_power)
-    sample_weights = np.asarray(sample_weights, dtype=np.float32)
+    sample_weights = class_sample_weights(y_train, class_weight_power)
 
     pos_rate = float(np.clip(y_train.mean(), 1e-4, 1 - 1e-4))
     bias = math.log(pos_rate / (1 - pos_rate))

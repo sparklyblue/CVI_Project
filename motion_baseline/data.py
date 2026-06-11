@@ -1,4 +1,9 @@
-"""Dataset loading and MOTS track recovery."""
+"""Dataset loading and MOTS track recovery.
+
+The model is trained from the filtered YOLO labels, but those labels do not
+contain track ids. This module therefore loads the original MOTS annotations
+and matches boxes back to them so temporal neighbors can be found later.
+"""
 
 from __future__ import annotations
 
@@ -81,7 +86,13 @@ def find_image(images_dir: Path, split: str, stem: str) -> Path | None:
 
 
 def load_filtered_detections(images_dir: Path, labels_dir: Path) -> dict[str, list[Detection]]:
-    """Filtered YOLO labels are loaded as one training example per animal box."""
+    """
+    Filtered YOLO labels are loaded as one training example per animal box.
+
+    Each row in a label file becomes one Detection object. The box remains in
+    normalized YOLO coordinates, while image size is stored so pixel movement
+    can be calculated later.
+    """
     by_split: dict[str, list[Detection]] = {split: [] for split in SPLITS}
     for split in SPLITS:
         label_files = sorted((labels_dir / split).glob("*.txt"))
@@ -187,6 +198,8 @@ def attach_track_ids(
             mot_dets = mots.get(flight_id, {}).get(frame_id, [])
             used_mots: set[int] = set()
             for det in frame_dets:
+                # The best unused MOTS box with the same species and motion label
+                # is treated as the source track for this filtered label row.
                 best_index = None
                 best_score = 0.0
                 label_box = (det.cx, det.cy, det.w, det.h)

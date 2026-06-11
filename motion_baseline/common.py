@@ -1,7 +1,8 @@
-"""Shared constants and data structures for the motion baseline."""
+"""Shared constants, data structures, and small parsing helpers."""
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -37,7 +38,12 @@ FILTERED_SPECIES_REMAP = {0: 0, 1: 1, 2: 2, 3: 3, 6: 4}
 
 @dataclass(frozen=True)
 class MotDetection:
-    """A raw MOTS detection is stored in pixel coordinates."""
+    """
+    A raw MOTS detection is stored in pixel coordinates.
+
+    These detections are not used directly for training labels. They are used
+    to recover track ids that were lost in the filtered YOLO label files.
+    """
 
     flight_id: str
     frame_id: int
@@ -52,7 +58,12 @@ class MotDetection:
 
 @dataclass
 class Detection:
-    """A filtered YOLO detection is stored in normalized coordinates."""
+    """
+    A filtered YOLO detection is stored in normalized coordinates.
+
+    This is the central row object used by the baseline: one object represents
+    one animal box in one image, plus the static/moving target label.
+    """
 
     split: str
     stem: str
@@ -83,7 +94,12 @@ class Detection:
 
 
 def detection_cache_key(det: Detection) -> str:
-    """A stable row key is used to validate cached feature matrices."""
+    """
+    A stable row key is used to validate cached feature matrices.
+
+    Cached features are only reused when the same detections appear in the same
+    order. This prevents old feature rows from silently attaching to new labels.
+    """
     track = "" if det.track_id is None else str(det.track_id)
     return "|".join(
         [
@@ -96,13 +112,39 @@ def detection_cache_key(det: Detection) -> str:
     )
 
 
-def parse_float_list(raw: str) -> list[float]:
-    """A comma-separated CLI value is parsed into floats."""
+def parse_csv_list(raw: str, convert: Callable[[str], object], value_name: str) -> list[object]:
+    """A comma-separated CLI value is split and converted into typed values."""
     values = []
     for item in raw.split(","):
         item = item.strip()
         if item:
-            values.append(float(item))
+            values.append(convert(item))
     if not values:
-        raise ValueError("At least one float value must be provided.")
+        raise ValueError(f"At least one {value_name} value must be provided.")
     return values
+
+
+def parse_float_list(raw: str) -> list[float]:
+    """A comma-separated CLI value is parsed into floats."""
+    return [float(value) for value in parse_csv_list(raw, float, "float")]
+
+
+def parse_int_list(raw: str) -> list[int]:
+    """A comma-separated CLI value is parsed into integers."""
+    return [int(value) for value in parse_csv_list(raw, int, "integer")]
+
+
+def parse_optional_int_list(raw: str) -> list[int | None]:
+    """A comma-separated CLI value is parsed into integers or None."""
+    return [
+        None if str(value).lower() == "none" else int(value)
+        for value in parse_csv_list(raw, str, "integer/None")
+    ]
+
+
+def parse_optional_str_list(raw: str) -> list[str | None]:
+    """A comma-separated CLI value is parsed into strings or None."""
+    return [
+        None if str(value).lower() == "none" else str(value)
+        for value in parse_csv_list(raw, str, "string/None")
+    ]

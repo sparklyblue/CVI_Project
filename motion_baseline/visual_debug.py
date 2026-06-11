@@ -1,4 +1,9 @@
-"""Visual error panels for false-positive and false-negative inspection."""
+"""Visual error panels for false-positive and false-negative inspection.
+
+The numeric metrics tell how often the model is wrong. These panels make it
+possible to see what those mistakes look like in the original images, including
+the nearest recovered track neighbors when they exist.
+"""
 
 from __future__ import annotations
 
@@ -20,7 +25,12 @@ def export_error_panels(
     output_dir: Path,
     max_errors: int,
 ) -> None:
-    """The highest-confidence false positives/negatives are saved as image panels."""
+    """
+    The highest-confidence false positives/negatives are saved as image panels.
+
+    High-confidence mistakes are especially useful because they show where the
+    current feature logic is confidently misleading the model.
+    """
     if max_errors <= 0:
         return
 
@@ -104,7 +114,12 @@ def make_error_panel(
     error_type: str,
     tracks: dict[tuple[str, str, int], list[Detection]],
 ) -> Image.Image:
-    """A previous/current/next panel is assembled for one mistaken prediction."""
+    """
+    A previous/current/next panel is assembled for one mistaken prediction.
+
+    The current box is highlighted, while neighbor panels are included so the
+    motion cue used by the feature extractor can be judged visually.
+    """
     previous_det, next_det = track_neighbors(det, tracks)
     panels = [
         draw_detection_image(previous_det, "previous") if previous_det else blank_panel("previous"),

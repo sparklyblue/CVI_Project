@@ -1,4 +1,9 @@
-"""Evaluation metrics and result writers."""
+"""Evaluation metrics and result writers.
+
+This module keeps scoring and CSV writing separate from training. That makes it
+easier to inspect predictions later without mixing file output into the model
+code itself.
+"""
 
 from __future__ import annotations
 
@@ -25,7 +30,13 @@ def choose_threshold(
     thresholds: list[float],
     metric_name: str,
 ) -> tuple[float, dict[str, float | int], list[dict[str, float | int]]]:
-    """The decision threshold is chosen by the requested validation metric."""
+    """
+    The decision threshold is chosen by the requested validation metric.
+
+    Probabilities are produced by the model, but the final static/moving label
+    depends on this threshold. Sweeping it on validation data is useful because
+    the moving class is much smaller than the static class.
+    """
     best_threshold = 0.5
     best_score = -1.0
     best_balanced = -1.0
@@ -91,7 +102,12 @@ def evidence_group_metrics(
     threshold: float,
     feature_names: list[str],
 ) -> dict[str, dict[str, float | int]]:
-    """Metrics are computed for temporal-evidence quality groups."""
+    """
+    Metrics are computed for temporal-evidence quality groups.
+
+    These groups are diagnostic only. They help show whether failures come from
+    missing neighbors, weak image registration, or edge-of-image examples.
+    """
     names = {name: index for index, name in enumerate(feature_names)}
     pair_count = x_values[:, names["pair_count"]]
     has_prev = x_values[:, names["has_prev_neighbor"]]
@@ -116,10 +132,12 @@ def evidence_group_metrics(
 
 
 def safe_div(numerator: float, denominator: float) -> float:
+    """Division by zero is treated as a zero score for empty metric cases."""
     return float(numerator / denominator) if denominator else 0.0
 
 
 def safe_f1(precision: float, recall: float) -> float:
+    """F1 is computed with the same safe division rule as the other metrics."""
     return safe_div(2 * precision * recall, precision + recall)
 
 

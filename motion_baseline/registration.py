@@ -1,4 +1,9 @@
-"""Image registration helpers used to estimate background motion."""
+"""Image registration helpers used to estimate background motion.
+
+The drone moves between frames, so raw animal-box displacement is not enough.
+These helpers estimate how the surrounding image moved, which lets the feature
+extractor measure animal motion relative to the background.
+"""
 
 from __future__ import annotations
 
@@ -9,7 +14,13 @@ from PIL import Image
 
 
 class ImageRegistrationCache:
-    """Downsampled image registrations are cached because many detections share frames."""
+    """
+    Downsampled image registrations are cached because many detections share frames.
+
+    Global registrations are reused for every detection in the same image pair.
+    Local registrations are also cached, but they are more specific because the
+    crop and animal mask boxes are part of the cache key.
+    """
 
     def __init__(self, max_side: int):
         self.max_side = max_side
@@ -67,15 +78,7 @@ class ImageRegistrationCache:
 
         dx_small, dy_small, peak_ratio = phase_correlation_shift(a, b)
 
-        # The sign with better normalized correlation is used as the final sign.
-        ncc_pos = shifted_ncc(a, b, dx_small, dy_small)
-        ncc_neg = shifted_ncc(a, b, -dx_small, -dy_small)
-        if ncc_neg > ncc_pos:
-            dx_small = -dx_small
-            dy_small = -dy_small
-            ncc = ncc_neg
-        else:
-            ncc = ncc_pos
+        dx_small, dy_small, ncc = choose_best_shift_sign(a, b, dx_small, dy_small)
 
         result = (dx_small * sx, dy_small * sy, float(ncc), float(peak_ratio))
         self._registration_cache[key] = result
@@ -109,14 +112,7 @@ class ImageRegistrationCache:
         crop_b, _, _ = resize_for_registration(crop_b, self.max_side)
         dx_small, dy_small, peak_ratio = phase_correlation_shift(crop_a, crop_b)
 
-        ncc_pos = shifted_ncc(crop_a, crop_b, dx_small, dy_small)
-        ncc_neg = shifted_ncc(crop_a, crop_b, -dx_small, -dy_small)
-        if ncc_neg > ncc_pos:
-            dx_small = -dx_small
-            dy_small = -dy_small
-            ncc = ncc_neg
-        else:
-            ncc = ncc_pos
+        dx_small, dy_small, ncc = choose_best_shift_sign(crop_a, crop_b, dx_small, dy_small)
 
         result = (dx_small * sx, dy_small * sy, float(ncc), float(peak_ratio))
         self._local_registration_cache[key] = result
@@ -129,6 +125,21 @@ def load_crop_gray(path: Path, crop_box: tuple[int, int, int, int]) -> np.ndarra
         img = img.convert("L")
         crop = img.crop(crop_box)
     return np.asarray(crop, dtype=np.float32) / 255.0
+
+
+def choose_best_shift_sign(a: np.ndarray, b: np.ndarray, dx: float, dy: float) -> tuple[float, float, float]:
+    """
+    The shift direction with better overlap correlation is selected.
+
+    Phase correlation gives the likely translation size, but the sign can be
+    ambiguous for this lightweight implementation. Both directions are checked
+    against the actual image overlap and the better one is kept.
+    """
+    ncc_pos = shifted_ncc(a, b, dx, dy)
+    ncc_neg = shifted_ncc(a, b, -dx, -dy)
+    if ncc_neg > ncc_pos:
+        return -dx, -dy, ncc_neg
+    return dx, dy, ncc_pos
 
 
 def mask_crop_box(

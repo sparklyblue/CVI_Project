@@ -1,4 +1,9 @@
-"""Command-line runner for the motion baseline."""
+"""Command-line runner for the motion baseline.
+
+This file connects the smaller modules into the full training pipeline:
+labels are loaded, track ids are recovered, feature matrices are built or
+loaded from cache, candidate models are tuned, and the selected model is saved.
+"""
 
 from __future__ import annotations
 
@@ -17,6 +22,9 @@ from .common import (
     MOTS_DIR,
     SPLITS,
     parse_float_list,
+    parse_int_list,
+    parse_optional_int_list,
+    parse_optional_str_list,
 )
 from .data import (
     attach_track_ids,
@@ -122,9 +130,11 @@ def main() -> None:
     random.seed(args.seed)
     np.random.seed(args.seed)
 
+    # The filtered labels provide the static/moving targets used for training.
     print("Loading filtered labels...")
     detections_by_split = load_filtered_detections(args.images_dir, args.labels_dir)
 
+    # MOTS data is only used to recover track ids; species is not used as a model feature.
     print("Loading MOTS tracks...")
     mots = load_mots(args.mots_dir)
 
@@ -145,6 +155,8 @@ def main() -> None:
     cache_dir = args.feature_cache_dir or (args.output_dir / "feature_cache")
     cache_tag = feature_cache_tag(args)
 
+    # Feature building is the expensive step because it compares nearby images.
+    # The cache keeps repeated model-tuning runs from recomputing those values.
     print("\nBuilding/loading train features...")
     x_train, y_train = feature_matrix_for_split(
         "train", train_dets, tracks, registration_cache, args, cache_dir, cache_tag
@@ -166,6 +178,8 @@ def main() -> None:
     )
 
     thresholds = make_thresholds(args.threshold_step)
+    # Candidate tuning is done only on the validation split. Test data is kept
+    # untouched until the final selected candidate is evaluated.
     tuning_rows, threshold_rows, best = tune_all_candidates(
         thresholds=thresholds,
         args=args,
@@ -356,33 +370,6 @@ def sklearn_candidate_grid(args: argparse.Namespace) -> list[dict]:
     return candidates
 
 
-def parse_int_list(raw: str) -> list[int]:
-    """A comma-separated CLI value is parsed into integers."""
-    return [int(item.strip()) for item in raw.split(",") if item.strip()]
-
-
-def parse_optional_int_list(raw: str) -> list[int | None]:
-    """A comma-separated CLI value is parsed into integers or None."""
-    values = []
-    for item in raw.split(","):
-        item = item.strip()
-        if not item:
-            continue
-        values.append(None if item.lower() == "none" else int(item))
-    return values
-
-
-def parse_optional_str_list(raw: str) -> list[str | None]:
-    """A comma-separated CLI value is parsed into strings or None."""
-    values = []
-    for item in raw.split(","):
-        item = item.strip()
-        if not item:
-            continue
-        values.append(None if item.lower() == "none" else item)
-    return values
-
-
 def tune_all_candidates(
     thresholds,
     args: argparse.Namespace,
@@ -393,7 +380,13 @@ def tune_all_candidates(
     x_train_std,
     x_val_std,
 ):
-    """Linear and nonlinear candidates are trained and scored on validation."""
+    """
+    Linear and nonlinear candidates are trained and scored on validation.
+
+    The validation metric selects useful models, while the optional overfit
+    penalty makes candidates less attractive when train performance is much
+    higher than validation performance.
+    """
     candidates = []
     if args.model_family in ("logistic", "both"):
         candidates.extend(logistic_candidate_grid(args))
@@ -529,7 +522,13 @@ def predict_best(best: dict, x_raw, x_std) -> np.ndarray:
 
 
 def save_selected_model(output_dir: Path, best: dict, model, feature_mean, feature_std, threshold: float) -> None:
-    """The selected model is saved in a format matching its family."""
+    """
+    The selected model is saved in a format matching its family.
+
+    Logistic regression is stored as plain arrays. Sklearn models are stored
+    with joblib because their tree structures cannot be represented cleanly in
+    a simple NumPy archive.
+    """
     metadata = {
         "family": best["family"],
         "params": best["params"],

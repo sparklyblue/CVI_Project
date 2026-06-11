@@ -1,4 +1,9 @@
-"""Feature extraction and feature-matrix caching."""
+"""Feature extraction and feature-matrix caching.
+
+The baseline does not look at species. Instead, each animal box is described by
+its position/size and by how its center moves relative to nearby track
+detections after global and local background motion have been estimated.
+"""
 
 from __future__ import annotations
 
@@ -14,7 +19,13 @@ from .registration import ImageRegistrationCache
 
 @dataclass
 class PairMotion:
-    """Motion features between one target detection and one track neighbor."""
+    """
+    Motion measurements between one target detection and one track neighbor.
+
+    Raw motion is the animal-center displacement. Background motion is estimated
+    from the images. Residual motion is what remains after that background
+    estimate is subtracted.
+    """
 
     frame_gap: float
     raw_dx: float
@@ -217,13 +228,34 @@ def clamp_box(box: tuple[int, int, int, int], image_w: int, image_h: int) -> tup
     return x1, y1, x2, y2
 
 
+def pair_values(pairs: list[PairMotion], getter) -> np.ndarray:
+    """One numeric value is extracted from each neighbor pair."""
+    return np.asarray([getter(pair) for pair in pairs], dtype=np.float32)
+
+
+def mean_max(values: np.ndarray) -> tuple[float, float]:
+    """Mean and maximum are returned in the feature order used by this script."""
+    return float(values.mean()), float(values.max())
+
+
+def weighted_sum(values: np.ndarray, weights: np.ndarray) -> float:
+    """A confidence-weighted summary is computed for pair-level motion values."""
+    return float(np.sum(weights * values))
+
+
 def features_for_detection(
     det: Detection,
     tracks: dict[tuple[str, str, int], list[Detection]],
     registration_cache: ImageRegistrationCache,
     neighbors: int,
 ) -> np.ndarray:
-    """A detection is converted into static image features and temporal features."""
+    """
+    A detection is converted into one row of model features.
+
+    The first features describe the current box itself. The later features
+    compare this animal with recovered track neighbors and estimate how much
+    movement remains after global and local background motion are subtracted.
+    """
     candidates = neighbor_candidates(det, tracks, neighbors)
     pairs = [pair_motion(det, other, registration_cache) for other in candidates]
 
@@ -252,26 +284,32 @@ def features_for_detection(
         temporal_values = [0.0] * (len(FEATURE_NAMES) - len(base_values))
         return np.asarray(base_values + temporal_values, dtype=np.float32)
 
-    frame_gaps = np.asarray([p.frame_gap for p in pairs], dtype=np.float32)
-    ncc = np.asarray([p.ncc for p in pairs], dtype=np.float32)
-    local_ncc = np.asarray([p.local_ncc for p in pairs], dtype=np.float32)
-    peak_log = np.log1p(np.asarray([max(0.0, p.peak_ratio) for p in pairs], dtype=np.float32))
-    local_peak_log = np.log1p(np.asarray([max(0.0, p.local_peak_ratio) for p in pairs], dtype=np.float32))
-    raw = np.asarray([math.hypot(p.raw_dx, p.raw_dy) / p.box_diag for p in pairs], dtype=np.float32)
-    bg = np.asarray([math.hypot(p.bg_dx, p.bg_dy) / p.box_diag for p in pairs], dtype=np.float32)
-    local_bg = np.asarray([math.hypot(p.local_bg_dx, p.local_bg_dy) / p.box_diag for p in pairs], dtype=np.float32)
-    residual = np.asarray([math.hypot(p.residual_dx, p.residual_dy) / p.box_diag for p in pairs], dtype=np.float32)
-    local_residual = np.asarray([math.hypot(p.local_residual_dx, p.local_residual_dy) / p.box_diag for p in pairs], dtype=np.float32)
-    bg_disagreement = np.asarray(
-        [math.hypot(p.bg_dx - p.local_bg_dx, p.bg_dy - p.local_bg_dy) / p.box_diag for p in pairs],
-        dtype=np.float32,
-    )
-    residual_x = np.asarray([abs(p.residual_dx) / p.box_diag for p in pairs], dtype=np.float32)
-    residual_y = np.asarray([abs(p.residual_dy) / p.box_diag for p in pairs], dtype=np.float32)
-    local_residual_x = np.asarray([abs(p.local_residual_dx) / p.box_diag for p in pairs], dtype=np.float32)
-    local_residual_y = np.asarray([abs(p.local_residual_dy) / p.box_diag for p in pairs], dtype=np.float32)
+    frame_gaps = pair_values(pairs, lambda p: p.frame_gap)
+    ncc = pair_values(pairs, lambda p: p.ncc)
+    local_ncc = pair_values(pairs, lambda p: p.local_ncc)
+    peak_log = np.log1p(pair_values(pairs, lambda p: max(0.0, p.peak_ratio)))
+    local_peak_log = np.log1p(pair_values(pairs, lambda p: max(0.0, p.local_peak_ratio)))
 
-    # Better-aligned pairs are given more weight without discarding weaker pairs.
+    # Pixel motion is normalized by the animal box diagonal so small and large
+    # animals can be compared on roughly the same scale.
+    raw = pair_values(pairs, lambda p: math.hypot(p.raw_dx, p.raw_dy) / p.box_diag)
+    bg = pair_values(pairs, lambda p: math.hypot(p.bg_dx, p.bg_dy) / p.box_diag)
+    local_bg = pair_values(pairs, lambda p: math.hypot(p.local_bg_dx, p.local_bg_dy) / p.box_diag)
+    residual = pair_values(pairs, lambda p: math.hypot(p.residual_dx, p.residual_dy) / p.box_diag)
+    local_residual = pair_values(
+        pairs,
+        lambda p: math.hypot(p.local_residual_dx, p.local_residual_dy) / p.box_diag,
+    )
+    bg_disagreement = pair_values(
+        pairs,
+        lambda p: math.hypot(p.bg_dx - p.local_bg_dx, p.bg_dy - p.local_bg_dy) / p.box_diag,
+    )
+    residual_x = pair_values(pairs, lambda p: abs(p.residual_dx) / p.box_diag)
+    residual_y = pair_values(pairs, lambda p: abs(p.residual_dy) / p.box_diag)
+    local_residual_x = pair_values(pairs, lambda p: abs(p.local_residual_dx) / p.box_diag)
+    local_residual_y = pair_values(pairs, lambda p: abs(p.local_residual_dy) / p.box_diag)
+
+    # Better-aligned pairs are given more weight without fully discarding weak pairs.
     weights = np.clip(np.maximum(ncc, local_ncc), 0.0, None) + 0.05
     weights = weights / max(float(weights.sum()), 1e-6)
     good_global = ncc >= 0.15
@@ -287,31 +325,21 @@ def features_for_detection(
         float(frame_gaps.mean()),
         float(frame_gaps.min()),
         float(frame_gaps.max()),
-        float(ncc.mean()),
-        float(ncc.max()),
-        float(local_ncc.mean()),
-        float(local_ncc.max()),
-        float(peak_log.mean()),
-        float(peak_log.max()),
-        float(local_peak_log.mean()),
-        float(local_peak_log.max()),
-        float(raw.mean()),
-        float(raw.max()),
-        float(bg.mean()),
-        float(bg.max()),
-        float(local_bg.mean()),
-        float(local_bg.max()),
-        float(residual.mean()),
-        float(residual.max()),
-        float(local_residual.mean()),
-        float(local_residual.max()),
-        float(np.sum(weights * residual)),
-        float(np.sum(weights * local_residual)),
-        float(np.sum(weights * raw)),
-        float(np.sum(weights * bg)),
-        float(np.sum(weights * local_bg)),
-        float(bg_disagreement.mean()),
-        float(bg_disagreement.max()),
+        *mean_max(ncc),
+        *mean_max(local_ncc),
+        *mean_max(peak_log),
+        *mean_max(local_peak_log),
+        *mean_max(raw),
+        *mean_max(bg),
+        *mean_max(local_bg),
+        *mean_max(residual),
+        *mean_max(local_residual),
+        weighted_sum(residual, weights),
+        weighted_sum(local_residual, weights),
+        weighted_sum(raw, weights),
+        weighted_sum(bg, weights),
+        weighted_sum(local_bg, weights),
+        *mean_max(bg_disagreement),
         float(residual_x.mean()),
         float(residual_y.mean()),
         float(local_residual_x.mean()),
