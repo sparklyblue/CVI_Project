@@ -274,7 +274,7 @@ Motion distribution per split:
 > source dataset — Fallow Deer is almost entirely concentrated in flight 17 (train)
 > and cannot be redistributed without gutting train data and maybe introducing data leakage. 
 > Hybrid Pig is just genuinely rare across all flights. 
-> Maybe use weighted classes to make sure that the majaority classes don't overshadow too har
+> Maybe use weighted classes to make sure that the majority classes don't overshadow too har
 > use **per-class metrics** (precision, recall, F1) rather than overall accuracy, maybee :)
 
 

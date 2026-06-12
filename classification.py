@@ -20,35 +20,41 @@ from sklearn.utils.class_weight import compute_class_weight
 from sklearn.utils import resample
 import statistics
 
+import matplotlib.pyplot as plt
+
 from keras.layers import Conv2D, Flatten, Dense, GlobalAveragePooling2D, GlobalMaxPooling2D, Dropout, concatenate
 from keras.models import Model
 from keras.applications.efficientnet_v2 import preprocess_input
 
-def load_img(image_path, label_path): 
-    img = Image.open(image_path).convert("L")  # convert to grayscale
+def load_img(image_path, label_path, context_ratio=0.5):
+    img = Image.open(image_path).convert("L")  # grayscale
     W, H = img.size
-
+    
     cropped_images = []
     classes = []
-
+    
     with open(label_path) as f:
         for annotation in f:
-            cls, xc, yc, w, h, _ = map(float, annotation.split()) # convert them to float, no need to import motion
-
-            # exclude samples that are less than 5 pixels wide or high -> too small
+            cls, xc, yc, w, h, _ = map(float, annotation.split())
+            
             if w * W < 5 or h * H < 5:
                 continue
-
-            x1 = int((xc - w/2) * W)
-            y1 = int((yc - h/2) * H)
-            x2 = int((xc + w/2) * W)
-            y2 = int((yc + h/2) * H)
-
+            
+            # expand box by context_ratio
+            w_exp = w * (1 + context_ratio)
+            h_exp = h * (1 + context_ratio)
+            
+            x1 = max(0, int((xc - w_exp/2) * W))
+            y1 = max(0, int((yc - h_exp/2) * H))
+            x2 = min(W, int((xc + w_exp/2) * W))
+            y2 = min(H, int((yc + h_exp/2) * H))
+            
             crop = img.crop((x1, y1, x2, y2))
             cropped_images.append(crop)
             classes.append(int(cls))
     
     return cropped_images, classes
+
 
 def load_dataset(image_path="images_filtered/train", label_path="labels_filtered/train"): 
     labels_dir = Path(label_path)
@@ -56,15 +62,18 @@ def load_dataset(image_path="images_filtered/train", label_path="labels_filtered
 
     X = []
     Y = []
+    flight_ids = []
     for img_path in images_dir.glob("*"):
         lbl_path = labels_dir / f"{img_path.stem}.txt" 
-        
+
         if lbl_path.exists():
             x, y = load_img(img_path, lbl_path)
             X.extend(x)
             Y.extend(y)
+            for _ in range(len(y)): 
+                flight_ids.append(img_path.stem[0])
     
-    return X, Y
+    return X, Y, flight_ids
 
 def load_img_multimodal(image_path, label_path): 
     img = Image.open(image_path).convert("L")
@@ -145,44 +154,86 @@ def get_class_weights(y):
 
     return dict(zip(classes, weights))
 
-from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, BatchNormalization, Input
+from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D, Dense, Dropout, BatchNormalization, Input
 
-def make_model(height, width, dim) -> tf.keras.Model:
+def make_robust_generalizer(height, width, dim) -> tf.keras.Model:
+    image_input = Input(shape=(height, width, dim))
+    
+    # 1. Moderate augmentation to diversify without erasing species signatures
+    data_augmentation = tf.keras.Sequential([
+        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
+        tf.keras.layers.RandomRotation(0.20),
+        tf.keras.layers.RandomZoom(0.10),
+    ])
+    
+    x = data_augmentation(image_input)
+    
+    # Block 1 - Expanding feature map count to capture thermal gradients
+    x = Conv2D(32, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(32, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D((2, 2))(x)
+    
+    # Block 2
+    x = Conv2D(64, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(64, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D((2, 2))(x)
+    
+    # Block 3
+    x = Conv2D(128, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(128, (3, 3), activation="relu", padding="same")(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D((2, 2))(x)
+    
+    # Global Pool to preserve spatial invariance across different flights
+    x = GlobalAveragePooling2D()(x) 
+    
+    # Expanded dense capacity so it has room to think
+    x = Dense(128, activation="relu")(x)
+    x = BatchNormalization()(x)
+    x = Dropout(0.4)(x)  
+    
+    output = Dense(5, activation="softmax")(x)
+    
+    model = tf.keras.Model(inputs=image_input, outputs=output)
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4), # Slight bump to kick-start weights
+        loss="sparse_categorical_crossentropy",
+        metrics=["accuracy"],
+    )
+    return model
+
+def make_model(width, height, dim) -> tf.keras.Model:
     data_augmentation = tf.keras.Sequential([
         tf.keras.layers.RandomFlip("horizontal_and_vertical"), # Animals can face any direction relative to drones
         tf.keras.layers.RandomRotation(0.15),
-        tf.keras.layers.RandomZoom(0.1),
+        tf.keras.layers.RandomZoom(0.2),
+        tf.keras.layers.RandomTranslation(0.1,0.1)
     ])
 
-    model = tf.keras.Sequential([
-        Input(shape=(height, width, dim)),
-        data_augmentation,
-        
-        # Block 1
-        Conv2D(32, (3, 3), activation="relu", padding="same"),
-        BatchNormalization(),
-        MaxPooling2D((2, 2)),
-        
-        # Block 2
-        Conv2D(64, (3, 3), activation="relu", padding="same"),
-        BatchNormalization(),
-        MaxPooling2D((2, 2)),
-        
-        # Block 3
-        Conv2D(128, (3, 3), activation="relu", padding="same"),
-        BatchNormalization(),
-        MaxPooling2D((2, 2)),
-        
-        Flatten(),
-        # Reduced dense layer capacity to force general feature representation
-        Dense(128, activation="relu"), 
-        BatchNormalization(),
-        Dropout(0.5), # Increased dropout to heavily penalize memorization
-        Dense(5, activation="softmax"),
-    ])
+    model = tf.keras.Sequential(
+        [
+            tf.keras.layers.Input(shape=(height, width, dim)),
+            data_augmentation,
+            tf.keras.layers.Conv2D(64, 3, activation="relu"), 
+            tf.keras.layers.MaxPooling2D(),
+            tf.keras.layers.Conv2D(128, 3, activation="relu"),
+            tf.keras.layers.MaxPooling2D(),
+            tf.keras.layers.Conv2D(256, 3, activation="relu"),
+            tf.keras.layers.Flatten(),
+            tf.keras.layers.Dense(256, activation="relu"),
+            tf.keras.layers.Dense(128),
+            tf.keras.layers.Dropout(0.3),
+            tf.keras.layers.Dense(5, activation="softmax"),
+        ]
+    )
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
         loss="sparse_categorical_crossentropy",
         metrics=["accuracy"],
     )
@@ -232,11 +283,116 @@ def make_multimodal_model(height, width, dim) -> tf.keras.Model:
     )
     return model
 
+def make_small_cnn(input_shape=(128, 128, 1), num_classes=5):
+    model = tf.keras.Sequential([
+        tf.keras.layers.Input(shape=input_shape),
+        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
+        tf.keras.layers.RandomRotation(0.1),
+        tf.keras.layers.RandomZoom(0.2),
+        tf.keras.layers.RandomTranslation(0.1,0.1),
+        
+        tf.keras.layers.Conv2D(32, 3, padding='same', activation='relu'),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.MaxPooling2D(),
+        
+        tf.keras.layers.Conv2D(64, 3, padding='same', activation='relu'),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.MaxPooling2D(),
+        
+        tf.keras.layers.Conv2D(128, 3, padding='same', activation='relu'),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.GlobalAveragePooling2D(),
+        
+        tf.keras.layers.Dense(64, activation='relu'),
+        tf.keras.layers.Dropout(0.4),
+        tf.keras.layers.Dense(32, activation='relu'),
+        tf.keras.layers.Dense(num_classes, activation='softmax'),
+    ])
+
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
+        loss="sparse_categorical_crossentropy",
+        metrics=["accuracy"],
+    )
+
+    return model
+
+def create_3class_dataset(y):
+    """
+    Deer vs Wild Boar vs Hybrid Pig
+
+    output labels:
+        0 = Deer
+        1 = Wild Boar
+        2 = Hybrid Pig
+    """
+
+    y_new = []
+
+    for cls in y:
+        if cls in [0, 1, 2]:
+            y_new.append(0)  # all deer merged
+        elif cls == 3:
+            y_new.append(1)  # wild boar
+        elif cls == 4:
+            y_new.append(2)  # hybrid pig
+
+    return np.array(y_new, dtype=np.int32)
+
+def calc_flight_stats(flight_ids, y, X, split="train"):
+    print(f"{split} flight ids + statistic")
+    flight_ids = np.array(flight_ids, dtype=np.int32)
+
+    for flight in np.unique(flight_ids):
+        for species in np.unique(y):
+            images = [
+                img
+                for img, f, y in zip(X, flight_ids, y)
+                if f == flight and y == species
+            ]
+
+            if len(images) > 20:
+                print(f"for flight {flight} and species {species}: ")
+                brightnesses = [np.array(img, dtype=np.int32).mean() for img in images]
+                print(f"min: {min(brightnesses)}, max: {max(brightnesses)}, mean: {statistics.mean(brightnesses)}, median: {statistics.median(brightnesses)}")
+                contrasts = [np.array(img, dtype=np.int32).std() for img in images]
+                print(f"min: {min(contrasts)}, max: {max(contrasts)}, mean: {statistics.mean(contrasts)}, median: {statistics.median(contrasts)}")
+                ranges = [np.array(img, dtype=np.int32).max() - np.array(img, dtype=np.int32).min() for img in images]
+                print(f"min: {min(ranges)}, max: {max(ranges)}, mean: {statistics.mean(ranges)}, median: {statistics.median(ranges)}")
+
+def oversampling(X, y):
+    # Find the size of your largest class to balance up to it
+    max_class_size = max(np.bincount(y))
+    X_resampled = []
+    y_resampled = []
+
+    for class_idx in np.unique(y):
+        X_class = X[y == class_idx]
+        y_class = y[y == class_idx]
+        
+        # Oversample minority classes with replacement
+        X_upsampled, y_upsampled = resample(
+            X_class, y_class,
+            replace=True,
+            n_samples=max_class_size,
+            random_state=42
+        )
+        X_resampled.extend(X_upsampled)
+        y_resampled.extend(y_upsampled)
+
+    return X_resampled, y_resampled
+
+    
+
 def train_model(model_path="classification_animals_model.keras"): 
-    X_train, y_train = load_dataset()
-    X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
-    X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+    X_train, y_train, flight_train = load_dataset()
+    X_val, y_val, flight_val = load_dataset("images_filtered/val", "labels_filtered/val")
+    X_test, y_test, flight_test = load_dataset("images_filtered/test", "labels_filtered/test")
     print("images loaded")
+
+    #calc_flight_stats(flight_train, y_train, X_train)
+    #calc_flight_stats(flight_val, y_val, X_val, "Val")
+    #calc_flight_stats(flight_test, y_test, X_test, "Test")
 
     X_train = resize_img_padding(X_train, 128)
     X_val = resize_img_padding(X_val, 128)
@@ -248,36 +404,16 @@ def train_model(model_path="classification_animals_model.keras"):
     X_test = X_test[..., np.newaxis]
     print("images resized")
 
-    X_train /= 255.0
-    X_val /= 255.0
-    X_test /= 255.0
+    X_train = X_train.astype(np.float32) / 255.0
+    X_val = X_val.astype(np.float32) / 255.0
+    X_test = X_test.astype(np.float32) / 255.0
 
     y_train = np.array(y_train, dtype=np.int32)
     y_val = np.array(y_val, dtype=np.int32)
     y_test = np.array(y_test, dtype=np.int32)
 
     # Oversamling
-    # Find the size of your largest class to balance up to it
-    max_class_size = max(np.bincount(y_train))
-    X_train_resampled = []
-    y_train_resampled = []
-
-    for class_idx in np.unique(y_train):
-        X_class = X_train[y_train == class_idx]
-        y_class = y_train[y_train == class_idx]
-        
-        # Oversample minority classes with replacement
-        X_upsampled, y_upsampled = resample(
-            X_class, y_class,
-            replace=True,
-            n_samples=max_class_size,
-            random_state=42
-        )
-        X_train_resampled.extend(X_upsampled)
-        y_train_resampled.extend(y_upsampled)
-
-    X_train = np.array(X_train_resampled, dtype=np.float32)
-    y_train = np.array(y_train_resampled, dtype=np.int32)
+    X_train, y_train = oversampling(X_train, y_train)
 
     print(np.unique(y_train, return_counts=True))
     print(np.unique(y_val, return_counts=True))
@@ -292,7 +428,7 @@ def train_model(model_path="classification_animals_model.keras"):
         restore_best_weights=True
     )
 
-    model = make_model(X_train.shape[1], X_train.shape[2], X_train.shape[3])   
+    model = make_model(X_train.shape[1], X_train.shape[2], X_train.shape[3])
 
     model.fit(
         X_train,
@@ -302,11 +438,12 @@ def train_model(model_path="classification_animals_model.keras"):
         batch_size=32,
         verbose=2,
         shuffle=True,
-        #callbacks=[early_stop]
+        callbacks=[early_stop]
     )
 
     print(model.summary())
-    evaluate_model(model, X_val, y_val)
+    evaluate_model(model, X_train, y_train, "Train")
+    evaluate_model(model, X_val, y_val, "Val")
     evaluate_model(model, X_test, y_test)
     model.save(model_path)
 
@@ -362,10 +499,10 @@ def train_model_multimodal(model_path="classification_multimodal.keras"):
     loss, acc = model.evaluate({"image_input": X_test, "meta_input": M_test}, y_test)
     print(f"Test Accuracy: {acc:.3f}")
 
-def load_model(model_path, train=False, transfer=True):
-    X_train, y_train = load_dataset()
-    X_val, y_val = load_dataset("images_filtered/val", "labels_filtered/val")
-    X_test, y_test = load_dataset("images_filtered/test", "labels_filtered/test")
+def load_model(model_path, train=False):
+    X_train, y_train,_ = load_dataset()
+    X_val, y_val,_ = load_dataset("images_filtered/val", "labels_filtered/val")
+    X_test, y_test,_ = load_dataset("images_filtered/test", "labels_filtered/test")
 
     widths = []
     w_train = []
@@ -411,19 +548,9 @@ def load_model(model_path, train=False, transfer=True):
     X_val = X_val[..., np.newaxis]
     X_test = X_test[..., np.newaxis]
 
-    if transfer:           
-        # convert to rgb format for transfer learning
-        X_train = np.repeat(X_train, 3, axis=-1)
-        X_val   = np.repeat(X_val, 3, axis=-1)
-        X_test  = np.repeat(X_test, 3, axis=-1)
-    
-        X_train = preprocess_input(X_train)
-        X_val = preprocess_input(X_val)
-        X_test = preprocess_input(X_test)
-    else: 
-        X_train /= 255.0
-        X_val /= 255.0
-        X_test /= 255.0
+    X_train /= 255.0
+    X_val /= 255.0
+    X_test /= 255.0
 
     y_train = np.array(y_train, dtype=np.int32)
     y_val = np.array(y_val, dtype=np.int32)
@@ -475,11 +602,10 @@ def evaluate_model(model, X, y, split="Test"):
 
 if __name__ == "__main__":
     #load_model("classification_base.keras")
-    train_model_multimodal("classification_multi.keras")
-    #load_model("classification_base16.keras")
+    train_model("classification_basic_augmented_oversampled_dropout.keras")
+    #load_model("classification_generalize.keras")
 
 # TODO's:
-# try less training data samples and increase image size (to little GPU to do that now)
-# try different model architectures (from scratch) like in the lecture
-# try image preprocessing?? idk filtering and so on
-# smaller batch size but increase image size 
+# different model architectures (from scratch) like in the lecture
+# image preprocessing?? idk filtering and so on
+# higher context ratio (at loading the images)
