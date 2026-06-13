@@ -237,50 +237,6 @@ def make_model(width, height, dim) -> tf.keras.Model:
     )
     return model
 
-def make_multimodal_model(height, width, dim) -> tf.keras.Model:
-    # --- Branch A: Pixel Image Processor ---
-    image_input = Input(shape=(height, width, dim), name="image_input")
-    
-    data_augmentation = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.20), # Increased to completely scramble flight patterns
-    ])
-    
-    x = data_augmentation(image_input)
-    x = Conv2D(32, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = MaxPooling2D((2, 2))(x)
-    
-    x = Conv2D(64, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = MaxPooling2D((2, 2))(x)
-    
-    x = GlobalAveragePooling2D()(x)
-    x = Dense(64, activation="relu")(x)
-    x = Dropout(0.4)(x)
-    # --- Branch B: Scale Bounding Box Processor ---
-    meta_input = Input(shape=(2,), name="meta_input")
-    y = Dense(32, activation="relu")(meta_input)
-    y = BatchNormalization()(y)
-    y = Dense(32, activation="relu")(y)
-
-    # --- Fusion Core ---
-    combined = concatenate([x, y])
-    z = Dense(64, activation="relu")(combined)
-    z = BatchNormalization()(z)
-    z = Dropout(0.5)(z) # Aggressive dropout to penalize background memorization
-    
-    output = Dense(5, activation="softmax", name="output")(z)
-    
-    model = Model(inputs=[image_input, meta_input], outputs=output)
-    
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=3e-4), # Low learning rate for validation stability
-        loss="sparse_categorical_crossentropy",
-        metrics=["accuracy"],
-    )
-    return model
-
 def make_small_cnn(input_shape=(128, 128, 1), num_classes=5):
     model = tf.keras.Sequential([
         tf.keras.layers.Input(shape=input_shape),
@@ -316,15 +272,6 @@ def make_small_cnn(input_shape=(128, 128, 1), num_classes=5):
     return model
 
 def create_3class_dataset(y):
-    """
-    Deer vs Wild Boar vs Hybrid Pig
-
-    output labels:
-        0 = Deer
-        1 = Wild Boar
-        2 = Hybrid Pig
-    """
-
     y_new = []
 
     for cls in y:
@@ -379,8 +326,6 @@ def oversampling(X, y):
         y_resampled.extend(y_upsampled)
 
     return X_resampled, y_resampled
-
-    
 
 def train_model(model_path="classification_animals_model.keras"): 
     X_train, y_train, flight_train = load_dataset()
@@ -444,58 +389,6 @@ def train_model(model_path="classification_animals_model.keras"):
     evaluate_model(model, X_val, y_val, "Val")
     evaluate_model(model, X_test, y_test)
     model.save(model_path)
-
-def train_model_multimodal(model_path="classification_multimodal.keras"): 
-    X_train, y_train, M_train = load_dataset_multimodal()
-    X_val, y_val, M_val = load_dataset_multimodal("images_filtered/val", "labels_filtered/val")
-    X_test, y_test, M_test = load_dataset_multimodal("images_filtered/test", "labels_filtered/test")
-    
-    # Run processing and channel expanding
-    X_train = resize_img_padding(X_train, 128)[..., np.newaxis] / 255.0
-    X_val = resize_img_padding(X_val, 128)[..., np.newaxis] / 255.0
-    X_test = resize_img_padding(X_test, 128)[..., np.newaxis] / 255.0
-    
-    y_train = np.array(y_train, dtype=np.int32)
-    y_val = np.array(y_val, dtype=np.int32)
-    y_test = np.array(y_test, dtype=np.int32)
-    
-    M_train = np.array(M_train, dtype=np.float32)
-    M_val = np.array(M_val, dtype=np.float32)
-    M_test = np.array(M_test, dtype=np.float32)
-
-    # --- Synchronized Multimodal Oversampling ---
-    max_class_size = max(np.bincount(y_train))
-    X_resampled, y_resampled, M_resampled = [], [], []
-
-    for class_idx in np.unique(y_train):
-        indices = np.where(y_train == class_idx)[0]
-        # Resample matching indices across images and shape metadata
-        sampled_indices = np.random.choice(indices, size=max_class_size, replace=True)
-        
-        X_resampled.extend(X_train[sampled_indices])
-        y_resampled.extend(y_train[sampled_indices])
-        M_resampled.extend(M_train[sampled_indices])
-
-    X_train = np.array(X_resampled, dtype=np.float32)
-    y_train = np.array(y_resampled, dtype=np.int32)
-    M_train = np.array(M_resampled, dtype=np.float32)
-
-    model = make_multimodal_model(128, 128, 1)
-    
-    # Train passing inputs as a multi-key dictionary
-    model.fit(
-        x={"image_input": X_train, "meta_input": M_train},
-        y=y_train,
-        validation_data=({"image_input": X_val, "meta_input": M_val}, y_val),
-        epochs=25,
-        batch_size=32, # 32 provides stabler batches than 16 for gradient steps
-        shuffle=True,
-        verbose=2
-    )
-    
-    # Evaluation
-    loss, acc = model.evaluate({"image_input": X_test, "meta_input": M_test}, y_test)
-    print(f"Test Accuracy: {acc:.3f}")
 
 def load_model(model_path, train=False):
     X_train, y_train,_ = load_dataset()
@@ -599,9 +492,7 @@ def evaluate_model(model, X, y, split="Test"):
     print(classification_report(y, y_pred_classes, digits=3))
 
 if __name__ == "__main__":
-    #load_model("classification_base.keras")
     train_model("species_class_models/classification_basic_augmented_oversampled_dropout.keras")
-    #load_model("classification_generalize.keras")
 
 # TODO's:
 # different model architectures (from scratch) like in the lecture
