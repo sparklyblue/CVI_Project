@@ -22,7 +22,7 @@ import statistics
 
 import matplotlib.pyplot as plt
 
-from keras.layers import Conv2D, Flatten, Dense, GlobalAveragePooling2D, GlobalMaxPooling2D, Dropout, concatenate
+from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D, Dense, Dropout, BatchNormalization, Input, concatenate
 from keras.models import Model
 from keras.applications.efficientnet_v2 import preprocess_input
 
@@ -71,7 +71,7 @@ def load_dataset(image_path="images_filtered/train", label_path="labels_filtered
             X.extend(x)
             Y.extend(y)
             for _ in range(len(y)): 
-                flight_ids.append(img_path.stem[0])
+                flight_ids.append(img_path.stem.split('_')[0])
     
     return X, Y, flight_ids
 
@@ -153,8 +153,6 @@ def get_class_weights(y):
     )
 
     return dict(zip(classes, weights))
-
-from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D, Dense, Dropout, BatchNormalization, Input
 
 def make_robust_generalizer(height, width, dim) -> tf.keras.Model:
     image_input = Input(shape=(height, width, dim))
@@ -602,7 +600,7 @@ def evaluate_model(model, X, y, split="Test"):
 
 if __name__ == "__main__":
     #load_model("classification_base.keras")
-    train_model("classification_basic_augmented_oversampled_dropout.keras")
+    train_model("species_class_models/classification_basic_augmented_oversampled_dropout.keras")
     #load_model("classification_generalize.keras")
 
 # TODO's:
