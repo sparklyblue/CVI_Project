@@ -11,3 +11,4 @@ filtered_summary.csv
 *.tif
 *.zip
 *.keras
+*.npz
