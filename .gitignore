@@ -12,3 +12,4 @@ filtered_summary.csv
 *.zip
 *.keras
 *.npz
+*/__pycache__

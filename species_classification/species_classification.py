@@ -150,23 +150,20 @@ def resize_with_padding(img, size=128):
     return canvas
 
 def mask_rgb(X):
-    masked_rgbs = []
-
-    for img in X:
-        thermal = img[...,0]
+    masked_combined = np.copy(X)
+    for i in range(len(X)):
+        thermal = X[i, ..., 0]
+        # Secure top 5% brightest pixels reliably before any normalization 
         thr = np.percentile(thermal, 95)
-        mask = thermal > thr # only keep the brightest places
+        mask = (thermal > thr).astype(np.uint8)
 
-        kernel = np.ones((7,7), np.uint8)
-        mask = cv2.dilate(mask.astype(np.uint8), kernel, iterations=2)
-        mask = cv2.GaussianBlur(mask.astype(np.float32), (11,11), 0)
+        kernel = np.ones((5, 5), np.uint8)
+        mask = cv2.dilate(mask, kernel, iterations=1)
+        mask = cv2.GaussianBlur(mask.astype(np.float32), (7, 7), 0)
 
-        # apply to rgb
-        rgb = img[..., 1:]
-        rgb_masked = rgb * mask[...,None]
-        masked_rgbs.append(rgb_masked)
-    
-    return np.array(masked_rgbs, dtype=np.float32)
+        # Apply mask directly to the RGB layers
+        masked_combined[i, ..., 1:] = X[i, ..., 1:] * mask[..., None]
+    return masked_combined
 
 
 def get_class_weights(y): 
@@ -180,68 +177,18 @@ def get_class_weights(y):
 
     return dict(zip(classes, weights))
 
-def make_robust_generalizer(height, width, dim) -> tf.keras.Model:
-    image_input = Input(shape=(height, width, dim))
-    
-    # 1. Moderate augmentation to diversify without erasing species signatures
-    data_augmentation = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.20),
-        tf.keras.layers.RandomZoom(0.10),
-    ])
-    
-    x = data_augmentation(image_input)
-    
-    # Block 1 - Expanding feature map count to capture thermal gradients
-    x = Conv2D(32, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = Conv2D(32, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = MaxPooling2D((2, 2))(x)
-    
-    # Block 2
-    x = Conv2D(64, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = Conv2D(64, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = MaxPooling2D((2, 2))(x)
-    
-    # Block 3
-    x = Conv2D(128, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = Conv2D(128, (3, 3), activation="relu", padding="same")(x)
-    x = BatchNormalization()(x)
-    x = MaxPooling2D((2, 2))(x)
-    
-    # Global Pool to preserve spatial invariance across different flights
-    x = GlobalAveragePooling2D()(x) 
-    
-    # Expanded dense capacity so it has room to think
-    x = Dense(128, activation="relu")(x)
-    x = BatchNormalization()(x)
-    x = Dropout(0.4)(x)  
-    
-    output = Dense(5, activation="softmax")(x)
-    
-    model = tf.keras.Model(inputs=image_input, outputs=output)
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4), # Slight bump to kick-start weights
-        loss="sparse_categorical_crossentropy",
-        metrics=["accuracy"],
-    )
-    return model
 
-def make_model(width, height, dim) -> tf.keras.Model:
+def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
     data_augmentation = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal"), # Animals can face any direction relative to drones horizontal_and_vertical
-        tf.keras.layers.RandomRotation(0.05),
-        tf.keras.layers.RandomZoom(0.05),
+        tf.keras.layers.RandomFlip("horizontal_vertical"), # Animals can face any direction relative to drones horizontal_and_vertical
+        tf.keras.layers.RandomRotation(0.1),
+        tf.keras.layers.RandomZoom(0.1),
         #tf.keras.layers.RandomTranslation(0.1,0.1)
     ])
 
     model = tf.keras.Sequential(
         [
-            tf.keras.layers.Input(shape=(height, width, dim)),
+            tf.keras.layers.Input(shape=input_shape),
             data_augmentation,
             tf.keras.layers.Conv2D(64, 3, activation="relu"), 
             BatchNormalization(),
@@ -249,13 +196,13 @@ def make_model(width, height, dim) -> tf.keras.Model:
             tf.keras.layers.Conv2D(128, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(256, 3, activation="relu"),
+            tf.keras.layers.Conv2D(128, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dense(32, activation="relu"),  #256
+            tf.keras.layers.Dense(16, activation="relu"),  #256
             BatchNormalization(),
-            tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(5, activation="softmax"),
+            tf.keras.layers.Dropout(0.5),
+            tf.keras.layers.Dense(num_classes, activation="softmax"),
         ]
     )
 
@@ -300,7 +247,7 @@ def make_small_cnn(input_shape=(128, 128, 1), num_classes=5):
 
     return model
 
-def transfer_model(input_shape=(128, 128, 3)):
+def transfer_model(input_shape=(128, 128, 3), num_classes=5):
     base_model = keras.applications.EfficientNetV2B0(
         include_top=False,  
         weights="imagenet",
@@ -322,7 +269,7 @@ def transfer_model(input_shape=(128, 128, 3)):
     x = Dropout(0.4)(x)
     x = Dense(256, activation='relu')(x)
     x = Dropout(0.4)(x)
-    outputs = Dense(5, activation='softmax')(x)
+    outputs = Dense(num_classes, activation='softmax')(x)
     model = Model(inputs=inputs, outputs=outputs)
     model.compile(
             optimizer=keras.optimizers.Adam(1e-3),
@@ -330,19 +277,6 @@ def transfer_model(input_shape=(128, 128, 3)):
             metrics=["accuracy"]
         )
     return model
-
-def create_3class_dataset(y):
-    y_new = []
-
-    for cls in y:
-        if cls in [0, 1, 2]:
-            y_new.append(0)  # all deer merged
-        elif cls == 3:
-            y_new.append(1)  # wild boar
-        elif cls == 4:
-            y_new.append(2)  # hybrid pig
-
-    return np.array(y_new, dtype=np.int32)
 
 def calc_flight_stats(flight_ids, y, X, split="train"):
     print(f"{split} flight ids + statistic")
@@ -365,36 +299,7 @@ def calc_flight_stats(flight_ids, y, X, split="train"):
                 ranges = [np.array(img, dtype=np.int32).max() - np.array(img, dtype=np.int32).min() for img in images]
                 print(f"min: {min(ranges)}, max: {max(ranges)}, mean: {statistics.mean(ranges)}, median: {statistics.median(ranges)}")
 
-def oversampling(X, y):
-    # Find the size of your largest class to balance up to it
-    max_class_size = max(np.bincount(y))
-    X_resampled = []
-    y_resampled = []
-
-    for class_idx in np.unique(y):
-        X_class = X[y == class_idx]
-        y_class = y[y == class_idx]
-        
-        # Oversample minority classes with replacement
-        X_upsampled, y_upsampled = resample(
-            X_class, y_class,
-            replace=True,
-            n_samples=max_class_size,
-            random_state=42
-        )
-        X_resampled.extend(X_upsampled)
-        y_resampled.extend(y_upsampled)
-
-    return X_resampled, y_resampled
-
-def combine_rgb_grayscale(gray, rgb):
-    if(len(gray.shape) < 4):
-        gray = np.expand_dims(gray, axis=-1)
-    X = np.concatenate([gray, rgb], axis=-1)
-    print(X.shape)
-    return X
-
-def model_combined():
+def model_combined(num_classes=5):
     base_model = keras.applications.EfficientNetV2B0(
         include_top=False,
         weights="imagenet"
@@ -431,7 +336,7 @@ def model_combined():
 
     x = keras.layers.Dense(64, activation="relu")(x)
     x = keras.layers.Dropout(0.5)(x)
-    out = keras.layers.Dense(5, activation="softmax")(x)
+    out = keras.layers.Dense(num_classes, activation="softmax")(x)
 
     model = keras.Model(
         [rgb_input, thermal_input],
@@ -446,87 +351,34 @@ def model_combined():
 
     return model
 
-import tensorflow as tf
-import keras
-from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D, Dense, Dropout, BatchNormalization, Input, concatenate
-from keras.models import Model
+def oversampling(X, y):
+    # Find the size of your largest class to balance up to it
+    max_class_size = max(np.bincount(y))
+    X_resampled = []
+    y_resampled = []
 
-def make_mid_fusion_drone_model(height=128, width=128) -> tf.keras.Model:
-    """
-    Separates Thermal shape extraction from RGB texture extraction, 
-    fusing representations late in the network topology.
-    """
-    # -----------------------------------------------------------------
-    # BRANCH 1: RGB Texture Pathway (Leveraging Transfer Learning)
-    # -----------------------------------------------------------------
-    rgb_input = Input(shape=(height, width, 3), name="rgb_input")
-    
-    # Moderate augmentation tailored for RGB environments
-    rgb_aug = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.10),
-    ])(rgb_input)
-    
-    # Load EfficientNet pre-trained on ImageNet for rich texture maps
-    rgb_base = keras.applications.EfficientNetV2B0(
-        include_top=False,
-        weights="imagenet",
-        pooling=None
-    )
-    rgb_base.trainable = False  # Keep features frozen to protect minority gradients
-    
-    rgb_features = rgb_base(rgb_aug, training=False)
-    rgb_vector = GlobalAveragePooling2D()(rgb_features)
-    rgb_vector = Dense(128, activation="relu")(rgb_vector)
-    rgb_vector = BatchNormalization()(rgb_vector)
+    for class_idx in np.unique(y):
+        X_class = X[y == class_idx]
+        y_class = y[y == class_idx]
+        
+        # Oversample minority classes with replacement
+        X_upsampled, y_upsampled = resample(
+            X_class, y_class,
+            replace=True,
+            n_samples=max_class_size,
+            random_state=42
+        )
+        X_resampled.extend(X_upsampled)
+        y_resampled.extend(y_upsampled)
 
-    # -----------------------------------------------------------------
-    # BRANCH 2: Thermal Hot-Spot Structural Pathway (Custom CNN)
-    # -----------------------------------------------------------------
-    thermal_input = Input(shape=(height, width, 1), name="thermal_input")
-    
-    # Geometric transformations for flight adjustments
-    thermal_aug = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.15),
-        tf.keras.layers.RandomZoom(0.05),
-    ])(thermal_input)
-    
-    t_layer = Conv2D(32, 3, padding='same', activation="relu")(thermal_aug)
-    t_layer = BatchNormalization()(t_layer)
-    t_layer = MaxPooling2D()(t_layer)
-    
-    t_layer = Conv2D(64, 3, padding='same', activation="relu")(t_layer)
-    t_layer = BatchNormalization()(t_layer)
-    t_layer = MaxPooling2D()(t_layer)
-    
-    t_layer = Conv2D(128, 3, padding='same', activation="relu")(t_layer)
-    t_layer = BatchNormalization()(t_layer)
-    
-    thermal_vector = GlobalAveragePooling2D()(t_layer)
-    thermal_vector = Dense(64, activation="relu")(thermal_vector)
-    thermal_vector = BatchNormalization()(thermal_vector)
+    return X_resampled, y_resampled
 
-    # -----------------------------------------------------------------
-    # CONCATENATION AND CROSS-MODAL FUSION HEAD
-    # -----------------------------------------------------------------
-    # Merge the 128-dim RGB vector with the 64-dim Thermal vector
-    fused_embedding = concatenate([rgb_vector, thermal_vector])
-    
-    x = Dense(128, activation="relu")(fused_embedding)
-    x = BatchNormalization()(x)
-    x = Dropout(0.5)(x)  # High dropout prevents dominant class memorization
-    
-    outputs = Dense(5, activation="softmax", name="species_output")(x)
-
-    # Compile model expecting a dual input stream list
-    model = Model(inputs=[rgb_input, thermal_input], outputs=outputs)
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4),
-        loss="sparse_categorical_crossentropy",
-        metrics=["accuracy"]
-    )
-    return model
+def combine_rgb_grayscale(gray, rgb):
+    if(len(gray.shape) < 4):
+        gray = np.expand_dims(gray, axis=-1)
+    X = np.concatenate([gray, rgb], axis=-1)
+    print(X.shape)
+    return X
 
 # execute once - takes around 15 min.
 def preprocess_and_save_data():
@@ -589,165 +441,106 @@ def preprocess_and_save_data():
         y=np.array(y_test, dtype=np.int32)
     )
 
-def make_optimized_drone_cnn(width, height, dim) -> tf.keras.Model:
-    data_augmentation = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"), 
-        tf.keras.layers.RandomRotation(0.15),
-        tf.keras.layers.RandomZoom(0.10),
-    ])
+def create_binary_dataset(y):
+    y_new = []
 
-    model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=(height, width, dim)),
-        data_augmentation,
-        
-        # Block 1: Capture fine-grained boundary edges
-        tf.keras.layers.Conv2D(32, 3, padding='same', activation="relu"), 
-        BatchNormalization(),
-        tf.keras.layers.Conv2D(32, 3, padding='same', activation="relu"),
-        BatchNormalization(),
-        tf.keras.layers.MaxPooling2D(),
-        
-        # Block 2: Expand features intermediate scale
-        tf.keras.layers.Conv2D(64, 3, padding='same', activation="relu"),
-        BatchNormalization(),
-        tf.keras.layers.Conv2D(64, 3, padding='same', activation="relu"),
-        BatchNormalization(),
-        tf.keras.layers.MaxPooling2D(),
-        
-        # Block 3: Deep structural features (Narrower filters prevent background smearing)
-        tf.keras.layers.Conv2D(128, 3, padding='same', activation="relu"),
-        BatchNormalization(),
-        tf.keras.layers.Conv2D(128, 3, padding='same', activation="relu"),
-        BatchNormalization(),
-        tf.keras.layers.GlobalAveragePooling2D(),
-        
-        # Dense Generalization Layers
-        tf.keras.layers.Dense(64, activation="relu"), 
-        BatchNormalization(),
-        tf.keras.layers.Dropout(0.4), # Elevated slightly to curb the 90% overfit
-        tf.keras.layers.Dense(5, activation="softmax"),
-    ])
+    for cls in y:
+        if cls in [0, 1, 2]:
+            y_new.append(0)  # roe, red, & fallow deer
+        elif cls in [3, 4]:
+            y_new.append(1)  # wild boar & hybrid pig
 
-    # Lower learning rate + explicit label smoothing to handle oversampled profiles safely
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=3e-4),
-        loss=tf.keras.losses.SparseCategoricalCrossentropy(),
-        metrics=["accuracy"],
+    return np.array(y_new, dtype=np.int32)
+
+def run_custom_split(X, y, model_path="species_class_models/custom_split.keras"):
+    print("Custom Train/Val/Test Split over all flights")
+
+    X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+    X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42, stratify=y_temp)
+
+    print(np.unique(y_train, return_counts=True))
+    print(np.unique(y_val, return_counts=True))
+    print(np.unique(y_test, return_counts=True))
+
+    print(X_train.shape)
+    print(X_val.shape)
+    print(X_test.shape)
+
+    print(X_train.dtype)
+
+    print(X_train.nbytes / 1024**3, "GB")
+
+    early_stop = keras.callbacks.EarlyStopping(
+        monitor="val_accuracy",
+        patience=5,
+        restore_best_weights=True
     )
-    return model
 
-def make_mid_fusion_drone_model(height=128, width=128) -> tf.keras.Model:
-    """
-    Separates Thermal shape extraction from RGB texture extraction, 
-    fusing representations late in the network topology.
-    """
-    # -----------------------------------------------------------------
-    # BRANCH 1: RGB Texture Pathway (Leveraging Transfer Learning)
-    # -----------------------------------------------------------------
-    rgb_input = Input(shape=(height, width, 3), name="rgb_input")
-    
-    # Moderate augmentation tailored for RGB environments
-    rgb_aug = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.10),
-    ])(rgb_input)
-    
-    # Load EfficientNet pre-trained on ImageNet for rich texture maps
-    rgb_base = keras.applications.EfficientNetV2B0(
-        include_top=False,
-        weights="imagenet",
-        pooling=None
+    model = make_model((X_train.shape[1], X_train.shape[2], X_train.shape[3]), num_classes=5)
+
+    model.fit(
+        X_train,
+        y_train,
+        validation_data=(X_val, y_val),
+        epochs=20,
+        batch_size=16,
+        verbose=2,
+        shuffle=True,
+        callbacks=[early_stop]
     )
-    rgb_base.trainable = False  # Keep features frozen to protect minority gradients
-    
-    rgb_features = rgb_base(rgb_aug, training=False)
-    rgb_vector = GlobalAveragePooling2D()(rgb_features)
-    rgb_vector = Dense(128, activation="relu")(rgb_vector)
-    rgb_vector = BatchNormalization()(rgb_vector)
 
-    # -----------------------------------------------------------------
-    # BRANCH 2: Thermal Hot-Spot Structural Pathway (Custom CNN)
-    # -----------------------------------------------------------------
-    thermal_input = Input(shape=(height, width, 1), name="thermal_input")
-    
-    # Geometric transformations for flight adjustments
-    thermal_aug = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.15),
-        tf.keras.layers.RandomZoom(0.05),
-    ])(thermal_input)
-    
-    t_layer = Conv2D(32, 3, padding='same', activation="relu")(thermal_aug)
-    t_layer = BatchNormalization()(t_layer)
-    t_layer = MaxPooling2D()(t_layer)
-    
-    t_layer = Conv2D(64, 3, padding='same', activation="relu")(t_layer)
-    t_layer = BatchNormalization()(t_layer)
-    t_layer = MaxPooling2D()(t_layer)
-    
-    t_layer = Conv2D(128, 3, padding='same', activation="relu")(t_layer)
-    t_layer = BatchNormalization()(t_layer)
-    
-    thermal_vector = GlobalAveragePooling2D()(t_layer)
-    thermal_vector = Dense(64, activation="relu")(thermal_vector)
-    thermal_vector = BatchNormalization()(thermal_vector)
+    print(model.summary())
+    evaluate_model(model, X_val, y_val, "Val")
+    evaluate_model(model, X_test, y_test)
+    model.save(model_path)
 
-    # -----------------------------------------------------------------
-    # CONCATENATION AND CROSS-MODAL FUSION HEAD
-    # -----------------------------------------------------------------
-    # Merge the 128-dim RGB vector with the 64-dim Thermal vector
-    fused_embedding = concatenate([rgb_vector, thermal_vector])
-    
-    x = Dense(128, activation="relu")(fused_embedding)
-    x = BatchNormalization()(x)
-    x = Dropout(0.5)(x)  # High dropout prevents dominant class memorization
-    
-    outputs = Dense(5, activation="softmax", name="species_output")(x)
+def run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/binary_classification.keras"):
+    print("Binary Classification: Deer = 0, Pig = 1")
 
-    # Compile model expecting a dual input stream list
-    model = Model(inputs=[rgb_input, thermal_input], outputs=outputs)
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4),
-        loss="sparse_categorical_crossentropy",
-        metrics=["accuracy"]
+    y_train = create_binary_dataset(y_train)
+    y_val = create_binary_dataset(y_val)
+    y_test = create_binary_dataset(y_test)
+
+    print(np.unique(y_train, return_counts=True))
+    print(np.unique(y_val, return_counts=True))
+    print(np.unique(y_test, return_counts=True))
+
+    print(X_train.shape)
+    print(X_val.shape)
+    print(X_test.shape)
+
+    early_stop = keras.callbacks.EarlyStopping(
+        monitor="val_accuracy",
+        patience=5,
+        restore_best_weights=True
     )
-    return model
 
-def mask_rgb_2(X_combined):
-    masked_combined = np.copy(X_combined)
-    for i in range(len(X_combined)):
-        thermal = X_combined[i, ..., 0]
-        # Secure top 5% brightest pixels reliably before any normalization 
-        thr = np.percentile(thermal, 95)
-        mask = (thermal > thr).astype(np.uint8)
+    model = make_model(input_shape=(X_train.shape[1], X_train.shape[2], X_train.shape[3]), num_classes=2)
 
-        kernel = np.ones((5, 5), np.uint8)
-        mask = cv2.dilate(mask, kernel, iterations=1)
-        mask = cv2.GaussianBlur(mask.astype(np.float32), (7, 7), 0)
+    model.fit(
+        X_train,
+        y_train,
+        validation_data=(X_val, y_val),
+        epochs=20,
+        batch_size=32,
+        verbose=2,
+        shuffle=True,
+        callbacks=[early_stop]
+    )
 
-        # Apply mask directly to the RGB layers safely
-        masked_combined[i, ..., 1:] = X_combined[i, ..., 1:] * mask[..., None]
-    return masked_combined
+    print(model.summary())
+    evaluate_model(model, X_val, y_val, "Val")
+    evaluate_model(model, X_test, y_test)
+    model.save(model_path)
 
-def train_model(model_path="classification_animals_model.keras"): 
+
+def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="transfer_learning.keras"): 
     # Oversamling
     #X_train, y_train = oversampling(X_train, y_train)
 
-    train = np.load("train.npz")
-    X_train = train["X"]
-    y_train = train["y"]
-
-    val = np.load("val.npz")
-    X_val = val["X"]
-    y_val = val["y"]
-
-    test = np.load("test.npz")
-    X_test = test["X"]
-    y_test = test["y"]
-
-    X_train = mask_rgb_2(X_train)
-    X_val = mask_rgb_2(X_val)
-    X_test = mask_rgb_2(X_test)
+    #X_train = mask_rgb(X_train)
+    #X_val = mask_rgb(X_val)
+    #X_test = mask_rgb(X_test)
 
     X_train_thermal = X_train[:, :, :, 0:1]
     X_val_thermal = X_val[:, :, :, 0:1]
@@ -766,19 +559,18 @@ def train_model(model_path="classification_animals_model.keras"):
     print(X_train_rgb.shape)
     print(X_test_rgb.shape)
 
-
     early_stop = keras.callbacks.EarlyStopping(
         monitor="val_accuracy",
         patience=5,
         restore_best_weights=True
     )
 
-    model = make_mid_fusion_drone_model()
+    model = make_model()
 
     model.fit(
-        [X_train_rgb, X_train_thermal],
+        X_train,
         y_train,
-        validation_data=([X_val_rgb, X_val_thermal], y_val),
+        validation_data=(X_val, y_val),
         epochs=20,
         batch_size=32,
         verbose=2,
@@ -787,94 +579,15 @@ def train_model(model_path="classification_animals_model.keras"):
     )
 
     print(model.summary())
-    evaluate_model(model, [X_val_rgb, X_val_thermal], y_val, "Val")
-    evaluate_model(model, [X_test_rgb, X_test_thermal], y_test)
+    evaluate_model(model, X_val, y_val, "Val")
+    evaluate_model(model, X_test, y_test)
     model.save(model_path)
 
     #class_weights = get_class_weights(y_train)
     #print("Applying Class Weights:", class_weights)
 
-def load_model(model_path, train=False):
-    X_train, y_train,_ = load_dataset()
-    X_val, y_val,_ = load_dataset("images_filtered/val", "labels_filtered/val")
-    X_test, y_test,_ = load_dataset("images_filtered/test", "labels_filtered/test")
-
-    widths = []
-    w_train = []
-    w_val = []
-    w_test = []
-    heights = []
-    h_train = []
-    h_val = []
-    h_test = []
-    X = X_train + X_val + X_test
-    for img in X:
-        widths.append(img.size[0])
-        heights.append(img.size[1])
-
-    for img in X_train:
-        w_train.append(img.size[0])
-        h_train.append(img.size[1])
-    for img in X_val:
-        w_val.append(img.size[0])
-        h_val.append(img.size[1])
-    for img in X_test:
-        w_test.append(img.size[0])
-        h_test.append(img.size[1])
-    print(min(widths), max(widths), statistics.mean(widths), statistics.median(widths))
-    print(min(heights), max(heights), statistics.mean(heights), statistics.median(heights))
-    print("\n\nX_train:")
-    print(min(w_train), max(w_train), statistics.mean(w_train), statistics.median(w_train))
-    print(min(h_train), max(h_train), statistics.mean(h_train), statistics.median(h_train))
-    print("\n\nX_val:")
-    print(min(w_val), max(w_val), statistics.mean(w_val), statistics.median(w_val))
-    print(min(h_val), max(h_val), statistics.mean(h_val), statistics.median(h_val))
-    print("\n\nX_test:")
-    print(min(w_test), max(w_test), statistics.mean(w_test), statistics.median(w_test))
-    print(min(h_test), max(h_test), statistics.mean(h_test), statistics.median(h_test))
-
-    print("images loaded")
-    X_train = resize_img_padding(X_train, 128)
-    X_val = resize_img_padding(X_val, 128)
-    X_test = resize_img_padding(X_test, 128)
-    print("images resized")
-    # need additional dim for keras input
-    X_train = X_train[..., np.newaxis]
-    X_val = X_val[..., np.newaxis]
-    X_test = X_test[..., np.newaxis]
-
-    X_train /= 255.0
-    X_val /= 255.0
-    X_test /= 255.0
-
-    y_train = np.array(y_train, dtype=np.int32)
-    y_val = np.array(y_val, dtype=np.int32)
-    y_test = np.array(y_test, dtype=np.int32)
-
+def load_model(model_path, X_train, y_train, X_val, y_val, X_test, y_test):
     loaded_model = keras.saving.load_model(model_path)
-
-    if train: 
-        # imbalanced classes 
-        class_weights = get_class_weights(y_train)
-        print(class_weights)
-
-        early_stop = keras.callbacks.EarlyStopping(
-            monitor="val_accuracy",
-            patience=5,
-            restore_best_weights=True
-        )
-
-        loaded_model.fit(
-            X_train,
-            y_train,
-            validation_split=0.2,
-            epochs=20,
-            batch_size=32,
-            class_weight=class_weights,
-            verbose=2,
-            shuffle=True,
-            callbacks=[early_stop]
-        )
 
     evaluate_model(loaded_model, X_train, y_train, "Train")
     evaluate_model(loaded_model, X_val, y_val, "Val")
@@ -897,7 +610,26 @@ def evaluate_model(model, X, y, split="Test"):
 
 if __name__ == "__main__":
     #preprocess_and_save_data()
-    train_model("species_class_models/combined_branched_mid_fusion.keras")
+    train = np.load("train.npz")
+    X_train = train["X"]
+    y_train = train["y"]
+
+    val = np.load("val.npz")
+    X_val = val["X"]
+    y_val = val["y"]
+
+    test = np.load("test.npz")
+    X_test = test["X"]
+    y_test = test["y"]
+
+    #X_train_thermal = X_train[:, :, :, 0:1]
+    #X_val_thermal = X_val[:, :, :, 0:1]
+    #X_test_thermal = X_test[:, :, :, 0:1]
+
+    #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
+    #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_thermal.keras")
+
+    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_normal_better.keras")
 
 # TODO's:
 # different model architectures (from scratch) like in the lecture
