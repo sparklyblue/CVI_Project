@@ -16,9 +16,16 @@ dist/
 models/
 runs/
 *.joblib
+*.pt
+*.pth
+*.ckpt
 *.npz
 *.pkl
 *.pickle
+checkpoints/
+lightning_logs/
+wandb/
+events.out.tfevents*
 
 # Generated summaries and predictions
 label_summary.csv
