@@ -179,27 +179,28 @@ def get_class_weights(y):
 
 
 def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
-    data_augmentation = tf.keras.Sequential([
-        tf.keras.layers.RandomFlip("horizontal_vertical"), # Animals can face any direction relative to drones horizontal_and_vertical
-        tf.keras.layers.RandomRotation(0.1),
-        tf.keras.layers.RandomZoom(0.1),
-        #tf.keras.layers.RandomTranslation(0.1,0.1)
+    data_augmentation = keras.Sequential([
+        tf.keras.layers.RandomFlip("horizontal"),
+        tf.keras.layers.RandomRotation(0.05),
     ])
 
     model = tf.keras.Sequential(
         [
             tf.keras.layers.Input(shape=input_shape),
             data_augmentation,
-            tf.keras.layers.Conv2D(64, 3, activation="relu"), 
+            tf.keras.layers.Conv2D(32, 3, activation="relu"), 
+            BatchNormalization(),
+            tf.keras.layers.MaxPooling2D(),
+            tf.keras.layers.Conv2D(64, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.MaxPooling2D(),
             tf.keras.layers.Conv2D(128, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(128, 3, activation="relu"),
+            tf.keras.layers.Conv2D(256, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dense(16, activation="relu"),  #256
+            tf.keras.layers.Dense(8, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.Dropout(0.5),
             tf.keras.layers.Dense(num_classes, activation="softmax"),
@@ -589,6 +590,8 @@ def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_pat
 def load_model(model_path, X_train, y_train, X_val, y_val, X_test, y_test):
     loaded_model = keras.saving.load_model(model_path)
 
+    print(loaded_model.summary())
+
     evaluate_model(loaded_model, X_train, y_train, "Train")
     evaluate_model(loaded_model, X_val, y_val, "Val")
     evaluate_model(loaded_model, X_test, y_test, "Test")
@@ -629,9 +632,5 @@ if __name__ == "__main__":
     #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
     #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_thermal.keras")
 
-    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_normal_better.keras")
-
-# TODO's:
-# different model architectures (from scratch) like in the lecture
-# image preprocessing?? idk filtering and so on
-# higher context ratio (at loading the images)
+    #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_normal_better.keras")
+    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
