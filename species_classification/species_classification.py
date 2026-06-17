@@ -60,6 +60,9 @@ def load_img_rgb(image_path, label_path, rgb_path, context_ratio=0.5):
     img = Image.open(image_path).convert("L")  # grayscale
     rgb = Image.open(rgb_path).convert("RGB")
     W, H = img.size
+
+    print(img.size)
+    print(rgb.size)
     
     cropped_images = []
     cropped_rgbs = []
@@ -467,10 +470,6 @@ def run_custom_split(X, y, model_path="species_class_models/custom_split.keras")
     print(X_val.shape)
     print(X_test.shape)
 
-    print(X_train.dtype)
-
-    print(X_train.nbytes / 1024**3, "GB")
-
     early_stop = keras.callbacks.EarlyStopping(
         monitor="val_accuracy",
         patience=5,
@@ -612,18 +611,18 @@ def evaluate_model(model, X, y, split="Test"):
     print(classification_report(y, y_pred_classes, digits=3))
 
 if __name__ == "__main__":
-    #preprocess_and_save_data()
-    train = np.load("train.npz")
-    X_train = train["X"]
-    y_train = train["y"]
+    preprocess_and_save_data()
+    #train = np.load("train.npz")
+    #X_train = train["X"]
+    #y_train = train["y"]
 
-    val = np.load("val.npz")
-    X_val = val["X"]
-    y_val = val["y"]
+    #val = np.load("val.npz")
+    #X_val = val["X"]
+    #y_val = val["y"]
 
-    test = np.load("test.npz")
-    X_test = test["X"]
-    y_test = test["y"]
+    #test = np.load("test.npz")
+    #X_test = test["X"]
+    #y_test = test["y"]
 
     #X_train_thermal = X_train[:, :, :, 0:1]
     #X_val_thermal = X_val[:, :, :, 0:1]
@@ -633,4 +632,4 @@ if __name__ == "__main__":
     #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_thermal.keras")
 
     #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_normal_better.keras")
-    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
+    #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
