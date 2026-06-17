@@ -56,56 +56,78 @@ def load_img(image_path, label_path, context_ratio=0.5):
     
     return cropped_images, classes
 
-def load_img_rgb(image_path, label_path, rgb_path, context_ratio=0.5):
+def load_img_rgb(image_path, label_path, rgb_path, rgb_label_path, context_ratio=0.5):
     img = Image.open(image_path).convert("L")  # grayscale
     rgb = Image.open(rgb_path).convert("RGB")
     W, H = img.size
-
-    print(img.size)
-    print(rgb.size)
     
     cropped_images = []
     cropped_rgbs = []
     classes = []
     
     with open(label_path) as f:
-        for annotation in f:
-            cls, xc, yc, w, h, _ = map(float, annotation.split())
-            
-            if w * W < 5 or h * H < 5:
-                continue
-            
-            # expand box by context_ratio
-            w_exp = w * (1 + context_ratio)
-            h_exp = h * (1 + context_ratio)
-            
-            x1 = max(0, int((xc - w_exp/2) * W))
-            y1 = max(0, int((yc - h_exp/2) * H))
-            x2 = min(W, int((xc + w_exp/2) * W))
-            y2 = min(H, int((yc + h_exp/2) * H))
-            
-            crop = img.crop((x1, y1, x2, y2))
-            crop_rgb = rgb.crop((x1, y1, x2, y2))
-            cropped_images.append(crop)
-            cropped_rgbs.append(crop_rgb)
-            classes.append(int(cls))
-    
+        with open(rgb_label_path) as f_rgb: 
+            for annotation, ann_rgb in zip(f, f_rgb):
+                # thermal image
+                cls, xc, yc, w, h, _ = map(float, annotation.split())
+                
+                # avoid saving very small images
+                if w * W < 5 or h * H < 5: 
+                    continue
+                
+                # expand box by context_ratio
+                w_exp = w * (1 + context_ratio)
+                h_exp = h * (1 + context_ratio)
+                
+                x1 = max(0, int((xc - w_exp/2) * W))
+                y1 = max(0, int((yc - h_exp/2) * H))
+                x2 = min(W, int((xc + w_exp/2) * W))
+                y2 = min(H, int((yc + h_exp/2) * H))
+
+                # rgb images
+                _, xc, yc, w, h = map(float, ann_rgb.split()[:5])
+
+                # avoid saving very small images
+                if w * W < 5 or h * H < 5: 
+                    continue
+        
+                w_exp = w * (1 + context_ratio)
+                h_exp = h * (1 + context_ratio)
+                
+                x1 = max(0, int((xc - w_exp/2) * W))
+                y1 = max(0, int((yc - h_exp/2) * H))
+                x2 = min(W, int((xc + w_exp/2) * W))
+                y2 = min(H, int((yc + h_exp/2) * H))
+
+                if x2 <= x1 or y2 <= y1:
+                    continue               
+                
+                crop = img.crop((x1, y1, x2, y2))
+                cropped_images.append(crop)
+
+                crop_rgb = rgb.crop((x1, y1, x2, y2))
+                cropped_rgbs.append(crop_rgb)
+
+                classes.append(int(cls))
+
     return cropped_images, cropped_rgbs, classes
 
-def load_dataset_rgb(image_path="images_filtered/train", label_path="labels_filtered/train", rgb_path="/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/train"): 
+def load_dataset_rgb(image_path="images_filtered/train", label_path="labels_filtered/train", rgb_label_path="labels_rgb_filtered/train", rgb_path="/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/train"): 
     labels_dir = Path(label_path)
     images_dir = Path(image_path)
     rgb_dir = Path(rgb_path)
+    rgb_labels_dir = Path(rgb_label_path)
 
     X = []
     X_rgb = []
     Y = []
     for img_path in images_dir.glob("*"):
         lbl_path = labels_dir / f"{img_path.stem}.txt"
+        lbl_rgb_path = rgb_labels_dir / f"{img_path.stem}.txt"
         rgb_path = rgb_dir / f"{img_path.stem}.jpg"
 
-        if lbl_path.exists() and rgb_path.exists():
-            x, x_rgb, y = load_img_rgb(img_path, lbl_path, rgb_path)
+        if lbl_path.exists() and lbl_rgb_path.exists() and rgb_path.exists():
+            x, x_rgb, y = load_img_rgb(img_path, lbl_path, rgb_path, lbl_rgb_path)
             X.extend(x)
             X_rgb.extend(x_rgb)
             Y.extend(y)
@@ -191,10 +213,7 @@ def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
         [
             tf.keras.layers.Input(shape=input_shape),
             data_augmentation,
-            tf.keras.layers.Conv2D(32, 3, activation="relu"), 
-            BatchNormalization(),
-            tf.keras.layers.MaxPooling2D(),
-            tf.keras.layers.Conv2D(64, 3, activation="relu"),
+            tf.keras.layers.Conv2D(64, 3, activation="relu"), 
             BatchNormalization(),
             tf.keras.layers.MaxPooling2D(),
             tf.keras.layers.Conv2D(128, 3, activation="relu"),
@@ -203,7 +222,7 @@ def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
             tf.keras.layers.Conv2D(256, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dense(8, activation="relu"),
+            tf.keras.layers.Dense(32, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.Dropout(0.5),
             tf.keras.layers.Dense(num_classes, activation="softmax"),
@@ -387,8 +406,8 @@ def combine_rgb_grayscale(gray, rgb):
 # execute once - takes around 15 min.
 def preprocess_and_save_data():
     X_train, X_train_rgb, y_train = load_dataset_rgb()
-    X_val, X_val_rgb, y_val = load_dataset_rgb("images_filtered/val", "labels_filtered/val", "/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/val")
-    X_test, X_test_rgb, y_test = load_dataset_rgb("images_filtered/test", "labels_filtered/test", "/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/test")
+    X_val, X_val_rgb, y_val = load_dataset_rgb("images_filtered/val", "labels_filtered/val", "labels_rgb_filtered/val", "/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/val")
+    X_test, X_test_rgb, y_test = load_dataset_rgb("images_filtered/test", "labels_filtered/test", "labels_rgb_filtered/test", "/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/test")
     print("images loaded")
     print(len(X_train), len(X_train_rgb), len(y_train))
     print(len(X_val), len(X_val_rgb), len(y_val))
@@ -611,18 +630,18 @@ def evaluate_model(model, X, y, split="Test"):
     print(classification_report(y, y_pred_classes, digits=3))
 
 if __name__ == "__main__":
-    preprocess_and_save_data()
-    #train = np.load("train.npz")
-    #X_train = train["X"]
-    #y_train = train["y"]
+    #preprocess_and_save_data()
+    train = np.load("train.npz")
+    X_train = train["X"]
+    y_train = train["y"]
 
-    #val = np.load("val.npz")
-    #X_val = val["X"]
-    #y_val = val["y"]
+    val = np.load("val.npz")
+    X_val = val["X"]
+    y_val = val["y"]
 
-    #test = np.load("test.npz")
-    #X_test = test["X"]
-    #y_test = test["y"]
+    test = np.load("test.npz")
+    X_test = test["X"]
+    y_test = test["y"]
 
     #X_train_thermal = X_train[:, :, :, 0:1]
     #X_val_thermal = X_val[:, :, :, 0:1]
@@ -631,5 +650,5 @@ if __name__ == "__main__":
     #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
     #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_thermal.keras")
 
-    #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_normal_better.keras")
+    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_combined.keras")
     #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
