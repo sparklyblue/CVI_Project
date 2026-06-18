@@ -153,7 +153,7 @@ def load_dataset(image_path="images_filtered/train", label_path="labels_filtered
     
     return X, Y, flight_ids
 
-# dont change format of image, add padding if bounding boxes not a square
+# dont change format of image, add padding if img.size < 128, otherwise resize
 def resize_img_padding(X, size=128): 
     x = np.array([np.array(resize_with_padding(img, size)) for img in X], dtype=np.float32)
 
@@ -178,7 +178,7 @@ def mask_rgb(X):
     masked_combined = np.copy(X)
     for i in range(len(X)):
         thermal = X[i, ..., 0]
-        # Secure top 5% brightest pixels reliably before any normalization 
+        # top 5% brightest pixels are animal fraction 
         thr = np.percentile(thermal, 95)
         mask = (thermal > thr).astype(np.uint8)
 
@@ -186,7 +186,7 @@ def mask_rgb(X):
         mask = cv2.dilate(mask, kernel, iterations=1)
         mask = cv2.GaussianBlur(mask.astype(np.float32), (7, 7), 0)
 
-        # Apply mask directly to the RGB layers
+        # apply mask to the RGB layers
         masked_combined[i, ..., 1:] = X[i, ..., 1:] * mask[..., None]
     return masked_combined
 
@@ -239,40 +239,6 @@ def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
     )
     return model
 
-def make_small_cnn(input_shape=(128, 128, 1), num_classes=5):
-    model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=input_shape),
-        tf.keras.layers.RandomFlip("horizontal_and_vertical"),
-        tf.keras.layers.RandomRotation(0.1),
-        tf.keras.layers.RandomZoom(0.2),
-        tf.keras.layers.RandomTranslation(0.1,0.1),
-        
-        tf.keras.layers.Conv2D(32, 3, padding='same', activation='relu'),
-        tf.keras.layers.BatchNormalization(),
-        tf.keras.layers.MaxPooling2D(),
-        
-        tf.keras.layers.Conv2D(64, 3, padding='same', activation='relu'),
-        tf.keras.layers.BatchNormalization(),
-        tf.keras.layers.MaxPooling2D(),
-        
-        tf.keras.layers.Conv2D(128, 3, padding='same', activation='relu'),
-        tf.keras.layers.BatchNormalization(),
-        tf.keras.layers.GlobalAveragePooling2D(),
-        
-        tf.keras.layers.Dense(64, activation='relu'),
-        tf.keras.layers.Dropout(0.4),
-        tf.keras.layers.Dense(32, activation='relu'),
-        tf.keras.layers.Dense(num_classes, activation='softmax'),
-    ])
-
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
-        loss="sparse_categorical_crossentropy",
-        metrics=["accuracy"],
-    )
-
-    return model
-
 def transfer_model(input_shape=(128, 128, 3), num_classes=5):
     base_model = keras.applications.EfficientNetV2B0(
         include_top=False,  
@@ -304,28 +270,8 @@ def transfer_model(input_shape=(128, 128, 3), num_classes=5):
         )
     return model
 
-def calc_flight_stats(flight_ids, y, X, split="train"):
-    print(f"{split} flight ids + statistic")
-    flight_ids = np.array(flight_ids, dtype=np.int32)
-
-    for flight in np.unique(flight_ids):
-        for species in np.unique(y):
-            images = [
-                img
-                for img, f, y in zip(X, flight_ids, y)
-                if f == flight and y == species
-            ]
-
-            if len(images) > 20:
-                print(f"for flight {flight} and species {species}: ")
-                brightnesses = [np.array(img, dtype=np.int32).mean() for img in images]
-                print(f"min: {min(brightnesses)}, max: {max(brightnesses)}, mean: {statistics.mean(brightnesses)}, median: {statistics.median(brightnesses)}")
-                contrasts = [np.array(img, dtype=np.int32).std() for img in images]
-                print(f"min: {min(contrasts)}, max: {max(contrasts)}, mean: {statistics.mean(contrasts)}, median: {statistics.median(contrasts)}")
-                ranges = [np.array(img, dtype=np.int32).max() - np.array(img, dtype=np.int32).min() for img in images]
-                print(f"min: {min(ranges)}, max: {max(ranges)}, mean: {statistics.mean(ranges)}, median: {statistics.median(ranges)}")
-
 def model_combined(num_classes=5):
+    """trains on RGB Input using EfficientNet, trains thermal images from scratch"""
     base_model = keras.applications.EfficientNetV2B0(
         include_top=False,
         weights="imagenet"
@@ -376,6 +322,27 @@ def model_combined(num_classes=5):
     )
 
     return model
+
+def calc_flight_stats(flight_ids, y, X, split="train"):
+    print(f"{split} flight ids + statistic")
+    flight_ids = np.array(flight_ids, dtype=np.int32)
+
+    for flight in np.unique(flight_ids):
+        for species in np.unique(y):
+            images = [
+                img
+                for img, f, y in zip(X, flight_ids, y)
+                if f == flight and y == species
+            ]
+
+            if len(images) > 20:
+                print(f"for flight {flight} and species {species}: ")
+                brightnesses = [np.array(img, dtype=np.int32).mean() for img in images]
+                print(f"min: {min(brightnesses)}, max: {max(brightnesses)}, mean: {statistics.mean(brightnesses)}, median: {statistics.median(brightnesses)}")
+                contrasts = [np.array(img, dtype=np.int32).std() for img in images]
+                print(f"min: {min(contrasts)}, max: {max(contrasts)}, mean: {statistics.mean(contrasts)}, median: {statistics.median(contrasts)}")
+                ranges = [np.array(img, dtype=np.int32).max() - np.array(img, dtype=np.int32).min() for img in images]
+                print(f"min: {min(ranges)}, max: {max(ranges)}, mean: {statistics.mean(ranges)}, median: {statistics.median(ranges)}")
 
 def oversampling(X, y):
     # Find the size of your largest class to balance up to it
@@ -557,13 +524,6 @@ def run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, mo
 
 
 def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="transfer_learning.keras"): 
-    # Oversamling
-    #X_train, y_train = oversampling(X_train, y_train)
-
-    #X_train = mask_rgb(X_train)
-    #X_val = mask_rgb(X_val)
-    #X_test = mask_rgb(X_test)
-
     X_train_thermal = X_train[:, :, :, 0:1]
     X_val_thermal = X_val[:, :, :, 0:1]
     X_test_thermal = X_test[:, :, :, 0:1]
@@ -587,12 +547,12 @@ def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_pat
         restore_best_weights=True
     )
 
-    model = make_model()
+    model = model_combined()
 
     model.fit(
-        X_train,
+        [X_train_rgb, X_train_thermal],
         y_train,
-        validation_data=(X_val, y_val),
+        validation_data=([X_val_rgb, X_val_thermal], y_val),
         epochs=20,
         batch_size=32,
         verbose=2,
@@ -601,12 +561,9 @@ def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_pat
     )
 
     print(model.summary())
-    evaluate_model(model, X_val, y_val, "Val")
-    evaluate_model(model, X_test, y_test)
+    evaluate_model(model, [X_val_rgb, X_val_thermal], y_val, "Val")
+    evaluate_model(model, [X_test_rgb, X_test_thermal], y_test)
     model.save(model_path)
-
-    #class_weights = get_class_weights(y_train)
-    #print("Applying Class Weights:", class_weights)
 
 def load_model(model_path, X_train, y_train, X_val, y_val, X_test, y_test):
     loaded_model = keras.saving.load_model(model_path)
@@ -645,13 +602,9 @@ if __name__ == "__main__":
     test = np.load("test.npz")
     X_test = test["X"]
     y_test = test["y"]
-
-    X_train_thermal = X_train[:, :, :, 0:1]
-    X_val_thermal = X_val[:, :, :, 0:1]
-    X_test_thermal = X_test[:, :, :, 0:1]
-
+    
     #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
-    #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_thermal.keras")
+    #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_rgb.keras")
 
-    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_new.keras")
+    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/combined.keras")
     #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
