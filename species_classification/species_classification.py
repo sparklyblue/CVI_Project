@@ -271,19 +271,24 @@ def transfer_model(input_shape=(128, 128, 3), num_classes=5):
     return model
 
 def model_combined(num_classes=5):
-    """trains on RGB Input using EfficientNet, trains thermal images from scratch"""
-    base_model = keras.applications.EfficientNetV2B0(
-        include_top=False,
-        weights="imagenet"
-    )
-
-    base_model.trainable = False
-
+    """trains RGB and thermal images separately and fuse them together"""
+    # rgb branch
     rgb_input = keras.Input((128,128,3))
 
-    rgb_branch = base_model(rgb_input, training=False)
-    rgb_branch = keras.layers.GlobalAveragePooling2D()(rgb_branch)
+    rgb_branch = Conv2D(32,3,padding="same",activation="relu")(rgb_input)
+    rgb_branch = BatchNormalization()(rgb_branch)
+    rgb_branch = MaxPooling2D()(rgb_branch)
 
+    rgb_branch = Conv2D(64,3,padding="same",activation="relu")(rgb_branch)
+    rgb_branch = BatchNormalization()(rgb_branch)
+    rgb_branch = MaxPooling2D()(rgb_branch)
+
+    rgb_branch = Conv2D(128,3,padding="same",activation="relu")(rgb_branch)
+    rgb_branch = BatchNormalization()(rgb_branch)
+
+    rgb_branch = GlobalAveragePooling2D()(rgb_branch)  
+
+    # thermal branch
     thermal_input = Input((128,128,1))
 
     thermal_branch = Conv2D(32,3,padding="same",activation="relu")(thermal_input)
@@ -299,13 +304,11 @@ def model_combined(num_classes=5):
 
     thermal_branch = GlobalAveragePooling2D()(thermal_branch)
 
-    thermal_branch = Dense(64, activation="relu")(thermal_branch)
-
     x = keras.layers.concatenate([
         rgb_branch,
         thermal_branch
     ])
-
+    
     x = keras.layers.Dense(64, activation="relu")(x)
     x = keras.layers.Dropout(0.5)(x)
     out = keras.layers.Dense(num_classes, activation="softmax")(x)
@@ -546,7 +549,7 @@ def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_pat
         patience=5,
         restore_best_weights=True
     )
-
+    class_weights = get_class_weights(y_train)
     model = model_combined()
 
     model.fit(
@@ -557,7 +560,8 @@ def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_pat
         batch_size=32,
         verbose=2,
         shuffle=True,
-        callbacks=[early_stop]
+        callbacks=[early_stop],
+        class_weight=class_weights
     )
 
     print(model.summary())
@@ -602,7 +606,7 @@ if __name__ == "__main__":
     test = np.load("test.npz")
     X_test = test["X"]
     y_test = test["y"]
-    
+
     #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
     #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_rgb.keras")
 
