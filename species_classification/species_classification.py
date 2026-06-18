@@ -84,6 +84,8 @@ def load_img_rgb(image_path, label_path, rgb_path, rgb_label_path, context_ratio
                 x2 = min(W, int((xc + w_exp/2) * W))
                 y2 = min(H, int((yc + h_exp/2) * H))
 
+                crop = img.crop((x1, y1, x2, y2))
+
                 # rgb images
                 _, xc, yc, w, h = map(float, ann_rgb.split()[:5])
 
@@ -100,14 +102,12 @@ def load_img_rgb(image_path, label_path, rgb_path, rgb_label_path, context_ratio
                 y2 = min(H, int((yc + h_exp/2) * H))
 
                 if x2 <= x1 or y2 <= y1:
-                    continue               
-                
-                crop = img.crop((x1, y1, x2, y2))
-                cropped_images.append(crop)
+                    continue              
 
                 crop_rgb = rgb.crop((x1, y1, x2, y2))
-                cropped_rgbs.append(crop_rgb)
 
+                cropped_images.append(crop)
+                cropped_rgbs.append(crop_rgb)
                 classes.append(int(cls))
 
     return cropped_images, cropped_rgbs, classes
@@ -213,7 +213,10 @@ def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
         [
             tf.keras.layers.Input(shape=input_shape),
             data_augmentation,
-            tf.keras.layers.Conv2D(64, 3, activation="relu"), 
+            tf.keras.layers.Conv2D(32, 3, activation="relu"), 
+            BatchNormalization(),
+            tf.keras.layers.MaxPooling2D(),
+            tf.keras.layers.Conv2D(64, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.MaxPooling2D(),
             tf.keras.layers.Conv2D(128, 3, activation="relu"),
@@ -222,7 +225,7 @@ def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
             tf.keras.layers.Conv2D(256, 3, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dense(32, activation="relu"),
+            tf.keras.layers.Dense(8, activation="relu"),
             BatchNormalization(),
             tf.keras.layers.Dropout(0.5),
             tf.keras.layers.Dense(num_classes, activation="softmax"),
@@ -643,12 +646,12 @@ if __name__ == "__main__":
     X_test = test["X"]
     y_test = test["y"]
 
-    #X_train_thermal = X_train[:, :, :, 0:1]
-    #X_val_thermal = X_val[:, :, :, 0:1]
-    #X_test_thermal = X_test[:, :, :, 0:1]
+    X_train_thermal = X_train[:, :, :, 0:1]
+    X_val_thermal = X_val[:, :, :, 0:1]
+    X_test_thermal = X_test[:, :, :, 0:1]
 
     #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
     #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_thermal.keras")
 
-    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_combined.keras")
+    run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/rgb_new.keras")
     #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
