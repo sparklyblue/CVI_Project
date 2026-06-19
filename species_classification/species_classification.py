@@ -350,14 +350,13 @@ def calc_flight_stats(flight_ids, y, X, split="train"):
     """prints brightness, contrast and range statistics of images per flight"""
     print(f"{split} flight ids + statistic")
     flight_ids = np.array(flight_ids, dtype=np.int32)
+    mean_b = []
+    mean_c = []
+    mean_r = []
 
     for flight in np.unique(flight_ids):
         for species in np.unique(y):
-            images = [
-                img
-                for img, f, y in zip(X, flight_ids, y)
-                if f == flight and y == species
-            ]
+            images = [img for img, f, y in zip(X, flight_ids, y) if f == flight and y == species]
 
             if len(images) > 20:
                 print(f"for flight {flight} and species {species}: ")
@@ -367,6 +366,13 @@ def calc_flight_stats(flight_ids, y, X, split="train"):
                 print(f"min: {min(contrasts)}, max: {max(contrasts)}, mean: {statistics.mean(contrasts)}, median: {statistics.median(contrasts)}")
                 ranges = [np.array(img, dtype=np.int32).max() - np.array(img, dtype=np.int32).min() for img in images]
                 print(f"min: {min(ranges)}, max: {max(ranges)}, mean: {statistics.mean(ranges)}, median: {statistics.median(ranges)}")
+
+                mean_b.append(statistics.mean(brightnesses))
+                mean_c.append(statistics.mean(contrasts))
+                mean_r.append(statistics.mean(ranges))
+    print("-------------------------------")
+    return statistics.mean(mean_b), statistics.mean(mean_c), statistics.mean(mean_r)             
+        
 
 def oversampling(X, y):
     """Implementation of oversampling to ensure there is the same amount of samples for each class in the dataset"""
