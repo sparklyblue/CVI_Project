@@ -13,3 +13,5 @@ filtered_summary.csv
 *.keras
 *.npz
 */__pycache__
+new_labels/
+labels_rgb/
