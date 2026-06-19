@@ -28,6 +28,7 @@ from keras.models import Model
 from keras.applications.efficientnet_v2 import preprocess_input
 
 def load_img(image_path, label_path, context_ratio=0.5):
+    """loads a thermal image and crops it based on the provided YOLO annotations"""
     img = Image.open(image_path).convert("L")  # grayscale
     W, H = img.size
     
@@ -57,6 +58,7 @@ def load_img(image_path, label_path, context_ratio=0.5):
     return cropped_images, classes
 
 def load_img_rgb(image_path, label_path, rgb_path, rgb_label_path, context_ratio=0.5):
+    """crops the rgb and thermal images based on the provided YOLO annotations."""
     img = Image.open(image_path).convert("L")  # grayscale
     rgb = Image.open(rgb_path).convert("RGB")
     W, H = img.size
@@ -113,6 +115,7 @@ def load_img_rgb(image_path, label_path, rgb_path, rgb_label_path, context_ratio
     return cropped_images, cropped_rgbs, classes
 
 def load_dataset_rgb(image_path="images_filtered/train", label_path="labels_filtered/train", rgb_label_path="labels_rgb_filtered/train", rgb_path="/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/train"): 
+    """load the thermal and rgb images, as well as their corresponding animal class"""
     labels_dir = Path(label_path)
     images_dir = Path(image_path)
     rgb_dir = Path(rgb_path)
@@ -135,6 +138,7 @@ def load_dataset_rgb(image_path="images_filtered/train", label_path="labels_filt
     return X, X_rgb, Y
 
 def load_dataset(image_path="images_filtered/train", label_path="labels_filtered/train"): 
+    """load only the thermal images and the corresponding labels"""
     labels_dir = Path(label_path)
     images_dir = Path(image_path)
 
@@ -155,11 +159,14 @@ def load_dataset(image_path="images_filtered/train", label_path="labels_filtered
 
 # dont change format of image, add padding if img.size < 128, otherwise resize
 def resize_img_padding(X, size=128): 
+    """Resize all images to 128x128. In case the image is smaller than that, fill the rest with gray background. 
+    This way the image format is preserved, which may be helpful at classification."""
     x = np.array([np.array(resize_with_padding(img, size)) for img in X], dtype=np.float32)
 
     return x
 
 def resize_with_padding(img, size=128):
+    """helper-function for resize_img_padding"""
     w, h = img.size
     scale = size / max(w, h)
     new_w, new_h = int(w * scale), int(h * scale)
@@ -175,6 +182,7 @@ def resize_with_padding(img, size=128):
     return canvas
 
 def mask_rgb(X):
+    """masks rgb images so that the model does not get distracted by the surroundings and actually focuses on the animal."""
     masked_combined = np.copy(X)
     for i in range(len(X)):
         thermal = X[i, ..., 0]
@@ -192,6 +200,7 @@ def mask_rgb(X):
 
 
 def get_class_weights(y): 
+    """function to implement balanced class weights, which punish misclassifications of smaller classes harder"""
     classes = np.unique(y)
 
     weights = compute_class_weight(
@@ -204,6 +213,7 @@ def get_class_weights(y):
 
 
 def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
+    """returns a simple CNN"""
     data_augmentation = keras.Sequential([
         tf.keras.layers.RandomFlip("horizontal"),
         tf.keras.layers.RandomRotation(0.05),
@@ -240,6 +250,7 @@ def make_model(input_shape=(128,128,4), num_classes=5) -> tf.keras.Model:
     return model
 
 def transfer_model(input_shape=(128, 128, 3), num_classes=5):
+    """returns a model based on EfficientNet"""
     base_model = keras.applications.EfficientNetV2B0(
         include_top=False,  
         weights="imagenet",
@@ -271,7 +282,7 @@ def transfer_model(input_shape=(128, 128, 3), num_classes=5):
     return model
 
 def model_combined(num_classes=5):
-    """trains RGB and thermal images separately and fuse them together"""
+    """returns a model that trains on RGB and thermal images separately and fuses them together"""
     # rgb branch
     rgb_input = keras.Input((128,128,3))
 
@@ -284,6 +295,10 @@ def model_combined(num_classes=5):
     rgb_branch = MaxPooling2D()(rgb_branch)
 
     rgb_branch = Conv2D(128,3,padding="same",activation="relu")(rgb_branch)
+    rgb_branch = BatchNormalization()(rgb_branch)
+    rgb_branch = MaxPooling2D()(rgb_branch)
+
+    rgb_branch = Conv2D(256,3,padding="same",activation="relu")(rgb_branch)
     rgb_branch = BatchNormalization()(rgb_branch)
 
     rgb_branch = GlobalAveragePooling2D()(rgb_branch)  
@@ -301,6 +316,10 @@ def model_combined(num_classes=5):
 
     thermal_branch = Conv2D(128,3,padding="same",activation="relu")(thermal_branch)
     thermal_branch = BatchNormalization()(thermal_branch)
+    thermal_branch = MaxPooling2D()(thermal_branch)
+
+    thermal_branch = Conv2D(256,3,padding="same",activation="relu")(thermal_branch)
+    thermal_branch = BatchNormalization()(thermal_branch)
 
     thermal_branch = GlobalAveragePooling2D()(thermal_branch)
 
@@ -310,6 +329,7 @@ def model_combined(num_classes=5):
     ])
     
     x = keras.layers.Dense(64, activation="relu")(x)
+    x = BatchNormalization()(x)
     x = keras.layers.Dropout(0.5)(x)
     out = keras.layers.Dense(num_classes, activation="softmax")(x)
 
@@ -327,6 +347,7 @@ def model_combined(num_classes=5):
     return model
 
 def calc_flight_stats(flight_ids, y, X, split="train"):
+    """prints brightness, contrast and range statistics of images per flight"""
     print(f"{split} flight ids + statistic")
     flight_ids = np.array(flight_ids, dtype=np.int32)
 
@@ -348,6 +369,7 @@ def calc_flight_stats(flight_ids, y, X, split="train"):
                 print(f"min: {min(ranges)}, max: {max(ranges)}, mean: {statistics.mean(ranges)}, median: {statistics.median(ranges)}")
 
 def oversampling(X, y):
+    """Implementation of oversampling to ensure there is the same amount of samples for each class in the dataset"""
     # Find the size of your largest class to balance up to it
     max_class_size = max(np.bincount(y))
     X_resampled = []
@@ -370,6 +392,7 @@ def oversampling(X, y):
     return X_resampled, y_resampled
 
 def combine_rgb_grayscale(gray, rgb):
+    """stacks thermal and rgb images on top of each other"""
     if(len(gray.shape) < 4):
         gray = np.expand_dims(gray, axis=-1)
     X = np.concatenate([gray, rgb], axis=-1)
@@ -378,6 +401,7 @@ def combine_rgb_grayscale(gray, rgb):
 
 # execute once - takes around 15 min.
 def preprocess_and_save_data():
+    """whole preprocessing pipeline. Saves the processed datasets as .npz once finished"""
     X_train, X_train_rgb, y_train = load_dataset_rgb()
     X_val, X_val_rgb, y_val = load_dataset_rgb("images_filtered/val", "labels_filtered/val", "labels_rgb_filtered/val", "/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/val")
     X_test, X_test_rgb, y_test = load_dataset_rgb("images_filtered/test", "labels_filtered/test", "labels_rgb_filtered/test", "/home/azureuser/cloudfiles/code/Users/s2410929006/CVI/rgb_filtered/rgb_filtered/test")
@@ -438,6 +462,7 @@ def preprocess_and_save_data():
     )
 
 def create_binary_dataset(y):
+    """helper-function for run_binary_classification that creates 2 classes out of 5"""
     y_new = []
 
     for cls in y:
@@ -449,6 +474,7 @@ def create_binary_dataset(y):
     return np.array(y_new, dtype=np.int32)
 
 def run_custom_split(X, y, model_path="species_class_models/custom_split.keras"):
+    """runs a model trained on a custom train dataset and evaluates on the custom validation and test sets"""
     print("Custom Train/Val/Test Split over all flights")
 
     X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
@@ -487,6 +513,7 @@ def run_custom_split(X, y, model_path="species_class_models/custom_split.keras")
     model.save(model_path)
 
 def run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/binary_classification.keras"):
+    """converts the datasets to binary classification and trains and evaluates a model"""
     print("Binary Classification: Deer = 0, Pig = 1")
 
     y_train = create_binary_dataset(y_train)
@@ -527,6 +554,7 @@ def run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, mo
 
 
 def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="transfer_learning.keras"): 
+    """trains a model to predict the 5 animal classes and evaluates on the validation and test dataset"""
     X_train_thermal = X_train[:, :, :, 0:1]
     X_val_thermal = X_val[:, :, :, 0:1]
     X_test_thermal = X_test[:, :, :, 0:1]
@@ -570,6 +598,7 @@ def run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_pat
     model.save(model_path)
 
 def load_model(model_path, X_train, y_train, X_val, y_val, X_test, y_test):
+    """loads a model, prints the model summary and evaluates it on all datasets"""
     loaded_model = keras.saving.load_model(model_path)
 
     print(loaded_model.summary())
@@ -579,6 +608,7 @@ def load_model(model_path, X_train, y_train, X_val, y_val, X_test, y_test):
     evaluate_model(loaded_model, X_test, y_test, "Test")
 
 def evaluate_model(model, X, y, split="Test"):
+    """evaluates a model on the provided X and y dataset"""
     loss, acc = model.evaluate(X, y)
     print(f"{split} loss:", loss)
     print(f"{split} accuracy:", acc)
@@ -594,7 +624,8 @@ def evaluate_model(model, X, y, split="Test"):
     print(classification_report(y, y_pred_classes, digits=3))
 
 if __name__ == "__main__":
-    #preprocess_and_save_data()
+    preprocess_and_save_data()
+    
     train = np.load("train.npz")
     X_train = train["X"]
     y_train = train["y"]
@@ -607,8 +638,7 @@ if __name__ == "__main__":
     X_test = test["X"]
     y_test = test["y"]
 
-    #run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary_better.keras")
-    #run_binary_classification(X_train_thermal, y_train, X_val_thermal, y_val, X_test_thermal, y_test, "species_class_models/binary_rgb.keras")
-
+    run_binary_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/binary.keras")
+    # for custom split only passing thermal images as otherwise there are too many/large numpy arrays to save in Azure GPU
+    run_custom_split(X_train[:, :, :, 0:1]+X_val[:, :, :, 0:1]+X_test[:, :, :, 0:1], y_train+y_val+y_test)
     run_classification(X_train, y_train, X_val, y_val, X_test, y_test, "species_class_models/combined.keras")
-    #run_classification(X_train, y_train, X_val, y_val, X_test, y_test, model_path="species_class_models/rgb_normal_2.keras")
