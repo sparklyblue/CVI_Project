@@ -1,0 +1,7 @@
+names:
+  0: Animal
+nc: 1
+path: C:\Users\delph\Schule\4. Semester\CIV4IL - Computer Vision\CVI_Project\dataset_yolo_detection
+test: images/test
+train: images/train
+val: images/val
