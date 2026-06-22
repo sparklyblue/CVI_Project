@@ -480,6 +480,39 @@ This file contains the training and validation metrics for every epoch.
 
 It was used to extract the best validation performance of each model.
 
+### Note
+
+The Ultralytics YOLO framework generates a large number of additional files during training and evaluation:
+
+```text
+results.png
+confusion_matrix.png
+confusion_matrix_normalized.png
+labels.jpg
+train_batch0.jpg
+train_batch1.jpg
+train_batch2.jpg
+val_batch0_labels.jpg
+val_batch0_pred.jpg
+val_batch1_labels.jpg
+val_batch1_pred.jpg
+val_batch2_labels.jpg
+val_batch2_pred.jpg
+```
+
+These files are useful for visual inspection, debugging, and model analysis. However, because the repository uses a `.gitignore` configuration that excludes generated image files (`*.png`, `*.jpg`), these artifacts are not stored in Git.
+
+To keep the repository lightweight and avoid unnecessary duplication, only the most important reproducibility files are retained:
+
+The retained files contain all information required to reproduce the training runs:
+
+- `best.pt` – best-performing model checkpoint
+- `last.pt` – final checkpoint from the last training epoch
+- `args.yaml` – complete training configuration
+- `results.csv` – epoch-by-epoch training and validation metrics
+
+If the notebooks are executed again using the provided dataset and model weights, Ultralytics will automatically regenerate all visual outputs, including training curves, confusion matrices, label visualizations, and prediction examples.
+
 ---
 
 ## 15. Evaluation Metrics
