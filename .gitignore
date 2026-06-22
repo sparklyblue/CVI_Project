@@ -13,7 +13,6 @@ labels_matched_thermal/
 mots/
 
 # Generated experiment outputs
-dist/
 models/
 runs/
 *.joblib
@@ -47,3 +46,9 @@ metrics.json
 */__pycache__
 new_labels/
 labels_rgb/
+
+# Experiment reports remain local. Only the approved final model weight is
+# exposed to Git; add another explicit exception when a new final model is approved.
+dist/**
+!dist/**/
+!dist/motion_baseline/model.joblib

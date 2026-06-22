@@ -12,6 +12,62 @@ more careful question:
 That distinction matters because the drone is moving, the frames are not always
 continuous, and no flight metadata is available.
 
+## Setup
+
+All commands in this guide are expected to be run from the repository root.
+
+Create a virtual environment and install the shared project requirements:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+On Windows, activate the environment with:
+
+```powershell
+.venv\Scripts\activate
+```
+
+The thermal images are not stored in Git because of their size. Follow the
+download instructions in the root `README.md`, then place the data in the
+expected folders:
+
+```txt
+images_thermal/images/{train,val,test}/
+labels_matched_thermal/{train,val,test}/
+mots/*_gt.txt
+```
+
+Prepare the filtered labels and rebalanced splits once:
+
+```bash
+python3 build_labels.py
+python3 filter_label.py
+python3 rebalance_splits.py
+```
+
+The training code then expects `labels_filtered/{train,val,test}/` to exist.
+
+## Included Trained Model
+
+The selected random-forest weight is committed at:
+
+```txt
+dist/motion_baseline/model.joblib
+```
+
+The file is approximately 1.05 MB, so regular GitHub storage is sufficient and
+Git LFS is not needed for this artifact. Other files below `dist/` are generated
+reports, caches, predictions, or visualizations and remain ignored by Git.
+
+The committed weight is the selected model from the documented run below. It
+does not include the source images or feature-extraction pipeline. Input rows
+must still be built in the exact order defined by `FEATURE_NAMES` in
+`features.py`.
+
 ## What This Baseline Uses
 
 The baseline uses three parts of the dataset:
@@ -260,10 +316,36 @@ Important files:
 | `predictions_val.csv` | Per-detection validation predictions. |
 | `predictions_test.csv` | Per-detection test predictions. |
 | `model_metadata.json` | Selected model family, parameters, threshold, feature version, and feature names. |
-| `model.joblib` | Saved sklearn model, if the selected model is from sklearn. |
+| `model.joblib` | Saved sklearn model. The selected baseline weight is committed to the repository. |
 | `model.npz` | Saved logistic regression model, if the selected model is logistic regression. |
 | `feature_cache/` | Cached feature matrices. These are generated files and should not be committed. |
 | `error_panels/` | Optional visual inspection panels for false positives and false negatives. |
+
+## Loading the Trained Model
+
+Only load `joblib` files from trusted sources, because the format can execute
+Python code while loading. The repository artifact can be opened as follows:
+
+```python
+from pathlib import Path
+
+import joblib
+
+artifact = joblib.load(Path("dist/motion_baseline/model.joblib"))
+model = artifact["model"]
+threshold = float(artifact["threshold"])
+feature_names = artifact["feature_names"]
+
+# x_features must contain the features produced by features.py in feature_names order.
+moving_index = list(model.classes_).index(1)
+p_moving = model.predict_proba(x_features)[:, moving_index]
+predicted_motion = (p_moving >= threshold).astype(int)
+```
+
+For an end-to-end reproduction, use `train_motion_baseline.py`; it performs
+track recovery, feature extraction, model tuning, evaluation, and export. The
+saved model alone cannot turn arbitrary images into detections because animal
+boxes and temporal track context are required first.
 
 ## Feature Cache
 
@@ -518,6 +600,18 @@ class_weight_power=0.0
 threshold=0.38
 ```
 
+The recorded evaluation for this selected model was:
+
+| Split | Accuracy | Balanced accuracy | Moving F1 | Macro F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Train | 0.895 | 0.829 | 0.776 | 0.854 |
+| Validation | 0.782 | 0.555 | 0.226 | 0.549 |
+| Test | 0.907 | 0.811 | 0.647 | 0.797 |
+
+The test confusion matrix was `TN=3878`, `FP=251`, `FN=188`, and
+`TP=403`. Accuracy is high partly because static detections are more common, so
+balanced accuracy, moving F1, and macro F1 should also be reported.
+
 The important pattern was:
 
 - train performance was good but not perfectly memorized
@@ -608,3 +702,17 @@ evaluate once on test
 
 The current baseline is still fine as a pushable project milestone because the
 test split remains untouched until final evaluation.
+
+## Reproduction Notes
+
+- Use the dependency versions in the repository `requirements.txt`, especially
+  the recorded scikit-learn version, when loading the committed `joblib` file.
+- Run commands from the repository root so the default relative paths resolve.
+- The first feature build is slow because image registration is performed for
+  many temporal pairs. Matching feature caches make later tuning runs faster.
+- Use `--rebuild-feature-cache` after changing feature extraction, neighbor
+  count, image-registration size, or the underlying labels.
+- Keep train, validation, and test flights separate. Test data must not be used
+  for parameter or threshold selection.
+- The result is a per-animal, per-image motion classification. It is not a
+  whole-image classifier or an animal detector.
