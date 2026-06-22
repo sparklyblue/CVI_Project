@@ -4,8 +4,6 @@
 
 > **Please download and unzip the `images_thermal` folder from https://zenodo.org/records/19034999 — it's way too large to upload on GitHub. Everything else should be available in the GitHub download.**
 
-> **The code to combine `images_thermal`, the labels and the mots was generated with Claude, mostly because the other stuff wasn't working because it was incredibly tough to understand wth was going on with the labels and mots :), if there is anything I can do, tell me — Lea**
-
 ---
 
 This document explains the dataset structure, what the label files mean, and how everything connects together for CNN training.
@@ -396,6 +394,5 @@ This reads `mots/` and `labels_matched_thermal/` and rewrites `labels_final/`, `
 
 The images and raw tracking data come from the [BAMBI dataset](https://github.com/bambi-eco/Dataset), a thermal + RGB aerial wildlife survey dataset collected by drone over Central Europe.
 
-
-### Note:
-The code to combine the images_thermal, the labels and the mots was generated with CLAUDE Code, mostly because the other stuff wasn't working because it was incredibly tough to understand wth was going on with the labels and mots :), if there is anything I can do, tell me - Lea
+## Note
+The preprocessing files were created with the help of claude (I let it comment it in the end as well :] for future reference)
