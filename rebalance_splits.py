@@ -38,6 +38,7 @@ MOVES = [
     # → val: need Wild boar, Hybrid Pig, Fallow Deer
     ("142", "train", "val"),
     ("143", "train", "val"),
+    ("246", "train", "val"),
     # → test: need Wild boar, Hybrid Pig, Fallow Deer
     ("140", "train", "test"),
     ("135", "train", "test"),
