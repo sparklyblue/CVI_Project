@@ -1,0 +1,28 @@
+path: .
+train: rgb_filtered/train
+val:   rgb_filtered/val
+test:  rgb_filtered/test
+
+# Label format per box: species_id cx cy w h motion_id
+# motion: 0=static  1=moving  2=ambiguous
+
+nc: 12
+names:
+  - Roe deer
+  - Red deer
+  - Fallow Deer
+  - Wild boar
+  - Alpine ibex
+  - Chamois
+  - Hybrid Pig
+  - Human
+  - Bird
+  - Dog
+  - Unknown
+  - No-animal
+
+motion_nc: 3
+motion_names:
+  - static
+  - moving
+  - ambiguous

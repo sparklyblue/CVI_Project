@@ -10,4 +10,4 @@ from pairwise_crop_cnn.cli import main
 if __name__ == "__main__":
     main()
 
-#python3 train_pairwise_crop_cnn.py --epochs 8 --neighbors 1 --crop-size 96 --batch-size 64 --tune-metric macro_f1 --overfit-penalty 0.15 --threshold-step 0.02 --output-dir dist/pairwise_crop_cnn
+# python train_pairwise_crop_cnn.py --device cuda --epochs 8 --neighbors 1 --crop-size 96 --batch-size 512 --num-workers 8 --tune-metric macro_f1 --overfit-penalty 0.15 --threshold-step 0.02 --output-dir dist/pairwise_crop_cnn

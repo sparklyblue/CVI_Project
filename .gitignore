@@ -6,6 +6,7 @@ __pycache__/
 
 # Large/raw dataset folders
 images_thermal/
+images_filtered/
 labels_final/
 labels_filtered/
 labels_matched_thermal/
@@ -41,3 +42,8 @@ metrics.json
 *.png
 *.tif
 *.tiff
+*.zip
+*.keras
+*/__pycache__
+new_labels/
+labels_rgb/

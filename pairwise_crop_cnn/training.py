@@ -26,6 +26,11 @@ def choose_device(raw_device: str) -> torch.device:
     """The requested device is converted to a torch device."""
     if raw_device == "auto":
         return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if raw_device.startswith("cuda") and not torch.cuda.is_available():
+        raise SystemExit(
+            "CUDA was requested, but this PyTorch install was built without CUDA support. "
+            "Run with '--device cpu' or install a CUDA-enabled PyTorch build."
+        )
     return torch.device(raw_device)
 
 
